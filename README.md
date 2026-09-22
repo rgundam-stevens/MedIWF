@@ -7,6 +7,8 @@ an open corpus of 28,280 generated items, a rule-based detector for 14 structura
 Author: Rohit Gundam, independent researcher (ORCID 0009-0001-3018-9663). Code: MIT License. Data and documents: CC BY 4.0
 (see LICENSE-DATA.md and DATASET_CARD.md).
 
+Archive: https://doi.org/10.5281/zenodo.22903818 (Zenodo, all versions). Corpus: https://huggingface.co/datasets/rgundam/MedIWF
+
 ## Layout
 - `src/mediwf/`     detector (14 rules, version 1.2), composites, gateway client
 - `scripts/`        generation, detection, validation, analysis and figure scripts; each writes a versioned file under `outputs/`

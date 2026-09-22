@@ -15,7 +15,7 @@ stability re-run made eight days later is included.
 not clinically validated and are not intended for use in examinations or teaching without expert review; two physicians
 found a content defect in about one item in eight of a 100-item sample (see the paper).
 
-**Provenance and licence.** Generated through the OpenRouter gateway under the prompts in `config/prompts/`; item text is
+**Provenance and license.** Generated through the OpenRouter gateway under the prompts in `config/prompts/`; item text is
 released as generated and each model's terms of use may apply; labels, metadata and the compilation are CC BY 4.0.
 No human subjects data; the physician ratings in `outputs/content_rating/` are released with both raters' written consent.
 

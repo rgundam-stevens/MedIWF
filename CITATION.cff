@@ -9,6 +9,14 @@ version: "1.0"
 date-released: "2026-09-22"
 license: MIT
 repository-code: https://github.com/rgundam-stevens/MedIWF
+doi: 10.5281/zenodo.22903818
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22903818
+    description: "Zenodo archive, all versions"
+  - type: url
+    value: https://huggingface.co/datasets/rgundam/MedIWF
+    description: "Corpus on Hugging Face"
 keywords:
   - item-writing flaws
   - multiple-choice questions

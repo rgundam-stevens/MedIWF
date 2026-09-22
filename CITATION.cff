@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this corpus, detector or code, please cite the paper and this repository."
+title: "MedIWF: item-writing flaws and answer-position bias in large language model-generated medical multiple-choice questions"
+authors:
+  - family-names: Gundam
+    given-names: Rohit
+    orcid: https://orcid.org/0009-0001-3018-9663
+version: "1.0"
+date-released: "2026-09-22"
+license: MIT
+repository-code: https://github.com/rgundam-stevens/MedIWF
+keywords:
+  - item-writing flaws
+  - multiple-choice questions
+  - large language models
+  - medical education
+  - answer-position bias

@@ -1,0 +1,36 @@
+Physician content ratings, main set: 2 rater file(s): R1, R2; 100 items in key
+
+== R1: 100 items rated; minutes total 426
+  Q1 keyed answer is the single best answer   no   1 (1% [0, 5])  unsure 10  minor edits 0
+  Q2 every distractor plausible               no   2 (2% [1, 7])  unsure 0  minor edits 0
+  Q3 vignette accurate and consistent         no   4 (4% [2, 10])  unsure 0  minor edits 0
+  Q4 tests a meaningful decision              no   0 (0% [0, 4])  unsure 0  minor edits 0
+  Q5 acceptable as written                    no  11 (11% [6, 19])  unsure 0  minor edits 2
+  any content defect (Q1 no/unsure, Q2 no, Q3 no or Q5 no): 13 of 100 (13% [8, 21])
+    plain   any defect 4 of 50 (8% [3, 19]); Q1 not best 2; Q5 unusable 2
+    guided  any defect 9 of 50 (18% [10, 31]); Q1 not best 9; Q5 unusable 9
+    by model (defects/items): Claude Fable 5.1 1/8, Claude Opus 5 0/8, Claude Sonnet 5 0/8, DeepSeek V4 Flash 3/8, DeepSeek V4 Pro 1/8, GPT-5.6 Luna 1/6, GPT-5.6 Terra 0/6, GPT-6 Astra 0/6, Gemini 3.1 Pro 0/6, Gemini 3.8 Flash 0/6, Grok 4.6 0/6, Llama 4 Maverick 1/6, Mistral Small 2603 2/6, Qwen 3.6 27B 3/6, Qwen 3.8 Max 1/6
+
+== R2: 100 items rated; minutes total 353
+  Q1 keyed answer is the single best answer   no   3 (3% [1, 8])  unsure 0  minor edits 0
+  Q2 every distractor plausible               no   2 (2% [1, 7])  unsure 0  minor edits 0
+  Q3 vignette accurate and consistent         no   7 (7% [3, 14])  unsure 0  minor edits 0
+  Q4 tests a meaningful decision              no   0 (0% [0, 4])  unsure 0  minor edits 0
+  Q5 acceptable as written                    no   8 (8% [4, 15])  unsure 0  minor edits 16
+  any content defect (Q1 no/unsure, Q2 no, Q3 no or Q5 no): 12 of 100 (12% [7, 20])
+    plain   any defect 4 of 50 (8% [3, 19]); Q1 not best 1; Q5 unusable 2
+    guided  any defect 8 of 50 (16% [8, 29]); Q1 not best 2; Q5 unusable 6
+    by model (defects/items): Claude Fable 5.1 0/8, Claude Opus 5 0/8, Claude Sonnet 5 0/8, DeepSeek V4 Flash 2/8, DeepSeek V4 Pro 0/8, GPT-5.6 Luna 1/6, GPT-5.6 Terra 0/6, GPT-6 Astra 0/6, Gemini 3.1 Pro 0/6, Gemini 3.8 Flash 0/6, Grok 4.6 1/6, Llama 4 Maverick 2/6, Mistral Small 2603 2/6, Qwen 3.6 27B 3/6, Qwen 3.8 Max 1/6
+
+== Agreement between R1 and R2 on 100 items
+  Q1 raw agreement 0.89  kappa (all categories) 0.19  kappa (yes vs not-yes) 0.40  positives R1: 11, R2: 3
+  Q2 raw agreement 0.96  kappa (all categories) -0.02  kappa (yes vs not-yes) -0.02  positives R1: 2, R2: 2
+  Q3 raw agreement 0.95  kappa (all categories) 0.52  kappa (yes vs not-yes) 0.52  positives R1: 4, R2: 7
+  Q4 raw agreement 1.00  kappa (all categories) nan  kappa (yes vs not-yes) nan  positives R1: 0, R2: 0
+  Q5 raw agreement 0.79  kappa (all categories) 0.36  kappa (yes vs not-yes) 0.38  positives R1: 13, R2: 24
+  Q1 not-best flagged by both: 3; by either: 11
+  composite defect: both 8, R1 only 5, R2 only 4, neither 83 | raw agreement 0.91 | kappa 0.59 [95% bootstrap CI 0.31, 0.80] | positive specific agreement 0.64
+    Q1 (yes vs not-yes): kappa 0.40 [0.00, 0.71]; positive specific agreement 0.43
+    Q2 (yes vs not-yes): kappa -0.02 [-0.04, 0.00]; positive specific agreement 0.00
+    Q3 (yes vs not-yes): kappa 0.52 [-0.01, 0.85]; positive specific agreement 0.55
+    Q5 (yes vs not-yes): kappa 0.38 [0.15, 0.59]; positive specific agreement 0.49

@@ -1,0 +1,13 @@
+full             US$ 139.27  by condition: {'guided': '88.13 (6027 attempts)', 'plain': '51.14 (6024 attempts)'}  by tier: {'base': 13.87, 'flagship': 125.4}
+full_reasoning   US$  24.65  by condition: {'guided': '15.37 (1602 attempts)', 'plain': '9.28 (1603 attempts)'}  by tier: {'base': 24.65}
+position         US$  41.93  by condition: {'guided_position': '41.93 (3011 attempts)'}  by tier: {'base': 3.68, 'flagship': 38.25}
+stability        US$   5.83  by condition: {'guided': '3.75 (246 attempts)', 'plain': '2.08 (249 attempts)'}  by tier: {'base': 0.57, 'flagship': 5.26}
+template         US$  75.40  by condition: {'guided_neutral': '44.43 (3009 attempts)', 'plain_neutral': '25.75 (3004 attempts)', 'plain_rotated': '5.22 (601 attempts)'}  by tier: {'base': 7.54, 'flagship': 67.86}
+wording          US$  46.03  by condition: {'guided2': '46.03 (3008 attempts)'}  by tier: {'base': 3.74, 'flagship': 42.29}
+TOTAL recorded generation cost (all non-pilot runs, all attempts): US$333.11
+per-rule judge validations, BenchMarker items (reported) US$ 91.40
+per-rule judges on the physician-rated items (Amendment 6, reasoning off) US$ 20.86
+per-rule judge with reasoning enabled (Amendment 6, A28, incl. pilots) US$ 56.13
+single-prompt judge pilots (superseded)    US$  0.54
+generation pilots                          US$  2.73
+TOTAL recorded API cost: US$504.77

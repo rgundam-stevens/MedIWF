@@ -1,0 +1,95 @@
+You are an expert evaluator of multiple-choice questions (MCQs). 
+You are given the following writing rule:
+
+<rule>
+Questions and options should be written in clear, unambiguous language.
+</rule>
+
+Your task is to judge whether a given MCQ **follows this rule**. Here are some guidelines for this specific rule:
+
+<guidelines>
+For example, if the question says 'Which of these is the best?' without specifying context, condition, or what terms like 'best' means, return fail. If the question is clear and all terms are defined or can be reasonably inferred, return pass. Using pronouns like 'it' and 'they' is allowed (pass), as long as it is obvious what they refer to. This judgement should not encompass whether multiple choices could be correct, but rather whether the question and choices are clear and unambiguous.
+</guidelines>
+
+<examples>
+<flawed example>
+<multiple-choice question>
+Question: To avoid getting juice on your cheeks when eating watermelon,
+Choices:
+(A) crush the water melon into pulp between your lips before putting it into your mouth
+(B) cut the green piece off the end of a slice of watermelon so your bite is note restricted
+Answer: B
+</multiple-choice question>
+<label>
+1
+</label>
+<explanation>
+Choice (B) uses the phrase 'note restricted' has a spelling errors (likely should be 'not restricted') and thus violates the clear-language rule.
+</explanation>
+</flawed example>
+
+<flawed example>
+<multiple-choice question>
+Question: What lasts only as long as the antibodies survive in body fluids?
+Choices:
+(A) recovery time from fatigue
+(B) food poisoning
+(C) during the day
+(D) leptospirosis
+(E) retaining heat
+(F) breastfeeding provides
+(G) an area swollen with pus
+(H) something that causes allergies
+Answer: F
+</multiple-choice question>
+<label>
+1
+</label>
+<explanation>
+Options like 'breastfeeding provides' and the question stem 'What lasts only as long as the antibodies survive in body fluids?' are not gramatically correct in English and thus violate the clear-language rule.
+</explanation>
+</flawed example>
+
+<not flawed example>
+<multiple-choice question>
+Question: How can a location's climate be determined?
+Choices:
+(A) look at the weather many mornings afternoons and evenings in different seasons
+(B) look at the the most extreme weather events
+(C) look at the weather at noon only
+(D) look at the weather on one day
+Answer: A
+</multiple-choice question>
+<label>
+0
+</label>
+<explanation>
+The question stem and options are all gramatically correct and understandable and thus do not violate the clear-language rule.
+</explanation>
+</not flawed example>
+</examples>
+
+<general instructions>
+- Think carefully about whether the MCQ adheres to the rule.
+- If the rule is clearly followed and there are no flaws in the MCQ, return "pass".
+- If the rule is clearly violated and there are no flaws in the MCQ, return "fail".
+- In borderline cases where you are unsure, return "pass".
+- Provide a confidence score from 1-10 for your pass/fail decision - how strongly you believe the MCQ follows or violates the rule. 1 means not at all confident and 10 means very confident.
+- Provide a short, clear explanation of your reasoning.
+</general instructions>
+
+Here is the MCQ to evaluate:
+<multiple-choice question>
+Question Stem: {question}
+Choices: {choices}
+</multiple-choice question>
+
+<format>
+Return your output as valid JSON in the following format:
+{lbrace}
+  "result": "pass" | "fail",
+  "confidence": 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10,
+  "explanation": "Your explanation here"
+{rbrace}
+Do not include anything else.
+</format>

@@ -1,0 +1,5 @@
+Format check of outputs/content_rating/ratings/main_R1_raw.json (R1): 100 rows read; 1 problems
+  MAIN-023: justification missing for a no/unsure/minor-edits rating
+Rating counts: Q1 {'yes': 89, 'unsure': 10, 'no': 1}; Q2 {'yes': 98, 'no': 2}; Q3 {'yes': 96, 'no': 4}; Q4 {'yes': 100}; Q5 {'yes': 87, 'no': 11, 'minor edits': 2}
+Minutes: total 426, median 4.0, min 2.0, max 8.0, items with < 1 minute: 0
+Internal-consistency notes (0):

@@ -1,0 +1,21 @@
+item_id,keyed_answer,q1,q2,q3,q4,q5,justification,minutes,rater,submitted_utc
+CAL-01,B,Yes,Yes,Yes,Yes,Yes,,5,R1,2026-09-15T16:04
+CAL-02,D,No,Yes,Yes,Yes,No,"The patient meets criteria for pre-eclampsia without severe features moreover she is less than 34 weeks of gestation, management options are follow up visits for both mother and fetus and correction of blood presure +/- adding steroids (choice A), Last choice would have been the best choice if it was expectant management/follow up. And if the woman was actively in labor, choice A will be the correct answer, either way, key answer here is incorrect.",10,R1,2026-09-15T16:04
+CAL-03,D,Yes,Yes,Yes,Yes,Yes,,3,R1,2026-09-15T16:04
+CAL-04,C,Yes,Yes,Yes,Yes,Yes,,3,R1,2026-09-15T16:04
+CAL-05,A,No,Yes,Yes,Yes,No,"For every pneumonia patient, we calculate CURB-65 score, via which we decide on management plan and subsequently the drugs. This patient's score is 1 which means he i suitable for outpatiet management using monotherapy with either Levofloxacin (choice B) or Moxifloxacin (choice C). Both are listed as answer choices, key answer is wrong",5,R1,2026-09-15T16:04
+CAL-06,A,Yes,Yes,Yes,Yes,Yes,,2,R1,2026-09-15T16:04
+CAL-07,A,Yes,Yes,Yes,Yes,Yes,,4,R1,2026-09-15T16:04
+CAL-08,E,No,Yes,Yes,Yes,No,"Jaundice on the first day of life is always pathological and of acute onset, commonest cause is ABO incompatibility which the vignette is clearly referring to by clarifying the blood groups of both the mother and the infant. The thyroid gland is strongly unrelated to first day jaundice. Key answer id incorrect",7,R1,2026-09-15T16:04
+CAL-09,A,No,Yes,Yes,Yes,No,"A and D both are correct answer choices, this patient suffers from Subacute Bacterial Peritonitis given his high neutrophil count, the antibiotic of choice is 3rd generation cephalosporins (ceftriaxone and cefotaxime) which is seen in both A and D",7,R1,2026-09-15T16:04
+CAL-10,E,Yes,Yes,Yes,Yes,Yes,,4,R1,2026-09-15T16:04
+CAL-11,B,Yes,Yes,Yes,Yes,Yes,,3,R1,2026-09-15T16:04
+CAL-12,E,Yes,Yes,Yes,Yes,Yes,,3,R1,2026-09-15T16:04
+CAL-13,A,Yes,No,Yes,Yes,Minor edits,Last choice is irrelevant,3,R1,2026-09-15T16:04
+CAL-14,A,Yes,Yes,No,Yes,No,"Hemoglobin is 15.8 g/dL, this number is normal, incosistent with other labs and the diagnosis of IDA.",5,R1,2026-09-15T16:04
+CAL-15,D,Yes,Yes,Yes,Yes,Yes,,2,R1,2026-09-15T16:04
+CAL-16,A,No,Yes,Yes,Yes,Yes,Watchful waiting (B) is the way to go forin asymptomatic/old age patients with reducible inguinal hernia.,3,R1,2026-09-15T16:04
+CAL-17,A,Yes,Yes,Yes,Yes,Yes,,2,R1,2026-09-15T16:04
+CAL-18,B,Yes,Yes,Yes,Yes,Yes,,2,R1,2026-09-15T16:04
+CAL-19,E,No,Yes,Yes,Yes,No,"As long as the patient is consious and can tolerate oral feeding, no tube is indicated, in fact it is contraindicated (choice e), instead, in patients wth severe dehydration IV fluids should be started immedately (Choice A)",5,R1,2026-09-15T16:04
+CAL-20,E,Yes,Yes,Yes,Yes,Yes,,3,R1,2026-09-15T16:04

@@ -1,0 +1,31 @@
+NBME items: 667 | any core flaw: 16.5% | mean core flaws/item: 0.178
+Difficulty: mean 0.488 sd 0.309 | Response time: mean 86.2 sd 29.5
+
+== OLS of difficulty (transformed; higher = harder) on flaw flags, adjusting for exam step, item type and log stem length (HC1 robust SE)
+  n_core                     n_flagged=110  b=-0.044 [-0.100, +0.011]  p=0.115  q=0.416  (R2=0.039)
+  core_any                   n_flagged=110  b=-0.036 [-0.100, +0.028]  p=0.274  q=0.416  (R2=0.037)
+  longest_option_key         n_flagged= 20  b=+0.069 [-0.065, +0.203]  p=0.312  q=0.416  (R2=0.036)
+  absolute_terms             n_flagged= 21  b=-0.204 [-0.329, -0.079]  p=0.0014  q=0.0112  (R2=0.048)
+  clang_cue                  n_flagged= 47  b=-0.032 [-0.135, +0.072]  p=0.549  q=0.549  (R2=0.036)
+  nonparallel_options        n_flagged= 24  b=-0.060 [-0.164, +0.043]  p=0.254  q=0.416  (R2=0.036)
+  option_length_outlier      n_flagged=243  b=-0.025 [-0.074, +0.023]  p=0.307  q=0.416  (R2=0.037)
+  options_not_alphabetical   n_flagged=115  b=-0.021 [-0.085, +0.043]  p=0.521  q=0.549  (R2=0.036)
+
+== OLS of response time (s) on flaw flags, adjusting for exam step, item type and log stem length (HC1 robust SE)
+  n_core                     n_flagged=110  b=-3.342 [-7.924, +1.241]  p=0.153  q=0.245  (R2=0.209)
+  core_any                   n_flagged=110  b=-2.915 [-8.290, +2.461]  p=0.288  q=0.384  (R2=0.208)
+  longest_option_key         n_flagged= 20  b=+6.752 [-8.818, +22.322]  p=0.395  q=0.452  (R2=0.209)
+  absolute_terms             n_flagged= 21  b=-14.283 [-21.390, -7.176]  p=8.18e-05  q=0.000506  (R2=0.214)
+  clang_cue                  n_flagged= 47  b=-10.779 [-17.362, -4.196]  p=0.00133  q=0.00355  (R2=0.216)
+  nonparallel_options        n_flagged= 24  b=+7.878 [-1.331, +17.087]  p=0.0936  q=0.187  (R2=0.210)
+  option_length_outlier      n_flagged=243  b=-7.730 [-11.683, -3.777]  p=0.000127  q=0.000506  (R2=0.223)
+  options_not_alphabetical   n_flagged=115  b=-1.535 [-6.453, +3.382]  p=0.541  q=0.541  (R2=0.207)
+
+== Descriptive: mean difficulty and response time by number of core flaws
+          n  difficulty  response_time
+n_core                                
+0       557       0.491         86.476
+1       101       0.484         85.846
+2         9       0.311         75.294
+
+== Key position (all 667 items): {'A': 135, 'B': 129, 'C': 111, 'D': 147, 'E': 125, 'F': 15, 'G': 3, 'H': 2}

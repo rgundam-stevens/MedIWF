@@ -1,0 +1,17 @@
+== 1. Flagship vs base tier, model as the unit (plain prompt)
+  flagship mean 22.1% (SD 5.3, n=7) vs base mean 24.6% (SD 6.1, n=8): difference -2.5 points, 95% CI -8.9 to 3.9 (Welch, df=13.0)
+  pooled SD 5.8 points; smallest difference detectable with 80% power at alpha 0.05 (two-sided, 7 vs 8 models): 9.1 points; power for the observed 2.5-point difference: about 13% (normal approximation)
+  cluster-robust logistic regression (clusters = 15 models, adjusted for condition and specialty): OR 0.80; 95% CI with normal critical value 0.58-1.11; with t(G-1 = 14) critical value 0.56-1.14
+
+== 2. Share of keys at A, all items vs primary-provider items only (primary = the most frequent provider of the model in that arm)
+  main corpus, plain           all n= 6000 key-at-A 53.7% | primary-provider n= 5937 key-at-A 53.5%  | models with a second provider: DeepSeek V4 Pro 75% -> 73% (n 400 -> 362); Gemini 3.1 Pro 46% -> 46% (n 400 -> 397); Gemini 3.8 Flash 28% -> 28% (n 400 -> 378)
+  main corpus, guided          all n= 6000 key-at-A 43.3% | primary-provider n= 5931 key-at-A 43.2%  | models with a second provider: Claude Fable 5.1 20% -> 21% (n 400 -> 399); DeepSeek V4 Pro 68% -> 67% (n 400 -> 361); Gemini 3.1 Pro 22% -> 21% (n 400 -> 398); Gemini 3.8 Flash 19% -> 19% (n 400 -> 373)
+  template arm, plain_neutral  all n= 3000 key-at-A 22.9% | primary-provider n= 2988 key-at-A 22.9%  | models with a second provider: Claude Fable 5.1 24% -> 24% (n 200 -> 199); DeepSeek V4 Pro 25% -> 25% (n 200 -> 199); Gemini 3.1 Pro 26% -> 25% (n 200 -> 198); Gemini 3.8 Flash 18% -> 19% (n 200 -> 192)
+  template arm, plain_rotated  all n=  600 key-at-A 16.7% | primary-provider n=  597 key-at-A 16.6%  | models with a second provider: Claude Fable 5.1 10% -> 10% (n 40 -> 39); Gemini 3.8 Flash 28% -> 26% (n 40 -> 38)
+  template arm, guided_neutral all n= 3000 key-at-A 24.1% | primary-provider n= 2954 key-at-A 24.1%  | models with a second provider: Claude Fable 5.1 19% -> 19% (n 200 -> 195); DeepSeek V4 Pro 30% -> 29% (n 200 -> 199); Gemini 3.1 Pro 21% -> 21% (n 200 -> 199); Gemini 3.8 Flash 18% -> 16% (n 200 -> 161)
+
+== 3. Headline estimates under each detector version (crude, unadjusted; same items)
+  version  plain any-flaw   guided any-flaw  OR guided/plain plain longest  plain clang    plain absolute NBME-5 any  
+  v1.0                27.6%            18.6%           0.60          10.9%           9.7%           4.5%        21.9%   (14 of 14 rules present)
+  v1.1                23.4%            13.5%           0.51          10.9%           8.4%           4.5%        16.8%   (14 of 14 rules present)
+  v1.2                23.4%            13.6%           0.51          10.9%           8.3%           4.6%        17.3%   (14 of 14 rules present)

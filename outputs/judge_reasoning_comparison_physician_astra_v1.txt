@@ -1,0 +1,18 @@
+Reasoning disabled vs enabled, same judge, 100 items with all four verdicts in both files (physician labels)
+thinking used on 323 of 400 calls (81%); median 59, max 908 thinking tokens when used; cost off $6.22 vs on $7.67 (records in the files)
+
+== Verdict agreement between the two settings
+  single_best_answer     identical on  98 of 100 items (98%); off->on: 1 pass->fail, 1 fail->pass; fail rate off 12%, on 12%
+  plausible_distractors  identical on  99 of 100 items (99%); off->on: 0 pass->fail, 1 fail->pass; fail rate off 1%, on 0%
+  no_extraneous_info     identical on  93 of 100 items (93%); off->on: 6 pass->fail, 1 fail->pass; fail rate off 21%, on 26%
+  focused_stem           identical on 100 of 100 items (100%); off->on: 0 pass->fail, 0 fail->pass; fail rate off 1%, on 1%
+
+== Agreement with the human label under each setting (kappa [95% CI]); McNemar exact test on items where only one setting agrees with the human
+  vs R1:
+  single_best_answer     off kappa 0.56 [0.26, 0.79] (tp 7 fp 5 fn 4)  on kappa 0.56 [0.26, 0.79] (tp 7 fp 5 fn 4)  | only-off-correct 1, only-on-correct 1, McNemar p=1.000
+  plausible_distractors  off kappa -0.01 [-0.03, 0.00] (tp 0 fp 1 fn 2)  on kappa 0.00 [0.00, 0.00] (tp 0 fp 0 fn 2)  | only-off-correct 0, only-on-correct 1, McNemar p=1.000
+  composite              off kappa 0.15 [-0.02, 0.35] (tp 7 fp 25 fn 6)  on kappa 0.11 [-0.05, 0.28] (tp 7 fp 30 fn 6)  | only-off-correct 7, only-on-correct 2, McNemar p=0.180
+  vs R2:
+  single_best_answer     off kappa 0.37 [0.00, 0.67] (tp 3 fp 9 fn 0)  on kappa 0.37 [0.00, 0.67] (tp 3 fp 9 fn 0)  | only-off-correct 1, only-on-correct 1, McNemar p=1.000
+  plausible_distractors  off kappa -0.01 [-0.03, 0.00] (tp 0 fp 1 fn 2)  on kappa 0.00 [0.00, 0.00] (tp 0 fp 0 fn 2)  | only-off-correct 0, only-on-correct 1, McNemar p=1.000
+  composite              off kappa 0.28 [0.10, 0.47] (tp 9 fp 23 fn 3)  on kappa 0.23 [0.06, 0.40] (tp 9 fp 28 fn 3)  | only-off-correct 7, only-on-correct 2, McNemar p=0.180

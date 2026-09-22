@@ -1,0 +1,92 @@
+You are an expert evaluator of multiple-choice questions (MCQs). 
+You are given the following writing rule:
+
+<rule>
+Avoid gratuitous or unnecessary information in the stem or options; include only what is required.
+</rule>
+
+Your task is to judge whether a given MCQ **follows this rule**. Here are some guidelines for this specific rule:
+
+<guidelines>
+Fail only if removing a clause/sentence from the stem does not change which option is correct and does not change the difficulty/construct being measured. Exceptions include contextual passages (reading comprehension), scenario-based items where details are diagnostic of the construct.
+</guidelines>
+
+<examples>
+<flawed example>
+<multiple-choice question>
+Question: To remove an acorn nut from an acorn
+Choices:
+(A) place the acorn onto a cutting board hit the acorn with a meat tenderizer to crack  it remove nut from the acorn shell
+(B) place the acorn onto a cutting board hit the acorn with a meat tenderizer to crack it open remove nut from the acorn shell
+Answer: B
+</multiple-choice question>
+<label>
+1
+</label>
+<explanation>
+Saying 'remove an acorn nut from an acorn' in the question stem is repetitive as it could be largely condensed to 'To remove an acorn nut', which violates the no-extraneous-info rule.
+</explanation>
+</flawed example>
+
+<flawed example>
+<multiple-choice question>
+Question: Susan was an ordinatry person, but her skills were not ordinary, they were what?
+Choices:
+(A) exceptional
+(B) strange
+(C) spectacular
+(D) unusual
+(E) special
+Answer: A
+</multiple-choice question>
+<label>
+1
+</label>
+<explanation>
+The use of 'ordinay' twice in the question stem (i.e. to describe Susan as a person) is extraneous and could be condensed to 'Susan's skils were not ordinary, so they were what?', which violates the no-extraneous-info rule.
+</explanation>
+</flawed example>
+
+<not flawed example>
+<multiple-choice question>
+Question: If a bird lives in a dangerous place with fires and predators, a bird will likely
+Choices:
+(A) live longer
+(B) flourish
+(C) thrive
+(D) acquire characteristics
+Answer: D
+</multiple-choice question>
+<label>
+0
+</label>
+<explanation>
+All of the information in the question stem is useful for understanding what is being asked (i.e. without giving examples of what dangerous means, it is unclear what type of danger the bird is in), so it does not violate the no-extraneous-info rule.
+</explanation>
+</not flawed example>
+</examples>
+
+<general instructions>
+- Think carefully about whether the MCQ adheres to the rule.
+- If the rule is clearly followed and there are no flaws in the MCQ, return "pass".
+- If the rule is clearly violated and there are no flaws in the MCQ, return "fail".
+- In borderline cases where you are unsure, return "pass".
+- Provide a confidence score from 1-10 for your pass/fail decision - how strongly you believe the MCQ follows or violates the rule. 1 means not at all confident and 10 means very confident.
+- Provide a short, clear explanation of your reasoning.
+</general instructions>
+
+Here is the MCQ to evaluate:
+<multiple-choice question>
+Question Stem: {question}
+Choices: {choices}
+</multiple-choice question>
+
+<format>
+Return your output as valid JSON in the following format:
+{lbrace}
+  "result": "pass" | "fail",
+  "confidence": 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10,
+  "explanation": "Your explanation here"
+{rbrace}
+Do not include anything else.
+</format>

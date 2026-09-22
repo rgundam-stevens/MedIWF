@@ -1,0 +1,30 @@
+Model-level prevalence of any core flaw (detector 1.1):
+condition                    guided  plain  both
+model_label        tier                         
+Claude Fable 5.1   flagship     9.5   24.5  17.0
+Claude Opus 5      flagship    19.3   29.0  24.2
+Claude Sonnet 5    base        20.2   32.8  26.5
+DeepSeek V4 Flash  base        12.2   21.2  16.8
+DeepSeek V4 Pro    flagship    18.5   22.2  20.4
+GPT-5.6 Luna       base        16.8   33.0  24.9
+GPT-5.6 Terra      base        13.2   29.0  21.1
+GPT-6 Astra        flagship     5.0   24.5  14.8
+Gemini 3.1 Pro     flagship    10.0   12.5  11.2
+Gemini 3.8 Flash   base         8.5   15.5  12.0
+Grok 4.6           flagship     3.5   18.0  10.8
+Llama 4 Maverick   base        13.8   23.8  18.8
+Mistral Small 2603 base        23.6   19.8  21.7
+Qwen 3.6 27B       base        14.2   21.8  18.0
+Qwen 3.8 Max       flagship    14.0   23.0  18.5
+
+plain   flagship mean 22.0% (n=7 models) vs base mean 24.6% (n=8): difference -2.6 points
+        exact permutation test over 6435 assignments: p = 0.405 | Welch t = -0.87, df = 13.0, p = 0.383
+
+guided  flagship mean 11.4% (n=7 models) vs base mean 15.3% (n=8): difference -3.9 points
+        exact permutation test over 6435 assignments: p = 0.188 | Welch t = -1.36, df = 11.3, p = 0.174
+
+both    flagship mean 16.7% (n=7 models) vs base mean 20.0% (n=8): difference -3.3 points
+        exact permutation test over 6435 assignments: p = 0.201 | Welch t = -1.33, df = 12.5, p = 0.184
+
+Cluster-robust logistic regression with clusters = models (G = 15), adjusted for condition and specialty:
+  flagship OR = 0.80 [0.58, 1.11], p = 0.174   (compare model_effects.py, clusters = topics)

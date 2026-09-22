@@ -1,0 +1,32 @@
+{
+ "n": 525,
+ "definition": "five-option retired USMLE items; any_core = any of the 14 core rules (mediwf.rules.CORE)",
+ "detector_version": "1.2",
+ "key_counts": {
+  "C": 89,
+  "A": 110,
+  "D": 118,
+  "E": 109,
+  "B": 99
+ },
+ "any_core": 91,
+ "flaw_counts": {
+  "negative_stem": 0,
+  "none_of_the_above": 0,
+  "all_of_the_above": 0,
+  "combination_options": 0,
+  "fill_in_blank": 0,
+  "true_false_stem": 0,
+  "longest_option_key": 15,
+  "absolute_terms": 16,
+  "vague_terms": 3,
+  "clang_cue": 44,
+  "grammatical_cue": 0,
+  "nonparallel_options": 17,
+  "numeric_not_ordered": 1,
+  "overlapping_options": 3,
+  "option_length_outlier": 207,
+  "options_not_alphabetical": 95,
+  "numeric_units_inconsistent": 2
+ }
+}

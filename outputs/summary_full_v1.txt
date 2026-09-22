@@ -1,0 +1,36 @@
+raw records=6400 (including retried failures)
+run=full  records=6400
+
+anthropic/claude-sonnet-5
+  n=800 parsed_ok=797 cost=$4.0408 ($0.0051/item) tokens in/out=360544/331970 mean_latency=5.3s
+  providers={'Claude Platform on AWS': 800} n_options={5: 797} key_positions={'D': 86, 'B': 232, 'C': 188, 'A': 234, 'E': 57} mean_stem_chars=573
+  errors={'missing_fields': 1, 'not_json': 2}
+
+deepseek/deepseek-v4-flash
+  n=800 parsed_ok=800 cost=$0.0516 ($0.0001/item) tokens in/out=228392/175213 mean_latency=7.3s
+  providers={'DeepInfra': 800} n_options={5: 800} key_positions={'A': 511, 'D': 48, 'B': 115, 'C': 102, 'E': 24} mean_stem_chars=455
+
+google/gemini-3.8-flash
+  n=800 parsed_ok=777 cost=$5.7308 ($0.0072/item) tokens in/out=227937/1482622 mean_latency=14.0s
+  providers={'Google': 753, 'Google AI Studio': 47} n_options={5: 777} key_positions={'A': 181, 'E': 120, 'C': 174, 'D': 119, 'B': 183} mean_stem_chars=679
+  errors={'empty': 21, 'not_json': 2}
+
+meta-llama/llama-4-maverick
+  n=800 parsed_ok=800 cost=$0.1656 ($0.0002/item) tokens in/out=234484/148396 mean_latency=2.5s
+  providers={'DeepInfra': 800} n_options={5: 800} key_positions={'A': 719, 'C': 27, 'B': 34, 'E': 6, 'D': 14} mean_stem_chars=339
+
+mistralai/mistral-small-2603
+  n=800 parsed_ok=800 cost=$0.1485 ($0.0002/item) tokens in/out=233080/192940 mean_latency=2.1s
+  providers={'Mistral': 800} n_options={5: 798, 6: 2} key_positions={'C': 43, 'A': 668, 'D': 29, 'B': 50, 'E': 10} mean_stem_chars=457
+
+openai/gpt-5.6-luna
+  n=800 parsed_ok=800 cost=$0.2578 ($0.0003/item) tokens in/out=230992/176362 mean_latency=3.0s
+  providers={'OpenAI': 800} n_options={5: 800} key_positions={'B': 27, 'A': 741, 'E': 7, 'C': 17, 'D': 8} mean_stem_chars=495
+
+openai/gpt-5.6-terra
+  n=800 parsed_ok=800 cost=$2.4823 ($0.0031/item) tokens in/out=230992/168361 mean_latency=3.6s
+  providers={'OpenAI': 800} n_options={5: 800} key_positions={'A': 382, 'D': 79, 'C': 127, 'B': 190, 'E': 22} mean_stem_chars=459
+
+qwen/qwen3.6-27b
+  n=800 parsed_ok=800 cost=$0.8246 ($0.0010/item) tokens in/out=246416/234589 mean_latency=8.8s
+  providers={'SiliconFlow': 800} n_options={5: 800} key_positions={'B': 253, 'A': 289, 'E': 16, 'C': 165, 'D': 77} mean_stem_chars=591

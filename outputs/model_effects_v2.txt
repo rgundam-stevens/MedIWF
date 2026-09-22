@@ -1,0 +1,83 @@
+N items = 6400; models = 8; topics = 200
+
+== Prevalence of ANY core structural flaw (validated rules), with Wilson 95%% CI
+  plain   Claude Sonnet 5       34.8% [30.2, 39.5]  n=400
+  plain   DeepSeek V4 Flash     25.5% [21.5, 30.0]  n=400
+  plain   GPT-5.6 Luna          36.8% [32.2, 41.6]  n=400
+  plain   GPT-5.6 Terra         33.5% [29.1, 38.3]  n=400
+  plain   Gemini 3.8 Flash      20.8% [17.1, 25.0]  n=400
+  plain   Llama 4 Maverick      27.0% [22.9, 31.6]  n=400
+  plain   Mistral Small 2603    24.2% [20.3, 28.7]  n=400
+  plain   Qwen 3.6 27B          26.2% [22.2, 30.8]  n=400
+  guided  Claude Sonnet 5       25.5% [21.5, 30.0]  n=400
+  guided  DeepSeek V4 Flash     16.2% [13.0, 20.2]  n=400
+  guided  GPT-5.6 Luna          21.5% [17.8, 25.8]  n=400
+  guided  GPT-5.6 Terra         20.5% [16.8, 24.7]  n=400
+  guided  Gemini 3.8 Flash      12.8% [ 9.8, 16.4]  n=400
+  guided  Llama 4 Maverick      17.0% [13.6, 21.0]  n=400
+  guided  Mistral Small 2603    28.2% [24.1, 32.9]  n=400
+  guided  Qwen 3.6 27B          18.2% [14.8, 22.3]  n=400
+
+== Effect of the guided prompt on any core flaw, adjusted for model and specialty (cluster-robust by topic)
+  overall OR (guided vs plain) = 0.62 [0.55, 0.69], p = 4.62e-17
+
+== Per-model effect of the guided prompt on any core flaw (separate models per generator, adjusted for specialty)
+  Claude Sonnet 5      OR=0.64 [0.47, 0.87]  p=0.00392  q(BH)=0.00448
+  DeepSeek V4 Flash    OR=0.56 [0.41, 0.78]  p=0.000484  q(BH)=0.000978
+  GPT-5.6 Luna         OR=0.47 [0.34, 0.64]  p=1.75e-06  q(BH)=1.4e-05
+  GPT-5.6 Terra        OR=0.51 [0.37, 0.69]  p=2.19e-05  q(BH)=8.77e-05
+  Gemini 3.8 Flash     OR=0.55 [0.37, 0.80]  p=0.00168  q(BH)=0.00224
+  Llama 4 Maverick     OR=0.54 [0.38, 0.76]  p=0.000489  q(BH)=0.000978
+  Mistral Small 2603   OR=1.23 [0.91, 1.67]  p=0.172  q(BH)=0.172
+  Qwen 3.6 27B         OR=0.62 [0.46, 0.83]  p=0.00162  q(BH)=0.00224
+
+== Per-flaw effect of the guided prompt, pooled over models (adjusted for model and specialty); flaws with >= 30 events
+  longest_option_key         events= 574  OR=0.53 [0.45, 0.63]  p=1.8e-12  q=6.1e-12
+  absolute_terms             events= 211  OR=0.23 [0.16, 0.34]  p=1.1e-13  q=5.5e-13
+  clang_cue                  events= 582  OR=0.75 [0.63, 0.89]  p=0.00088  q=0.0015
+  combination_options        events=  58  OR=0.93 [0.57, 1.53]  p=0.78  q=0.78
+  overlapping_options        events=  69  OR=1.23 [0.75, 2.02]  p=0.41  q=0.46
+  grammatical_cue            events= 185  OR=1.16 [0.87, 1.54]  p=0.3  q=0.38
+  nonparallel_options        events= 133  OR=0.63 [0.43, 0.93]  p=0.02  q=0.028
+  option_length_outlier      events=1430  OR=0.69 [0.60, 0.78]  p=9.2e-09  q=2.3e-08
+  options_not_alphabetical   events=3554  OR=0.02 [0.02, 0.03]  p=4.4e-146  q=4.4e-145
+  keyA                       events=3733  OR=0.72 [0.63, 0.82]  p=1.1e-06  q=2.3e-06
+
+== Model differences in any core flaw, plain condition (reference = Claude Sonnet 5), adjusted for specialty
+  model_label[DeepSeek V4 Flash] OR=0.63 [0.46, 0.88] p=0.0066
+  model_label[GPT-5.6 Luna]      OR=1.09 [0.79, 1.52] p=0.59
+  model_label[GPT-5.6 Terra]     OR=0.94 [0.68, 1.31] p=0.73
+  model_label[Gemini 3.8 Flash]  OR=0.48 [0.34, 0.68] p=3.4e-05
+  model_label[Llama 4 Maverick]  OR=0.69 [0.49, 0.95] p=0.025
+  model_label[Mistral Small 2603] OR=0.59 [0.43, 0.81] p=0.0012
+  model_label[Qwen 3.6 27B]      OR=0.66 [0.47, 0.93] p=0.016
+
+== Key position: share at A and chi-square vs uniform (A-E), by model x condition; BH-FDR over the 16 tests
+  Claude Sonnet 5      plain   n=400  P(key=A)=0.28  chi2=  186.9  p=2.4e-39  q=3.5e-39
+  Claude Sonnet 5      guided  n=400  P(key=A)=0.31  chi2=   38.5  p=8.7e-08  q=1e-07
+  DeepSeek V4 Flash    plain   n=400  P(key=A)=0.77  chi2=  809.3  p=7.4e-174  q=1.7e-173
+  DeepSeek V4 Flash    guided  n=400  P(key=A)=0.51  chi2=  270.4  p=2.7e-57  q=4.8e-57
+  GPT-5.6 Luna         plain   n=400  P(key=A)=0.94  chi2= 1360.6  p=2.4e-293  q=3.9e-292
+  GPT-5.6 Luna         guided  n=400  P(key=A)=0.92  chi2= 1278.9  p=1.2e-275  q=9.9e-275
+  GPT-5.6 Terra        plain   n=400  P(key=A)=0.61  chi2=  480.4  p=1.2e-102  q=2.4e-102
+  GPT-5.6 Terra        guided  n=400  P(key=A)=0.34  chi2=   96.1  p=6.7e-20  q=8.3e-20
+  Gemini 3.8 Flash     plain   n=400  P(key=A)=0.28  chi2=   35.3  p=4e-07  q=4.3e-07
+  Gemini 3.8 Flash     guided  n=400  P(key=A)=0.19  chi2=    7.4  p=0.11  q=0.11
+  Llama 4 Maverick     plain   n=400  P(key=A)=0.91  chi2= 1252.7  p=6.1e-270  q=3.2e-269
+  Llama 4 Maverick     guided  n=400  P(key=A)=0.89  chi2= 1192.0  p=8.7e-257  q=3.5e-256
+  Mistral Small 2603   plain   n=400  P(key=A)=0.85  chi2= 1061.7  p=1.5e-228  q=4.9e-228
+  Mistral Small 2603   guided  n=400  P(key=A)=0.82  chi2=  962.5  p=4.7e-207  q=1.3e-206
+  Qwen 3.6 27B         plain   n=400  P(key=A)=0.27  chi2=  176.6  p=4.1e-37  q=5.4e-37
+  Qwen 3.6 27B         guided  n=400  P(key=A)=0.46  chi2=  218.1  p=4.9e-46  q=7.8e-46
+
+== Specialty: any core flaw prevalence (plain / guided)
+condition              guided  plain
+specialty                           
+internal_medicine       0.182  0.232
+neurology               0.172  0.242
+obstetrics_gynecology   0.242  0.370
+pathology               0.180  0.255
+pediatrics              0.215  0.398
+pharmacology            0.182  0.175
+psychiatry              0.190  0.255
+surgery                 0.235  0.360

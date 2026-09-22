@@ -1,0 +1,21 @@
+LLM-judge panel vs BenchMarker human labels, exam block (216 human-written items), Cohen's kappa per rule
+Setting: BenchMarker per-rule prompts, one call per item and rule, temperature 0, seed 7, reasoning disabled, OpenRouter. Scored by scripts/validate_judge.py.
+problem_in_stem was judged but has no human label in BenchMarker's release and cannot be scored.
+
+rule                     GPT-5.4 Mini (14 Sep) Gemini 3.1 Pro (14 Sep)      Fable 5.1 (20 Sep)    GPT-6 Astra (20 Sep)
+single_best_answer                       -0.03                    0.01                    0.05                   -0.01
+plausible_distractors                     0.10                    0.39                    0.48                    0.40
+no_extraneous_info                        0.24                    0.22                    0.29                    0.26
+focused_stem                              0.22                    0.32                    0.33                    0.33
+clear_language                            0.23                    0.28                    0.29                    0.38
+no_absolute_terms                         0.43                    0.43                    0.41                    0.43
+no_vague_terms                           -0.03                    0.10                    0.16                    0.07
+no_logical_cues                           0.25                    0.15                    0.18                    0.30
+mean, 8 rules                             0.18                    0.24                    0.27                    0.27
+mean, 4 content rules                     0.13                    0.24                    0.29                    0.24
+best rule                                 0.43                    0.43                    0.48                    0.43
+cost, USD (script count)                    1.97                   13.20                   49.41                   26.82
+
+Reading against Amendment 5 A23: primary hypothesis holds (kappa < 0.5 on every rule for both frontier judges; best 0.48, Fable 5.1 on plausible_distractors); the alternative (kappa >= 0.6 on three or more rules) is not met for either judge.
+A25 condition (i) is met (no content rule reaches 0.5 for either judge); the reasoning-on sensitivity check, if funded, goes to Fable 5.1 (higher mean content-rule kappa, 0.29 vs 0.24) on the four scorable content rules.
+Means are computed from the unrounded per-rule kappas (recomputed from the confusion counts), 21 Sep; the validation files' 'total cost' line now sums every record in the file.

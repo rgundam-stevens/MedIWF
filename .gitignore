@@ -1,0 +1,13 @@
+# NBME data: covered by a data-use agreement. Never commit or publish.
+data/nbme/*.xlsx
+data/nbme/*.csv
+# Local secrets
+.env
+*.key
+# Python
+__pycache__/
+*.pyc
+.venv/
+# OS / editors
+.DS_Store
+.ipynb_checkpoints/

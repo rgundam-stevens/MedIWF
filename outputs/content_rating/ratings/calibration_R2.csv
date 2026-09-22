@@ -1,0 +1,21 @@
+item_id,keyed_answer,q1,q2,q3,q4,q5,justification,minutes,rater,submitted_utc,q1_raw,q2_raw,q3_raw,q5_raw
+CAL-01,B,yes,yes,yes,yes,minor edits,|| Minor edits(Need to add most appropiate empiric or initial antibiotic because after urine culture trimethoprim can be an answer),3,R2,2026-09-16T05:43,Yes,Yes,Yes,Minor edits(Need to add most appropiate empiric or initial antibiotic because after urine culture trimethoprim can be an answer)
+CAL-02,D,no,yes,yes,yes,no,The Answer should be E but it could be written in much better way like 'expectant management with close maternal and fetal surveillance' || No (The answer is E) No indications for labour induction,7,R2,2026-09-16T05:43,No (The answer is E) No indications for labour induction,Yes,Yes,No
+CAL-03,D,yes,yes,yes,yes,yes,,2,R2,2026-09-16T05:43,Yes,Yes,Yes,Yes
+CAL-04,C,yes,yes,yes,yes,yes,,4,R2,2026-09-16T05:43,Yes,Yes,Yes,Yes
+CAL-05,A,no,yes,yes,yes,no,"For inpatient treatment,we can give azithro and ceftriaxone but for outpatient we give flouroquinones group in non severe CAP || No (The answer can be B and C also as inpatient and outpatient not mention)",5,R2,2026-09-16T05:43,No (The answer can be B and C also as inpatient and outpatient not mention),Yes,Yes,No
+CAL-06,A,yes,yes,yes,yes,yes,,2,R2,2026-09-16T05:43,Yes,Yes,Yes,Yes
+CAL-07,A,yes,yes,yes,yes,yes,,3,R2,2026-09-16T05:43,Yes,Yes,Yes,Yes
+CAL-08,E,no,yes,yes,yes,no,The Answer should be A because patient has hemolytic disease due to ABO incompatibility || No (A is correct because ABO incompatibility),4,R2,2026-09-16T05:43,No (A is correct because ABO incompatibility),Yes,Yes,No
+CAL-09,A,no,no,yes,yes,no,Both A and D is correct || NO(The answer can be D also) | No(The option D need to be change),4,R2,2026-09-16T05:43,NO(The answer can be D also),No(The option D need to be change),Yes,No
+CAL-10,E,no,no,no,yes,no,No (The DSM-5 diagnositc criteria for adhd is greater than 5 symptoms which the question stem lacks and also th option B is correct) || No(The answer B is also correct) | No(The option B is also correct) | No (The DSM-5 diagnositc criteria for adhd is greater than 5 symptoms),7,R2,2026-09-16T05:43,No(The answer B is also correct),No(The option B is also correct),No (The DSM-5 diagnositc criteria for adhd is greater than 5 symptoms),No
+CAL-11,B,yes,yes,yes,yes,yes,,2,R2,2026-09-16T05:43,Yes,Yes,Yes,Yes
+CAL-12,E,yes,yes,yes,yes,yes,,1,R2,2026-09-16T05:43,Yes,Yes,Yes,Yes
+CAL-13,A,yes,no,yes,yes,no,The answer E does not fit properly || NoE (amputation of the right lower extremity is not clinically plausible.,3,R2,2026-09-16T05:43,Yes,NoE (amputation of the right lower extremity is not clinically plausible.,Yes,No
+CAL-14,A,yes,yes,no,yes,no,Hemoglobin level need to be low around 6-9 || no (Iron deficiency anemia so hemoglobin should be low),3,R2,2026-09-16T05:43,Yes,Yes,no (Iron deficiency anemia so hemoglobin should be low),no
+CAL-15,D,yes,yes,yes,yes,yes,,3,R2,2026-09-16T05:43,Yes,Yes,Yes,Yes
+CAL-16,A,no,yes,yes,yes,no,B is the answer || NO(The answer is B as patient is asymptomatic),4,R2,2026-09-16T05:43,NO(The answer is B as patient is asymptomatic),yes,Yes,No
+CAL-17,A,yes,yes,yes,yes,yes,,1,R2,2026-09-16T05:43,Yes,Yes,Yes,Yes
+CAL-18,B,yes,yes,yes,yes,yes,,3,R2,2026-09-16T05:43,Yes,Yes,Yes,Yes
+CAL-19,E,no,yes,yes,yes,no,Answer is A || No(The answer is A as patient is dehydrated),4,R2,2026-09-16T05:43,No(The answer is A as patient is dehydrated),Yes,Yes,no
+CAL-20,E,yes,yes,yes,yes,yes,,4,R2,2026-09-16T05:43,Yes,Yes,Yes,Yes

@@ -1,0 +1,40 @@
+Template-control arm: 600 neutral items, 600 rotated items; plain comparison items (same topics): 1200
+
+model                | P(A) plain [CI]        | P(A) neutral [CI]      | rotated: P(key=example) [CI]   | any core flaw: plain / neutral / rotated
+Claude Fable 5.1     | 0.38 [0.28, 0.48] n= 80 | 0.15 [0.07, 0.29] n= 40 | 0.82 [0.68, 0.91] n= 40       |  30.0% /  32.5% /  20.0%
+Claude Opus 5        | 0.61 [0.50, 0.71] n= 80 | 0.57 [0.42, 0.71] n= 40 | 0.75 [0.60, 0.86] n= 40       |  35.0% /  32.5% /  35.0%
+Claude Sonnet 5      | 0.25 [0.17, 0.35] n= 80 | 0.15 [0.07, 0.29] n= 40 | 0.38 [0.24, 0.53] n= 40       |  26.2% /  42.5% /  35.0%
+DeepSeek V4 Flash    | 0.80 [0.70, 0.87] n= 80 | 0.20 [0.10, 0.35] n= 40 | 0.80 [0.65, 0.90] n= 40       |  17.5% /  22.5% /  20.0%
+DeepSeek V4 Pro      | 0.75 [0.65, 0.83] n= 80 | 0.25 [0.14, 0.40] n= 40 | 0.80 [0.65, 0.90] n= 40       |  32.5% /  25.0% /  30.0%
+GPT-5.6 Luna         | 0.88 [0.78, 0.93] n= 80 | 0.20 [0.10, 0.35] n= 40 | 0.88 [0.74, 0.95] n= 40       |  38.8% /  42.5% /  30.0%
+GPT-5.6 Terra        | 0.62 [0.52, 0.72] n= 80 | 0.12 [0.05, 0.26] n= 40 | 0.62 [0.47, 0.76] n= 40       |  28.7% /  37.5% /  27.5%
+GPT-6 Astra          | 0.11 [0.06, 0.20] n= 80 | 0.05 [0.01, 0.17] n= 40 | 0.85 [0.71, 0.93] n= 40       |  23.8% /  30.0% /  27.5%
+Gemini 3.1 Pro       | 0.40 [0.30, 0.51] n= 80 | 0.33 [0.20, 0.48] n= 40 | 0.23 [0.12, 0.38] n= 40       |  11.2% /  10.0% /  20.0%
+Gemini 3.8 Flash     | 0.39 [0.29, 0.50] n= 80 | 0.20 [0.10, 0.35] n= 40 | 0.28 [0.16, 0.43] n= 40       |  18.8% /  12.5% /  10.0%
+Grok 4.6             | 0.12 [0.07, 0.22] n= 80 | 0.12 [0.05, 0.26] n= 40 | 0.42 [0.29, 0.58] n= 40       |  13.8% /  15.0% /  30.0%
+Llama 4 Maverick     | 0.91 [0.83, 0.96] n= 80 | 0.23 [0.12, 0.38] n= 40 | 0.82 [0.68, 0.91] n= 40       |  20.0% /  20.0% /  10.0%
+Mistral Small 2603   | 0.80 [0.70, 0.87] n= 80 | 0.23 [0.12, 0.38] n= 40 | 0.70 [0.55, 0.82] n= 40       |  13.8% /  17.5% /  12.5%
+Qwen 3.6 27B         | 0.31 [0.22, 0.42] n= 80 | 0.23 [0.12, 0.38] n= 40 | 0.38 [0.24, 0.53] n= 40       |  10.0% /  25.0% /  25.0%
+Qwen 3.8 Max         | 0.42 [0.32, 0.53] n= 80 | 0.20 [0.10, 0.35] n= 40 | 0.33 [0.20, 0.48] n= 40       |  25.0% /  22.5% /  27.5%
+
+Key distribution under the neutral template (chi-square vs uniform, BH over models):
+  Claude Fable 5.1     keys={'A': 6, 'B': 17, 'C': 10, 'D': 7} chi2=  19.2 p=0.0007 q=0.0013
+  Claude Opus 5        keys={'A': 23, 'B': 11, 'C': 4, 'D': 2} chi2=  43.8 p=7.2e-09 q=1.1e-07
+  Claude Sonnet 5      keys={'A': 6, 'B': 14, 'C': 13, 'D': 5, 'E': 2} chi2=  13.8 p=0.0081 q=0.01
+  DeepSeek V4 Flash    keys={'A': 8, 'B': 12, 'C': 14, 'D': 5, 'E': 1} chi2=  13.8 p=0.0081 q=0.01
+  DeepSeek V4 Pro      keys={'A': 10, 'B': 18, 'C': 9, 'D': 2, 'E': 1} chi2=  23.8 p=9e-05 q=0.0003
+  GPT-5.6 Luna         keys={'A': 8, 'B': 16, 'C': 8, 'D': 7, 'E': 1} chi2=  14.2 p=0.0065 q=0.0098
+  GPT-5.6 Terra        keys={'A': 5, 'B': 18, 'C': 12, 'D': 5} chi2=  24.8 p=5.6e-05 q=0.00028
+  GPT-6 Astra          keys={'A': 2, 'B': 12, 'C': 15, 'D': 10, 'E': 1} chi2=  19.2 p=0.0007 q=0.0013
+  Gemini 3.1 Pro       keys={'A': 13, 'B': 10, 'C': 6, 'D': 7, 'E': 4} chi2=   6.2 p=0.18 q=0.18
+  Gemini 3.8 Flash     keys={'A': 8, 'B': 7, 'C': 14, 'D': 6, 'E': 5} chi2=   6.2 p=0.18 q=0.18
+  Grok 4.6             keys={'A': 5, 'B': 7, 'C': 20, 'D': 7, 'E': 1} chi2=  25.5 p=4e-05 q=0.00028
+  Llama 4 Maverick     keys={'A': 9, 'B': 19, 'C': 7, 'D': 4, 'E': 1} chi2=  23.5 p=0.0001 q=0.0003
+  Mistral Small 2603   keys={'A': 9, 'B': 13, 'C': 10, 'D': 7, 'E': 1} chi2=  10.0 p=0.04 q=0.047
+  Qwen 3.6 27B         keys={'A': 9, 'B': 15, 'C': 12, 'D': 3, 'E': 1} chi2=  17.5 p=0.0015 q=0.0026
+  Qwen 3.8 Max         keys={'A': 8, 'B': 15, 'C': 14, 'D': 3} chi2=  21.8 p=0.00022 q=0.00056
+
+Pooled: P(A) plain=0.52 neutral=0.21 | rotated P(key=example)=0.60; rotated key distribution={'A': 100, 'B': 147, 'C': 175, 'D': 111, 'E': 67}
+
+Interpretation guide: if P(A) under the neutral template stays high, the bias is the model's own; if it falls to ~0.2 and rotated
+keys follow the example letter, the bias in the main corpus was largely induced by the example letter in the output template.

@@ -1,0 +1,73 @@
+Reasoning arm: 3200 items with reasoning on, 3200 matched items with reasoning off; models: Claude Sonnet 5, GPT-5.6 Luna, GPT-5.6 Terra, Qwen 3.6 27B
+items per model x condition x reasoning:
+reason_on                    0    1
+model_label     condition          
+Claude Sonnet 5 guided     400  400
+                plain      400  400
+GPT-5.6 Luna    guided     400  400
+                plain      400  400
+GPT-5.6 Terra   guided     400  400
+                plain      400  400
+Qwen 3.6 27B    guided     400  400
+                plain      400  400
+
+reasoning tokens when on (median [IQR]) / when off:
+  Claude Sonnet 5      on:    604 [  256-  941]  share>0=1.00 | off: median     0 share>0=0.00
+  GPT-5.6 Luna         on:    340 [  172-  516]  share>0=1.00 | off: median     0 share>0=0.00
+  GPT-5.6 Terra        on:    253 [  102-  440]  share>0=0.93 | off: median     0 share>0=0.00
+  Qwen 3.6 27B         on:   3216 [ 2600- 3926]  share>0=1.00 | off: median     0 share>0=0.00
+
+== Any validated Tier-A flaw, reasoning on vs off, Wilson 95% CI
+  Claude Sonnet 5      plain   reasoning=off   34.8% [30.2, 39.5] n=400
+  Claude Sonnet 5      plain   reasoning=on    33.5% [29.1, 38.3] n=400
+  Claude Sonnet 5      guided  reasoning=off   25.5% [21.5, 30.0] n=400
+  Claude Sonnet 5      guided  reasoning=on    21.5% [17.8, 25.8] n=400
+  GPT-5.6 Luna         plain   reasoning=off   36.8% [32.2, 41.6] n=400
+  GPT-5.6 Luna         plain   reasoning=on    32.5% [28.1, 37.2] n=400
+  GPT-5.6 Luna         guided  reasoning=off   21.5% [17.8, 25.8] n=400
+  GPT-5.6 Luna         guided  reasoning=on    20.8% [17.1, 25.0] n=400
+  GPT-5.6 Terra        plain   reasoning=off   33.5% [29.1, 38.3] n=400
+  GPT-5.6 Terra        plain   reasoning=on    32.2% [27.9, 37.0] n=400
+  GPT-5.6 Terra        guided  reasoning=off   20.5% [16.8, 24.7] n=400
+  GPT-5.6 Terra        guided  reasoning=on    17.8% [14.3, 21.8] n=400
+  Qwen 3.6 27B         plain   reasoning=off   26.2% [22.2, 30.8] n=400
+  Qwen 3.6 27B         plain   reasoning=on    22.2% [18.4, 26.6] n=400
+  Qwen 3.6 27B         guided  reasoning=off   18.2% [14.8, 22.3] n=400
+  Qwen 3.6 27B         guided  reasoning=on    10.2% [ 7.6, 13.6] n=400
+
+== Effect of reasoning on any core flaw (adjusted for condition, model, specialty; cluster-robust by topic)
+  pooled OR (on vs off) = 0.83 [0.75, 0.93], p = 0.00075   | guided OR in same model = 0.52
+  interaction reasoning x guided: OR = 0.88 [0.73, 1.07], p = 0.2
+  Claude Sonnet 5      OR (on vs off)=0.88 [0.71, 1.08] p=0.22 q=0.29
+  GPT-5.6 Luna         OR (on vs off)=0.88 [0.71, 1.08] p=0.22 q=0.29
+  GPT-5.6 Terra        OR (on vs off)=0.90 [0.73, 1.10] p=0.31 q=0.31
+  Qwen 3.6 27B         OR (on vs off)=0.67 [0.51, 0.88] p=0.0037 q=0.015
+
+== Per-flaw effect of reasoning, pooled (adjusted for condition, model, specialty); flaws with >= 20 events
+  longest_option_key         off  10.3% -> on  10.2%  OR=0.99 [0.85, 1.15] p=0.89 q=0.94
+  absolute_terms             off   4.7% -> on   3.1%  OR=0.64 [0.52, 0.79] p=4.4e-05 q=0.0002
+  clang_cue                  off   9.6% -> on   7.8%  OR=0.79 [0.67, 0.95] p=0.012 q=0.035
+  combination_options        off   1.1% -> on   0.9%  OR=0.88 [0.62, 1.25] p=0.48 q=0.74
+  overlapping_options        off   1.1% -> on   1.1%  OR=1.03 [0.67, 1.58] p=0.9 q=0.94
+  grammatical_cue            off   3.4% -> on   3.3%  OR=0.99 [0.75, 1.31] p=0.94 q=0.94
+  nonparallel_options        off   1.8% -> on   2.0%  OR=1.12 [0.80, 1.58] p=0.5 q=0.74
+  option_length_outlier      off  22.5% -> on  25.1%  OR=1.16 [1.02, 1.32] p=0.023 q=0.051
+  options_not_alphabetical   off  56.9% -> on  49.0%  OR=0.49 [0.41, 0.57] p=7.1e-18 q=6.4e-17
+
+== Key position by model x condition x reasoning (chi-square vs uniform; BH over the reasoning-on cells)
+  Claude Sonnet 5      plain   reasoning=off n=400 P(key=A)=0.28 chi2= 186.9 p=2.4e-39 q=  -   {'A': 111, 'B': 151, 'C': 105, 'D': 28, 'E': 5}
+  Claude Sonnet 5      plain   reasoning=on  n=400 P(key=A)=0.27 chi2= 179.2 p=1.1e-37 q=2.2e-37 {'A': 107, 'B': 145, 'C': 113, 'D': 33, 'E': 2}
+  Claude Sonnet 5      guided  reasoning=off n=400 P(key=A)=0.31 chi2=  38.5 p=8.7e-08 q=  -   {'A': 123, 'B': 82, 'C': 84, 'D': 58, 'E': 53}
+  Claude Sonnet 5      guided  reasoning=on  n=400 P(key=A)=0.20 chi2=  20.5 p=0.0004 q=0.0004 {'A': 81, 'B': 87, 'C': 94, 'D': 93, 'E': 45}
+  GPT-5.6 Luna         plain   reasoning=off n=400 P(key=A)=0.94 chi2=1360.6 p=2.4e-293 q=  -   {'A': 375, 'B': 12, 'C': 8, 'D': 2, 'E': 3}
+  GPT-5.6 Luna         plain   reasoning=on  n=400 P(key=A)=0.76 chi2= 779.1 p=2.6e-167 q=2e-166 {'A': 302, 'B': 29, 'C': 43, 'D': 20, 'E': 6}
+  GPT-5.6 Luna         guided  reasoning=off n=400 P(key=A)=0.92 chi2=1278.9 p=1.2e-275 q=  -   {'A': 366, 'B': 15, 'C': 9, 'D': 6, 'E': 4}
+  GPT-5.6 Luna         guided  reasoning=on  n=400 P(key=A)=0.30 chi2=  44.7 p=4.6e-09 q=7.3e-09 {'A': 122, 'B': 87, 'C': 81, 'D': 71, 'E': 39}
+  GPT-5.6 Terra        plain   reasoning=off n=400 P(key=A)=0.61 chi2= 480.4 p=1.2e-102 q=  -   {'A': 245, 'B': 86, 'C': 53, 'D': 14, 'E': 2}
+  GPT-5.6 Terra        plain   reasoning=on  n=400 P(key=A)=0.69 chi2= 631.0 p=3e-135 q=1.2e-134 {'A': 277, 'B': 51, 'C': 54, 'D': 15, 'E': 3}
+  GPT-5.6 Terra        guided  reasoning=off n=400 P(key=A)=0.34 chi2=  96.1 p=6.7e-20 q=  -   {'A': 137, 'B': 104, 'C': 74, 'D': 65, 'E': 20}
+  GPT-5.6 Terra        guided  reasoning=on  n=400 P(key=A)=0.23 chi2=  21.8 p=0.00022 q=0.00026 {'A': 91, 'B': 97, 'C': 95, 'D': 68, 'E': 49}
+  Qwen 3.6 27B         plain   reasoning=off n=400 P(key=A)=0.27 chi2= 176.6 p=4.1e-37 q=  -   {'A': 106, 'B': 155, 'C': 98, 'D': 35, 'E': 6}
+  Qwen 3.6 27B         plain   reasoning=on  n=400 P(key=A)=0.41 chi2= 239.6 p=1.1e-50 q=3e-50 {'A': 166, 'B': 131, 'C': 76, 'D': 26, 'E': 1}
+  Qwen 3.6 27B         guided  reasoning=off n=400 P(key=A)=0.46 chi2= 218.1 p=4.9e-46 q=  -   {'A': 183, 'B': 98, 'C': 67, 'D': 42, 'E': 10}
+  Qwen 3.6 27B         guided  reasoning=on  n=400 P(key=A)=0.29 chi2=  41.8 p=1.8e-08 q=2.4e-08 {'A': 115, 'B': 93, 'C': 80, 'D': 76, 'E': 36}

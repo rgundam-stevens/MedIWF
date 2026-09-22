@@ -1,0 +1,440 @@
+sample_id,job_id,model_label,tier,condition,stratum,stratum_population,negative_stem,none_of_the_above,all_of_the_above,combination_options,fill_in_blank,true_false_stem,longest_option_key,option_length_outlier,absolute_terms,vague_terms,clang_cue,grammatical_cue,nonparallel_options,numeric_not_ordered,numeric_units_inconsistent,overlapping_options,options_not_alphabetical,n_flaws,n_options,key,stem_words,key_chars,mean_distractor_chars,detector_version
+1,913c211d5257,DeepSeek V4 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,95,75,67.8,1.1
+2,3e16b84c30c7,GPT-5.6 Luna,base,plain,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,5,A,62,9,9,1.1
+3,c6e9068dd4e1,Qwen 3.8 Max,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,87,32,24,1.1
+4,0063e69e91d8,DeepSeek V4 Pro,flagship,plain,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,5,B,56,9,9,1.1
+5,b77bdfc681ab,Grok 4.6,flagship,guided,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,2,5,A,33,7,7.5,1.1
+6,7d6cb668c606,Qwen 3.8 Max,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,94,16,17,1.1
+7,303e962d1819,GPT-6 Astra,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,116,37,28.2,1.1
+8,c46738c912f8,Claude Fable 5.1,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,2,5,C,141,108,70.8,1.1
+9,faebde466474,DeepSeek V4 Flash,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,44,58,58.2,1.1
+10,8ce17c2f8dcd,Claude Opus 5,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,B,108,151,130.8,1.1
+11,aa42ff3c2b2b,Qwen 3.6 27B,base,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,C,88,19,24,1.1
+12,a15bd7893ac4,Grok 4.6,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,B,79,47,29.2,1.1
+13,94735d202247,Claude Fable 5.1,flagship,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,B,121,16,28.5,1.1
+14,bdd07dbb1ffe,DeepSeek V4 Pro,flagship,plain,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,5,B,97,1,1,1.1
+15,8656f08b6d1f,Qwen 3.6 27B,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,86,39,37.2,1.1
+16,e949044ffebe,Gemini 3.1 Pro,flagship,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,2,5,D,116,28,28.5,1.1
+17,6ef17870be87,Grok 4.6,flagship,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,5,A,60,11,22,1.1
+18,4457a4fdde02,Qwen 3.6 27B,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,107,14,23.8,1.1
+19,915d4dd17570,GPT-6 Astra,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,123,30,20.8,1.1
+20,acf48bcdd111,Llama 4 Maverick,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,39,34,23,1.1
+21,acf9fddec6d9,Gemini 3.8 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,73,43,45.5,1.1
+22,fb334249420f,Mistral Small 2603,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,E,73,50,37.2,1.1
+23,8bcf331b9aa9,Claude Sonnet 5,base,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,2,5,B,92,10,12,1.1
+24,16cede08616b,Grok 4.6,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0,3,5,D,65,34,41.5,1.1
+25,052b388ce1fa,Gemini 3.8 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,114,56,49,1.1
+26,5e1181b95691,GPT-5.6 Terra,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,51,60,55.2,1.1
+27,7664329416d5,Qwen 3.8 Max,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,55,23,27.5,1.1
+28,bfe258522ba4,Gemini 3.8 Flash,base,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2,5,C,111,51,23,1.1
+29,af55c18b01d9,Mistral Small 2603,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,103,68,48.5,1.1
+30,d906aeb36e9b,GPT-5.6 Terra,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,C,46,42,39.8,1.1
+31,8b958945a727,Claude Fable 5.1,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,75,61,59.5,1.1
+32,cc5eb13146c1,DeepSeek V4 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,59,54,54,1.1
+33,5188a716a7f8,GPT-5.6 Terra,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,A,63,134,67.8,1.1
+34,5ec7443125fc,DeepSeek V4 Flash,base,guided,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,1,3,5,A,81,24,27.8,1.1
+35,c52b15eec8a7,Llama 4 Maverick,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,56,49,45,1.1
+36,5685a8a91f24,Gemini 3.1 Pro,flagship,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,E,105,57,63.2,1.1
+37,31eae68b6010,DeepSeek V4 Flash,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,E,83,88,46,1.1
+38,daecbba7cd16,Qwen 3.6 27B,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,99,44,76.2,1.1
+39,1c9a29c34d63,Claude Fable 5.1,flagship,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,3,5,C,139,54,22.2,1.1
+40,dbb32518bcfe,Llama 4 Maverick,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,1,3,5,A,62,70,23.5,1.1
+41,d89cb5e81f5c,Claude Sonnet 5,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,B,133,61,40.2,1.1
+42,57d29f646252,Gemini 3.8 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,97,48,38.8,1.1
+43,517a01b74b8c,Claude Opus 5,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,113,38,43.8,1.1
+44,4319c78181e6,Claude Sonnet 5,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,90,14,14.2,1.1
+45,2a797c846c58,Claude Opus 5,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,A,162,43,9.2,1.1
+46,6ea9c336826b,Claude Sonnet 5,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,B,107,65,54,1.1
+47,9c103bbd7248,GPT-5.6 Terra,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,89,34,34.2,1.1
+48,e21160a2318e,Qwen 3.6 27B,base,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,D,114,52,35.5,1.1
+49,86b348c0433e,Claude Opus 5,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,91,48,54.5,1.1
+50,c93258b7b837,DeepSeek V4 Pro,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,80,80,66.8,1.1
+51,30a1d645cf00,Qwen 3.8 Max,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,2,5,C,136,27,22.5,1.1
+52,c9c8c1e709c8,GPT-6 Astra,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,C,59,17,27.5,1.1
+53,1e1834441537,Grok 4.6,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,53,14,10.2,1.1
+54,f195c93401a3,GPT-5.6 Terra,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,1,3,5,C,52,116,62.5,1.1
+55,7bdfc0787e77,GPT-5.6 Luna,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,A,86,90,55.5,1.1
+56,2f27e41b681e,Claude Fable 5.1,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,A,128,69,30.2,1.1
+57,825c44cdaaac,GPT-5.6 Terra,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,73,28,28,1.1
+58,a30830b56236,Mistral Small 2603,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,74,60,83.5,1.1
+59,e0f4a7cb74f1,DeepSeek V4 Pro,flagship,guided,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,2,5,A,58,18,18.5,1.1
+60,97a4900a6aeb,DeepSeek V4 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,53,12,12.5,1.1
+61,8284cf7367e9,Qwen 3.6 27B,base,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,2,5,A,112,9,16.8,1.1
+62,3d82b1d0a8ba,Qwen 3.8 Max,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,73,15,14.8,1.1
+63,4f0ce0ed0c8a,Claude Opus 5,flagship,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,100,52,54.5,1.1
+64,3409a5d2ce45,GPT-5.6 Luna,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,2,5,A,67,44,30.5,1.1
+65,2b025d0b4486,DeepSeek V4 Flash,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,A,70,61,40.5,1.1
+66,eb66dd1f3162,Mistral Small 2603,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,89,74,66,1.1
+67,c9fc700c5b47,Qwen 3.8 Max,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,63,14,13.2,1.1
+68,82b4164e20a6,Gemini 3.8 Flash,base,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2,5,B,102,11,38.5,1.1
+69,aa9a087b9df2,Qwen 3.8 Max,flagship,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,2,5,A,74,11,13.5,1.1
+70,12be5d208ef9,DeepSeek V4 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,55,57,47.8,1.1
+71,33896bc834d4,Gemini 3.1 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,118,10,10,1.1
+72,05c4e87535a1,Qwen 3.6 27B,base,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2,5,A,88,21,25.8,1.1
+73,53118572c4fe,Llama 4 Maverick,base,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,1,3,5,A,54,18,31.8,1.1
+74,3bafdce3d93b,Grok 4.6,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,52,37,61.5,1.1
+75,84966f50b465,DeepSeek V4 Flash,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,A,54,35,18.8,1.1
+76,6e575adf667f,DeepSeek V4 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,66,34,29.8,1.1
+77,b153f925d3bf,Claude Fable 5.1,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,90,13,13,1.1
+78,c2bac6b987d0,GPT-5.6 Luna,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,A,77,30,31.2,1.1
+79,3207bf69cf08,Llama 4 Maverick,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,68,20,23.5,1.1
+80,9b7b2d48d945,Llama 4 Maverick,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,A,39,50,40,1.1
+81,39c85a519bc3,Llama 4 Maverick,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,62,30,21.2,1.1
+82,f8f4ee18544c,Claude Fable 5.1,flagship,plain,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,5,A,113,20,20.5,1.1
+83,2d0da05b737e,Mistral Small 2603,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,A,74,31,31,1.1
+84,3bbfb78db1ff,Mistral Small 2603,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,67,61,48.8,1.1
+85,57438248c4c3,Llama 4 Maverick,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,57,9,9.8,1.1
+86,bfe69d9b3e8b,Mistral Small 2603,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,40,43,57.5,1.1
+87,e327f52ec133,Claude Opus 5,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,85,72,70.8,1.1
+88,af8688a7caeb,Gemini 3.1 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,109,47,51.8,1.1
+89,f5983f4805df,DeepSeek V4 Flash,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,A,81,63,43.2,1.1
+90,c06c7cb5e671,GPT-5.6 Luna,base,plain,flagged:vague_terms,4,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,5,A,92,90,74.5,1.1
+91,b2fd50cf78e7,Qwen 3.8 Max,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,79,23,30.2,1.1
+92,cf289cd26d21,Claude Sonnet 5,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,80,13,12,1.1
+93,111812b7e831,Claude Opus 5,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,E,112,10,13,1.1
+94,45f5ef4d25ff,Qwen 3.6 27B,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,87,54,38.5,1.1
+95,d8a9def514e1,Mistral Small 2603,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,100,16,19,1.1
+96,31305ad8e56d,Grok 4.6,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,D,98,75,32.5,1.1
+97,9785067d2b07,Qwen 3.8 Max,flagship,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,2,5,C,89,40,24.2,1.1
+98,42f28841d125,Claude Sonnet 5,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,87,30,40,1.1
+99,30e4cd193a57,Claude Opus 5,flagship,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,C,109,94,82.8,1.1
+100,d5ee98bb22a0,DeepSeek V4 Flash,base,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,77,64,49.2,1.1
+101,71c629b10b4f,Qwen 3.6 27B,base,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,75,72,47.8,1.1
+102,2c554117e07d,Claude Opus 5,flagship,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,2,5,B,130,44,20,1.1
+103,152a741a0dd5,GPT-6 Astra,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,53,9,9,1.1
+104,bf362d040160,Qwen 3.6 27B,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,B,86,82,83.5,1.1
+105,57bed7ed6e44,Claude Sonnet 5,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,C,95,143,72.5,1.1
+106,9b0ea3f13baf,Grok 4.6,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,41,8,12.5,1.1
+107,a1eb7a085421,Claude Sonnet 5,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,D,89,50,47.8,1.1
+108,3ba0dbe9c00e,DeepSeek V4 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,B,104,42,46.8,1.1
+109,573f611d8345,Qwen 3.6 27B,base,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,1,3,5,A,100,21,29,1.1
+110,a2239bbdcf38,GPT-5.6 Terra,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,B,70,8,18,1.1
+111,0c1e5113e26a,Qwen 3.6 27B,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,88,51,48.2,1.1
+112,a60f0cccb455,Grok 4.6,flagship,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2,5,B,98,15,23.2,1.1
+113,12377fe534ce,Gemini 3.8 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,100,34,37.8,1.1
+114,947c5128da36,Mistral Small 2603,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,2,5,A,73,71,26.8,1.1
+115,49a0a18c70fc,DeepSeek V4 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,50,10,10.8,1.1
+116,5e3ba0dfa86a,Claude Opus 5,flagship,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,C,85,53,58,1.1
+117,294004f8b0bc,GPT-5.6 Luna,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,A,108,95,49.2,1.1
+118,144d63a29949,Llama 4 Maverick,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,A,60,39,25,1.1
+119,d60fd7543a35,Claude Fable 5.1,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,125,47,41.2,1.1
+120,5780ceff932d,Claude Sonnet 5,base,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,B,92,36,34.8,1.1
+121,950911ba45c5,Claude Fable 5.1,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,1,3,5,B,158,59,23.8,1.1
+122,820a409ffa08,GPT-5.6 Terra,base,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,69,22,23,1.1
+123,5305b0aaca5b,Mistral Small 2603,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,2,5,A,36,59,33.5,1.1
+124,f8ac9ae0dd33,Claude Sonnet 5,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,2,5,A,77,29,42.8,1.1
+125,4d0bb7ec2395,Qwen 3.8 Max,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,D,80,33,23.5,1.1
+126,530418045b63,Claude Sonnet 5,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,2,5,D,89,68,50,1.1
+127,6835916a00dc,Claude Opus 5,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,C,148,58,37.5,1.1
+128,aba4f3b6c132,Mistral Small 2603,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,48,12,24,1.1
+129,c3cdc290787e,Qwen 3.6 27B,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,2,5,B,67,64,48,1.1
+130,dbc4522566fd,Llama 4 Maverick,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,26,25,20.8,1.1
+131,b9fa0923b956,Qwen 3.8 Max,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,A,111,39,26,1.1
+132,2bd4277b89aa,Qwen 3.6 27B,base,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,B,98,24,33.2,1.1
+133,d0834362cd0c,GPT-5.6 Terra,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,C,65,112,81.5,1.1
+134,e8932d637a1c,Claude Sonnet 5,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,B,97,42,50.8,1.1
+135,564e2c4fcc68,Grok 4.6,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,D,99,28,23.8,1.1
+136,44db95f7f81d,Claude Fable 5.1,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,125,11,12.2,1.1
+137,6602191eb5c0,Claude Fable 5.1,flagship,guided,flagged:nonparallel_options,170,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,5,E,123,17,25,1.1
+138,be8526e6d0c5,GPT-5.6 Luna,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,69,88,58,1.1
+139,98d191dd13ad,Qwen 3.8 Max,flagship,guided,flagged:nonparallel_options,170,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,5,C,70,10,21.8,1.1
+140,c7cbf8b192b9,GPT-5.6 Luna,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,52,66,52.8,1.1
+141,20b44f378681,Qwen 3.8 Max,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,45,69,64.5,1.1
+142,df0538b11798,GPT-6 Astra,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,B,127,33,53.5,1.1
+143,afb4ec81dcb4,Qwen 3.6 27B,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,93,32,29,1.1
+144,6cab963634ca,Claude Fable 5.1,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,127,89,75,1.1
+145,e4aebf7ee91b,GPT-5.6 Terra,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,35,19,19.8,1.1
+146,3c649d1b34a1,Qwen 3.8 Max,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,C,91,38,18.5,1.1
+147,ff2430638e43,Claude Sonnet 5,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,79,10,9.5,1.1
+148,55fbd60b9184,Qwen 3.6 27B,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,107,36,36.8,1.1
+149,f2647c863cb5,Claude Opus 5,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,113,36,36,1.1
+150,56627819ccee,DeepSeek V4 Pro,flagship,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,A,123,17,28,1.1
+151,e9b0003b377d,Gemini 3.1 Pro,flagship,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,2,5,A,108,21,24.2,1.1
+152,ebf8e706383c,Grok 4.6,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,E,72,15,9.8,1.1
+153,24ac67f87e71,Llama 4 Maverick,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,56,29,20,1.1
+154,27e29388d728,Qwen 3.8 Max,flagship,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,A,88,43,34,1.1
+155,a50b66a3eb95,Claude Fable 5.1,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,A,92,76,70.5,1.1
+156,fedf29675856,GPT-5.6 Terra,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,D,80,61,43.8,1.1
+157,f353d69f9a83,Grok 4.6,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,77,10,9.8,1.1
+158,8c01c4d6572d,Claude Fable 5.1,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,95,37,34.2,1.1
+159,2cbe8be50de7,Llama 4 Maverick,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,42,26,19.8,1.1
+160,7acaf5c26a28,Gemini 3.1 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,128,28,39.2,1.1
+161,e4bc8916890c,Gemini 3.1 Pro,flagship,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,C,74,19,32,1.1
+162,5621ab424b45,DeepSeek V4 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,47,13,11,1.1
+163,7b462618e3e7,Llama 4 Maverick,base,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,A,61,23,29.2,1.1
+164,0577f6755905,Claude Sonnet 5,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,3,5,B,80,76,41,1.1
+165,9903c145856e,GPT-5.6 Luna,base,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,98,43,29.5,1.1
+166,2eaa3f0cb60b,DeepSeek V4 Pro,flagship,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,61,48,47.8,1.1
+167,1c76a0429386,Grok 4.6,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,A,39,11,23.5,1.1
+168,bfdafb8aa788,Gemini 3.8 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,122,76,77.8,1.1
+169,be54b77818ae,Claude Fable 5.1,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,2,5,A,124,24,28.8,1.1
+170,9fcf26670ab9,Claude Fable 5.1,flagship,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,2,5,B,83,23,10.5,1.1
+171,1dacc12d017d,Claude Sonnet 5,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,B,82,110,75.2,1.1
+172,0db6a0563d9f,Claude Opus 5,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,168,11,10,1.1
+173,ee87d9ea3762,Llama 4 Maverick,base,plain,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,5,A,42,4,4.5,1.1
+174,7fd0c63ed711,Gemini 3.1 Pro,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,C,130,91,88.5,1.1
+175,3a21e12a4d29,Llama 4 Maverick,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,55,36,28.5,1.1
+176,9a6418f68f77,Gemini 3.8 Flash,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,D,72,51,39,1.1
+177,3d0ca777efec,GPT-5.6 Terra,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,57,62,42.8,1.1
+178,4f017d73b942,GPT-5.6 Terra,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,73,16,11.2,1.1
+179,ce69d20d0e80,Qwen 3.8 Max,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,C,70,12,11.5,1.1
+180,b28ee03b0fc1,Gemini 3.1 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,108,84,80,1.1
+181,9bd17f509ad5,GPT-5.6 Terra,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,60,9,9.5,1.1
+182,4d61f2166462,GPT-5.6 Terra,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,88,48,58.8,1.1
+183,2f81c694172a,Claude Opus 5,flagship,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,B,147,23,29,1.1
+184,6fd919ea09c1,Qwen 3.6 27B,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,105,52,48.8,1.1
+185,7465fce6a2d4,Qwen 3.6 27B,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,C,111,34,30.8,1.1
+186,76a11c5f59fc,Claude Fable 5.1,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,B,105,75,51.2,1.1
+187,80c635ba9968,Claude Sonnet 5,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,2,5,B,104,37,48.2,1.1
+188,e97d35c32173,GPT-5.6 Terra,base,plain,flagged:vague_terms,4,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,5,B,77,80,78.8,1.1
+189,b081ce1ff7d2,GPT-5.6 Luna,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,86,55,49.2,1.1
+190,bf90ef8e50bc,Claude Fable 5.1,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,C,130,73,39.2,1.1
+191,1649c1bcd45f,GPT-6 Astra,flagship,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,B,121,49,48.8,1.1
+192,a5e324d20e71,GPT-5.6 Luna,base,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,91,45,36,1.1
+193,af9377e98cd3,Llama 4 Maverick,base,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,2,5,A,42,18,20,1.1
+194,c32933707921,DeepSeek V4 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,69,35,44.8,1.1
+195,71ee0c509c31,DeepSeek V4 Pro,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,A,57,31,33.5,1.1
+196,5c44d8d7627c,DeepSeek V4 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,60,5,5,1.1
+197,86a4c59a897e,Claude Opus 5,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,E,155,52,56.8,1.1
+198,bf2b953c428f,Claude Sonnet 5,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,C,112,100,77.8,1.1
+199,d211a8fc3686,GPT-5.6 Luna,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,2,5,A,84,41,29,1.1
+200,f6a5202c14da,Llama 4 Maverick,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,A,83,87,49,1.1
+201,75d9b2839b2d,Qwen 3.6 27B,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,B,103,27,45.2,1.1
+202,427924ff41b7,DeepSeek V4 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,65,23,21.2,1.1
+203,5e56cad65e41,GPT-5.6 Terra,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,C,56,49,28.5,1.1
+204,e604b950b674,DeepSeek V4 Flash,base,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,B,56,44,33.2,1.1
+205,b6a0f52b759c,Llama 4 Maverick,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,53,16,19,1.1
+206,1976d96b2db1,GPT-6 Astra,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,113,13,52,1.1
+207,c0111b315887,Gemini 3.1 Pro,flagship,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,5,D,97,35,20.5,1.1
+208,9237ab01fd91,DeepSeek V4 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,83,38,33.8,1.1
+209,6adbd837e9f9,Gemini 3.1 Pro,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,D,110,34,21.5,1.1
+210,b88f82eec7fe,Claude Sonnet 5,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,C,109,84,34.8,1.1
+211,bb8711aa3e16,Qwen 3.8 Max,flagship,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,E,105,20,12,1.1
+212,71c369b2c0d9,Claude Fable 5.1,flagship,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,A,86,39,57.8,1.1
+213,4de371252b8f,Claude Opus 5,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,B,100,42,27.8,1.1
+214,bf069ee98c39,Mistral Small 2603,base,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,B,67,33,41.8,1.1
+215,87ccf2b3f08d,Mistral Small 2603,base,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,B,108,52,55.8,1.1
+216,34d0de4ce4a7,Llama 4 Maverick,base,plain,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,2,5,A,45,6,6,1.1
+217,163e2d458b49,DeepSeek V4 Pro,flagship,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,2,5,C,81,53,26.5,1.1
+218,ac797b2e713d,Mistral Small 2603,base,guided,flagged:nonparallel_options,170,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,5,A,63,37,35.5,1.1
+219,f239ef47139a,Claude Sonnet 5,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,89,28,29.5,1.1
+220,acb3d9700799,Gemini 3.8 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,54,17,15.5,1.1
+221,071473f52e2e,Mistral Small 2603,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,100,34,60.5,1.1
+222,e245667d3c24,GPT-5.6 Luna,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,96,76,49.8,1.1
+223,c4ed166f3370,GPT-5.6 Terra,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,C,55,9,12.8,1.1
+224,551f34eb2930,GPT-5.6 Luna,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,98,39,43.2,1.1
+225,b63dc3678a8d,Llama 4 Maverick,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,A,44,51,28.8,1.1
+226,94b1c3b377db,Claude Fable 5.1,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,B,139,62,40.5,1.1
+227,b1ff79d99de7,Claude Sonnet 5,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,96,10,8.5,1.1
+228,c843adf2b3f0,GPT-6 Astra,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,79,16,14,1.1
+229,0a15a688146c,Llama 4 Maverick,base,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,5,A,60,11,20.2,1.1
+230,d658bc0cc3ec,DeepSeek V4 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,79,9,10,1.1
+231,85edc5076c5d,Gemini 3.1 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,135,20,35.8,1.1
+232,0e4ce2b2009f,Qwen 3.8 Max,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,96,40,42.8,1.1
+233,52f3eb6a9fa8,Claude Sonnet 5,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,76,49,33.5,1.1
+234,f4b83b52b489,Claude Sonnet 5,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,92,41,35.5,1.1
+235,aed58295df78,DeepSeek V4 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,78,31,33,1.1
+236,b92d467c1b00,Gemini 3.1 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,109,42,36.5,1.1
+237,f7db9eaa2043,GPT-6 Astra,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,C,119,27,36,1.1
+238,5f36465f707a,Claude Fable 5.1,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,C,108,11,26.2,1.1
+239,ec1c3410b4cd,DeepSeek V4 Flash,base,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,A,64,34,44.5,1.1
+240,9c681494fcbd,Qwen 3.6 27B,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,115,51,45,1.1
+241,e344df2fa22f,Grok 4.6,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,E,67,15,9.8,1.1
+242,308deb103d24,DeepSeek V4 Pro,flagship,plain,flagged:vague_terms,4,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,5,A,101,71,60.8,1.1
+243,d804d480290c,DeepSeek V4 Pro,flagship,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,2,5,A,77,62,32.8,1.1
+244,c8b02980be67,Claude Opus 5,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,152,29,40.5,1.1
+245,6fbdf93ac60e,Qwen 3.6 27B,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,A,73,49,29,1.1
+246,b56036906786,Gemini 3.8 Flash,base,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,2,5,A,98,25,26,1.1
+247,8fd308b1c6b6,Qwen 3.6 27B,base,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,2,5,A,106,11,12.8,1.1
+248,faffecd80a54,Llama 4 Maverick,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,38,37,29,1.1
+249,7eef34db36cb,Gemini 3.8 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,C,88,33,23.8,1.1
+250,cd950e3a6427,Claude Fable 5.1,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,79,87,85.8,1.1
+251,f817d56edeba,Grok 4.6,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,39,10,8.2,1.1
+252,2e6dc55e9c86,DeepSeek V4 Pro,flagship,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,5,A,58,30,19.5,1.1
+253,3dc9f78f7de8,Claude Sonnet 5,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,2,5,D,96,22,11.2,1.1
+254,d8d81803eb34,Mistral Small 2603,base,guided,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,5,B,45,13,11.5,1.1
+255,3e8f8221952b,Gemini 3.8 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,66,52,44.8,1.1
+256,30fc7a730c43,Gemini 3.8 Flash,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,D,123,47,34,1.1
+257,5b6381431897,Llama 4 Maverick,base,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,5,A,50,19,28.5,1.1
+258,41b1f3acb67d,Claude Sonnet 5,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,102,108,84.8,1.1
+259,c8e86d432c63,Claude Fable 5.1,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,154,12,11.2,1.1
+260,479e53d68177,Qwen 3.8 Max,flagship,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,2,5,A,102,24,25.5,1.1
+261,1fc5c29215ac,Gemini 3.8 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,117,35,28.2,1.1
+262,d7a7b949cc2c,Mistral Small 2603,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,80,53,60,1.1
+263,7fc488c70366,Claude Sonnet 5,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,129,32,37.5,1.1
+264,0fd801d55c52,GPT-5.6 Luna,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,78,27,40.5,1.1
+265,ba5d956acdf8,Gemini 3.1 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,108,31,54.8,1.1
+266,c15abe0668a0,Claude Sonnet 5,base,guided,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2,5,A,124,25,26.2,1.1
+267,76d6c5d6bb3a,DeepSeek V4 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,B,70,10,12.2,1.1
+268,3bebb1648b64,DeepSeek V4 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,85,20,24.2,1.1
+269,978ca3e75008,Mistral Small 2603,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,64,91,88.2,1.1
+270,61d18a4b5794,GPT-5.6 Luna,base,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,100,14,22.8,1.1
+271,84b3e3727d0c,DeepSeek V4 Flash,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,63,39,36.5,1.1
+272,c8c885baf871,GPT-5.6 Luna,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,61,62,64.2,1.1
+273,c630243506d3,GPT-5.6 Luna,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,71,64,48,1.1
+274,977c4b6d38e7,Claude Fable 5.1,flagship,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,95,42,34.2,1.1
+275,06e86ad396c9,Claude Opus 5,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,B,74,48,49,1.1
+276,638a96d6506d,Claude Opus 5,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,148,76,77.8,1.1
+277,8f5865deb06a,Qwen 3.6 27B,base,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,87,36,48.8,1.1
+278,f6782401cdd1,GPT-5.6 Luna,base,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,5,A,77,22,13.2,1.1
+279,8bbd467047b2,GPT-5.6 Luna,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,A,79,46,42.2,1.1
+280,8cf2258b03f0,DeepSeek V4 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,47,11,11.2,1.1
+281,00dc88006cb7,Qwen 3.6 27B,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,83,32,30,1.1
+282,9261193e25a3,Claude Opus 5,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,D,137,34,27.8,1.1
+283,803405f0414e,Grok 4.6,flagship,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,C,83,31,32,1.1
+284,10eed6debca1,GPT-5.6 Terra,base,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,A,80,30,26.5,1.1
+285,7b85891c39c4,Gemini 3.8 Flash,base,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,5,D,77,21,19.5,1.1
+286,888537b33665,Claude Opus 5,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,197,92,62.2,1.1
+287,167073b40f1f,Mistral Small 2603,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,55,29,27.8,1.1
+288,bcde242f5b74,Claude Fable 5.1,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,108,35,36,1.1
+289,2d0964b6f7a7,Gemini 3.1 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,101,18,22.2,1.1
+290,2860ac6f1a55,Llama 4 Maverick,base,guided,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,A,64,23,20.8,1.1
+291,bed92cf6a908,Mistral Small 2603,base,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,2,5,A,67,36,28.5,1.1
+292,7ec2563dce44,DeepSeek V4 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,59,35,26,1.1
+293,f06a34858ca8,DeepSeek V4 Pro,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,2,5,A,61,11,18,1.1
+294,6f176c9569d0,DeepSeek V4 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,69,41,42.5,1.1
+295,09bd0db446a1,Grok 4.6,flagship,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2,5,A,101,23,32.5,1.1
+296,76ca4e851bdb,Qwen 3.6 27B,base,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,5,A,106,22,36.2,1.1
+297,64874c49e8a8,GPT-5.6 Terra,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,83,9,9.8,1.1
+298,3d29e12572d6,DeepSeek V4 Flash,base,plain,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,5,B,44,5,5,1.1
+299,b6ada4348447,GPT-6 Astra,flagship,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,2,5,C,100,16,20.5,1.1
+300,df322f8018ff,Llama 4 Maverick,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,A,50,46,24,1.1
+301,9c9f8c3ab577,Gemini 3.1 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,142,41,25.2,1.1
+302,abf8fcafb273,GPT-6 Astra,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,E,50,24,24.5,1.1
+303,e5dcabb05121,Gemini 3.1 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,83,29,30.8,1.1
+304,d6a7d6bab839,Gemini 3.1 Pro,flagship,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,5,C,98,37,49.8,1.1
+305,40f7da9db1e7,DeepSeek V4 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,99,74,51.2,1.1
+306,de1d3f34cbb9,Gemini 3.1 Pro,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,A,108,34,18,1.1
+307,54b19675fa13,Claude Sonnet 5,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,E,98,9,12.5,1.1
+308,08a32fd6188b,Qwen 3.8 Max,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,57,37,66,1.1
+309,b85602aeda47,Mistral Small 2603,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,91,23,16.8,1.1
+310,463645bb99b0,Qwen 3.8 Max,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,110,80,52.5,1.1
+311,91b67438eb2f,Gemini 3.1 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,108,50,51.2,1.1
+312,36fb67e4964e,Gemini 3.8 Flash,base,guided,flagged:vague_terms,4,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,5,E,101,44,49,1.1
+313,554efeb185b4,DeepSeek V4 Pro,flagship,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,A,57,28,31.5,1.1
+314,5a3af4bbd133,Mistral Small 2603,base,guided,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,2,5,B,49,11,11.5,1.1
+315,0eb4b1270ad9,Grok 4.6,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,37,14,18.5,1.1
+316,d15e7765a5b9,Qwen 3.6 27B,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,85,35,28,1.1
+317,aa299d24d7c2,DeepSeek V4 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,88,17,22.2,1.1
+318,f85d75766e83,Gemini 3.1 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,83,38,36,1.1
+319,010f24929719,Grok 4.6,flagship,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,C,62,58,42.5,1.1
+320,ae2e4f091e5c,Claude Fable 5.1,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,D,119,43,37,1.1
+321,fb5e79460f8f,Claude Fable 5.1,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,D,73,55,45,1.1
+322,fa0414c7cf8a,Qwen 3.8 Max,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,133,28,37.2,1.1
+323,a080c72d2588,DeepSeek V4 Pro,flagship,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,A,62,12,38.5,1.1
+324,1eabf5735381,Qwen 3.6 27B,base,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,105,80,53.5,1.1
+325,be8ca2698ae8,Grok 4.6,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,B,90,45,34.2,1.1
+326,ac9b9e50f3af,DeepSeek V4 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,A,66,29,22,1.1
+327,111b6f88f208,Llama 4 Maverick,base,plain,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,2,5,A,48,1,1.2,1.1
+328,ddeac0356b28,DeepSeek V4 Pro,flagship,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,C,94,77,60.2,1.1
+329,02dc53245b43,Claude Fable 5.1,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,111,42,52,1.1
+330,aa24845f519b,Claude Opus 5,flagship,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,A,103,73,48.2,1.1
+331,58a6028d7e73,Qwen 3.6 27B,base,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2,5,D,98,29,35,1.1
+332,43d4ee7a6b3c,Llama 4 Maverick,base,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,A,72,48,21.5,1.1
+333,e840dd672d41,Gemini 3.1 Pro,flagship,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,C,103,51,33.2,1.1
+334,83159519e303,Llama 4 Maverick,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,51,32,33,1.1
+335,2223a0d91b85,DeepSeek V4 Flash,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,1,3,5,A,62,64,18.5,1.1
+336,009b8babe7b4,Claude Sonnet 5,base,guided,flagged:nonparallel_options,170,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,5,C,91,50,23.5,1.1
+337,6b40889aca6a,Qwen 3.8 Max,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,75,12,10,1.1
+338,35cc697ffcd6,DeepSeek V4 Pro,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,A,78,59,36,1.1
+339,06a241323dad,GPT-5.6 Terra,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,57,10,11,1.1
+340,6e648215fb0a,Gemini 3.8 Flash,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,2,5,A,99,64,64.2,1.1
+341,4581edd8aed4,Gemini 3.1 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,84,19,13,1.1
+342,2f182bf3367b,DeepSeek V4 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,124,45,29.2,1.1
+343,69c077965b14,GPT-6 Astra,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,118,12,10.8,1.1
+344,3d773eb58a80,Qwen 3.6 27B,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,2,5,A,71,21,35.2,1.1
+345,3e6d80b2fd7a,Claude Opus 5,flagship,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,C,109,19,22,1.1
+346,7fdfb24bf1a3,GPT-5.6 Terra,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,75,18,44.5,1.1
+347,813c5dbb6ae2,Claude Opus 5,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,131,25,37.8,1.1
+348,94b80c60bb47,DeepSeek V4 Pro,flagship,guided,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,5,B,88,27,24.5,1.1
+349,c1f899db6f03,Llama 4 Maverick,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,60,24,16.2,1.1
+350,56780aaa78c3,GPT-6 Astra,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,C,116,10,13,1.1
+351,d1429a7adcf9,Claude Fable 5.1,flagship,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,B,130,16,28.5,1.1
+352,41ddff8bbfab,Mistral Small 2603,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,A,61,115,76,1.1
+353,d5109b49661a,Claude Sonnet 5,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,B,86,57,51,1.1
+354,08b19bfb56fc,Claude Opus 5,flagship,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,5,B,102,58,55.2,1.1
+355,11655c6fa863,Claude Opus 5,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,159,43,39.5,1.1
+356,e493ac0a11e6,Claude Fable 5.1,flagship,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,2,5,A,103,19,20.8,1.1
+357,4d73c5a77ba1,Grok 4.6,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,86,11,9.8,1.1
+358,2ec54f028c48,GPT-6 Astra,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,C,117,46,51.2,1.1
+359,bb9e7bf9c225,Grok 4.6,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,B,46,29,39.8,1.1
+360,aef2c09cd8b4,Claude Sonnet 5,base,guided,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2,5,A,77,30,28.5,1.1
+361,2365c2879285,Qwen 3.6 27B,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,88,56,48.5,1.1
+362,01023097d9f5,Mistral Small 2603,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,A,68,39,28.2,1.1
+363,41d1951c22fe,DeepSeek V4 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,52,14,27,1.1
+364,13bbb5d50358,GPT-5.6 Luna,base,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,2,5,A,94,18,41,1.1
+365,71cb8076388e,Gemini 3.8 Flash,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,A,108,67,45,1.1
+366,10b6c3b7c115,GPT-5.6 Terra,base,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,2,5,C,122,32,67.8,1.1
+367,0183099f82cc,Llama 4 Maverick,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,35,53,53.2,1.1
+368,a456d14ec797,Claude Sonnet 5,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,2,5,A,94,18,36.5,1.1
+369,acd221f6db51,GPT-5.6 Terra,base,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,5,A,82,32,58.2,1.1
+370,1799705db3a4,Claude Fable 5.1,flagship,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,A,129,60,47.2,1.1
+371,638f5d5b316e,Claude Fable 5.1,flagship,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,E,115,52,31.5,1.1
+372,aa1b980b6578,Mistral Small 2603,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,A,78,24,29.8,1.1
+373,fedc99f70159,DeepSeek V4 Flash,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,C,80,34,37,1.1
+374,2700c2d6d19a,Claude Opus 5,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,117,28,33.5,1.1
+375,84d6c11364b1,Qwen 3.6 27B,base,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,5,B,99,24,27,1.1
+376,a67aecca7392,GPT-5.6 Luna,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,73,82,64.5,1.1
+377,e662cef62f2f,Gemini 3.1 Pro,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,D,110,22,33.2,1.1
+378,a918f506d3a8,Llama 4 Maverick,base,guided,flagged:nonparallel_options,170,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,5,A,49,56,34.2,1.1
+379,69c199da64b1,Gemini 3.1 Pro,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,E,122,24,30,1.1
+380,e61dfb4f5440,Qwen 3.8 Max,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,2,5,A,90,37,91,1.1
+381,e251f37de904,Gemini 3.8 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,A,128,31,20,1.1
+382,1d441a2c0579,Claude Opus 5,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,97,17,19.5,1.1
+383,354c8efd4ec2,Claude Fable 5.1,flagship,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,2,5,B,89,23,10.5,1.1
+384,3b11cc9602db,Qwen 3.8 Max,flagship,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,5,A,94,34,48.8,1.1
+385,609e9efd42e3,GPT-6 Astra,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,B,84,16,15,1.1
+386,ffa92e504eb5,Llama 4 Maverick,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,52,12,12,1.1
+387,89badb57a42a,Llama 4 Maverick,base,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,A,85,94,41.8,1.1
+388,f6f52cc464b0,Gemini 3.8 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,E,70,65,55,1.1
+389,b2bb7badc04d,DeepSeek V4 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,57,48,53.2,1.1
+390,5941018d17e2,GPT-6 Astra,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,70,51,55.2,1.1
+391,c57b05243e51,Claude Fable 5.1,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,106,64,57.2,1.1
+392,56f320bf9ab8,Grok 4.6,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,A,68,46,26,1.1
+393,74ef12395d07,DeepSeek V4 Flash,base,plain,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,5,B,30,4,4.5,1.1
+394,a420924b78d6,Claude Sonnet 5,base,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,B,73,25,24.2,1.1
+395,a1bcf2e26658,Gemini 3.8 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,A,77,17,14,1.1
+396,1466631ea520,Claude Opus 5,flagship,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,A,123,52,34,1.1
+397,ce61ad7d14ef,Claude Sonnet 5,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,76,52,36.8,1.1
+398,fc369bea2be8,Claude Opus 5,flagship,plain,flagged:nonparallel_options,170,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,2,5,C,144,28,39.2,1.1
+399,172abf9d9efa,Mistral Small 2603,base,plain,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,5,A,67,9,8.5,1.1
+400,1b10e1fe6237,DeepSeek V4 Pro,flagship,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,A,78,11,10.8,1.1
+401,8aeaca879918,GPT-5.6 Luna,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,86,40,48.2,1.1
+402,01aa2cf65343,Qwen 3.6 27B,base,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,2,5,C,65,9,18.2,1.1
+403,ce08637eadd6,Claude Opus 5,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,E,143,13,10,1.1
+404,3b0fbe0ed0d8,Mistral Small 2603,base,guided,flagged:nonparallel_options,170,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,5,A,86,22,36.5,1.1
+405,62fc2603a11a,GPT-6 Astra,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,82,66,70.2,1.1
+406,df7c57876e35,GPT-5.6 Terra,base,plain,flagged:clang_cue,686,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,2,5,B,65,49,52.8,1.1
+407,4a23ded64924,Qwen 3.8 Max,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,E,110,44,30.5,1.1
+408,e4d5115e2c34,Qwen 3.6 27B,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,90,57,49.2,1.1
+409,4096dc325cc0,DeepSeek V4 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,58,14,14.8,1.1
+410,891bb1bfc555,GPT-5.6 Luna,base,plain,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,78,44,26.2,1.1
+411,b035d92befa1,Qwen 3.8 Max,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,86,18,33.2,1.1
+412,709daa05ac4d,Gemini 3.1 Pro,flagship,plain,flagged:longest_option_key,975,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,2,5,A,125,39,20.8,1.1
+413,cfceef0fe8cc,Qwen 3.6 27B,base,guided,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,5,B,116,9,12.5,1.1
+414,081b2af9b4e1,DeepSeek V4 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,75,10,11,1.1
+415,8d68588f7256,Gemini 3.8 Flash,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,149,13,10.8,1.1
+416,b1fce7d92a05,Gemini 3.1 Pro,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,124,22,20.5,1.1
+417,859b361188ad,GPT-5.6 Terra,base,guided,flagged:clang_cue,686,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,5,D,62,25,25,1.1
+418,ad8934e2f0e0,Grok 4.6,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,59,10,10.8,1.1
+419,9a11589a8e54,Claude Opus 5,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,154,90,74.5,1.1
+420,ff2122720e98,GPT-6 Astra,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,C,102,56,71.8,1.1
+421,b316fc8cbbc1,DeepSeek V4 Pro,flagship,guided,flagged:longest_option_key,975,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,D,75,70,49.5,1.1
+422,96d1cfe07cb1,Qwen 3.6 27B,base,plain,flagged:numeric_not_ordered,15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,5,A,99,3,3,1.1
+423,6d4ebe5b8871,Claude Sonnet 5,base,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,1,3,5,B,84,30,49.8,1.1
+424,d95b55fd29f2,Grok 4.6,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,71,15,19.5,1.1
+425,d353e9d31c64,GPT-5.6 Luna,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,A,69,37,44.2,1.1
+426,5d421a48d36e,Mistral Small 2603,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,79,23,21.8,1.1
+427,2b33ad61e3a2,GPT-6 Astra,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,101,15,19.2,1.1
+428,94346c9da8d5,Qwen 3.8 Max,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,E,100,25,24.2,1.1
+429,8a1929171aa0,GPT-5.6 Luna,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,53,63,70.8,1.1
+430,1338fe665d07,Qwen 3.8 Max,flagship,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,5,A,99,33,43,1.1
+431,78ca57d3fefd,Claude Sonnet 5,base,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,E,107,24,20.5,1.1
+432,c94c5f3bf35a,GPT-6 Astra,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,C,89,81,83,1.1
+433,2cb323b053c7,DeepSeek V4 Pro,flagship,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,83,21,29.5,1.1
+434,d20ed38dfc8f,Qwen 3.6 27B,base,plain,flagged:overlapping_options,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,5,A,70,37,49.5,1.1
+435,8cb42e6a88d3,Qwen 3.8 Max,flagship,guided,unflagged,9785,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,5,A,94,45,35,1.1
+436,09a23eb5acd4,Qwen 3.6 27B,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,72,17,26.2,1.1
+437,babb8cffd4e6,Gemini 3.8 Flash,base,guided,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,C,101,7,12.2,1.1
+438,9d64258578ed,Claude Fable 5.1,flagship,plain,flagged:absolute_terms,265,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,5,A,102,127,97,1.1
+439,53957c8e14f0,Llama 4 Maverick,base,plain,unflagged,9785,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,37,14,13,1.1

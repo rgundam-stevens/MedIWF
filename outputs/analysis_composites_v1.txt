@@ -1,0 +1,51 @@
+Composites on 12000 main-corpus items (plain + guided, reasoning off); detector 1.2
+  CORE (14):        negative_stem, none_of_the_above, all_of_the_above, combination_options, fill_in_blank, true_false_stem, longest_option_key, absolute_terms, vague_terms, clang_cue, grammatical_cue, nonparallel_options, numeric_not_ordered, overlapping_options
+  SENSITIVITY (11): CORE minus absolute_terms, vague_terms, grammatical_cue
+  VALIDATED (10):   negative_stem, none_of_the_above, all_of_the_above, combination_options, fill_in_blank, absolute_terms, vague_terms, clang_cue, grammatical_cue, numeric_not_ordered
+  never externally validated: true_false_stem, longest_option_key, nonparallel_options, overlapping_options
+
+composite                      plain % [CI]             guided % [CI]            OR guided vs plain       NBME all / five-option %
+CORE (14 rules)                 23.4 [22.3, 24.5]       13.6 [12.7, 14.5]      0.50 [0.45, 0.56] p=6.9e-38   17.5 / 17.3
+SENSITIVITY (11 rules)          19.9 [18.9, 20.9]       12.7 [11.8, 13.5]      0.58 [0.52, 0.64] p=9.5e-27   15.0 / 14.7
+VALIDATED (10 rules)            12.8 [12.0, 13.7]        7.3 [ 6.6,  8.0]      0.53 [0.46, 0.60] p=2.0e-20   10.6 / 11.4
+CORE, first repetition only     23.6 [22.1, 25.2]       13.5 [12.4, 14.8]      0.50 [0.43, 0.57] p=6.4e-23   17.5 / 17.3
+
+== Share of flagged plain-prompt items flagged ONLY by never-validated rules
+  flagged 1404 of 6000; flagged only by unvalidated rules 635 (45.2% of flagged)
+
+== Per-model plain-prompt prevalence (%) under each composite
+model                  CORE14   SENS11  VALID10
+Claude Fable 5.1         24.5     22.0     13.0
+Claude Opus 5            29.0     25.8     13.2
+Claude Sonnet 5          32.2     25.5     18.0
+DeepSeek V4 Flash        21.2     18.8     10.5
+DeepSeek V4 Pro          22.8     19.2     13.2
+GPT-5.6 Luna             32.5     24.2     20.2
+GPT-5.6 Terra            29.2     23.8     19.0
+GPT-6 Astra              24.5     21.8     13.0
+Gemini 3.1 Pro           12.5     11.5      5.5
+Gemini 3.8 Flash         15.5     14.8      7.5
+Grok 4.6                 18.0     16.2      8.0
+Llama 4 Maverick         23.8     21.8     11.0
+Mistral Small 2603       20.2     18.0     12.0
+Qwen 3.6 27B             21.8     17.0     14.0
+Qwen 3.8 Max             23.2     18.0     14.0
+
+== NBME per-rule counts (all 667 items / 525 five-option items)
+  negative_stem                   0 /    0
+  none_of_the_above               0 /    0
+  all_of_the_above                1 /    0
+  combination_options             0 /    0
+  fill_in_blank                   0 /    0
+  true_false_stem                 0 /    0
+  longest_option_key             20 /   15
+  absolute_terms                 21 /   16
+  vague_terms                     3 /    3
+  clang_cue                      51 /   44
+  grammatical_cue                 0 /    0
+  nonparallel_options            24 /   17
+  numeric_not_ordered             1 /    1
+  overlapping_options             7 /    3
+  option_length_outlier         243 /  207
+  numeric_units_inconsistent      2 /    2
+  options_not_alphabetical      115 /   95

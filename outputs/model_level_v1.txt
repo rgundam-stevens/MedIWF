@@ -1,0 +1,66 @@
+== 1. Guideline effect pooled over models (random effects); per-model estimates from specialty-adjusted, topic-clustered logistic regressions
+  Claude Fable 5.1     OR=0.31 [0.20, 0.48]
+  Claude Opus 5        OR=0.59 [0.43, 0.80]
+  Claude Sonnet 5      OR=0.53 [0.38, 0.72]
+  DeepSeek V4 Flash    OR=0.51 [0.36, 0.73]
+  DeepSeek V4 Pro      OR=0.78 [0.58, 1.04]
+  GPT-5.6 Luna         OR=0.42 [0.30, 0.59]
+  GPT-5.6 Terra        OR=0.35 [0.25, 0.51]
+  GPT-6 Astra          OR=0.16 [0.09, 0.28]
+  Gemini 3.1 Pro       OR=0.77 [0.51, 1.16]
+  Gemini 3.8 Flash     OR=0.51 [0.33, 0.79]
+  Grok 4.6             OR=0.16 [0.08, 0.31]
+  Llama 4 Maverick     OR=0.51 [0.36, 0.73]
+  Mistral Small 2603   OR=1.21 [0.87, 1.69]
+  Qwen 3.6 27B         OR=0.60 [0.44, 0.83]
+  Qwen 3.8 Max         OR=0.53 [0.36, 0.78]
+  fixed-effect (inverse-variance) OR = 0.538
+  random-effects OR = 0.49 [0.39, 0.61]; tau^2 = 0.160; I^2 = 82%; Q = 77.0 on 14 df
+  95% prediction interval for the OR in a new model: [0.22, 1.10]
+
+== 2. Reasoning arm at the model level (four models)
+  Claude Sonnet 5      off 26.2% -> on 23.2%  OR=0.84 [0.69, 1.04] p=0.11
+  GPT-5.6 Luna         off 24.8% -> on 20.9%  OR=0.79 [0.63, 1.00] p=0.051
+  GPT-5.6 Terra        off 21.2% -> on 21.0%  OR=0.98 [0.78, 1.25] p=0.89
+  Qwen 3.6 27B         off 18.1% -> on 12.2%  OR=0.62 [0.45, 0.84] p=0.0026
+  model-level mean OR = 0.80 [0.59, 1.09] (t interval, 4 models); models with OR<1: 4 of 4 (exact two-sided sign test p=0.125)
+  random-effects OR = 0.82 [0.69, 0.96]; I^2 = 46%
+
+== 3. Tier rows: model-level mean prevalence of any core flaw (t interval over models) vs item-level Wilson interval
+  base      plain   model-level 24.6% [19.4, 29.7] (n=8 models)   item-level Wilson 24.6% [23.1, 26.1]
+  base      guided  model-level 15.4% [11.5, 19.3] (n=8 models)   item-level Wilson 15.4% [14.2, 16.7]
+  flagship  plain   model-level 22.1% [17.1, 27.0] (n=7 models)   item-level Wilson 22.1% [20.6, 23.6]
+  flagship  guided  model-level 11.5% [5.7, 17.3] (n=7 models)   item-level Wilson 11.5% [10.3, 12.7]
+
+== 4. Table 3 cells: prevalence with Wilson interval and with a topic-cluster bootstrap interval (2,000 resamples of the 200 topics)
+model                cond    Wilson [CI]            cluster bootstrap [CI]
+Claude Fable 5.1     plain    24.5 [20.5, 28.9]      24.5 [19.5, 29.8]
+Claude Fable 5.1     guided    9.5 [ 7.0, 12.8]       9.5 [ 6.5, 12.8]
+Claude Opus 5        plain    29.0 [24.8, 33.6]      29.0 [24.0, 34.0]
+Claude Opus 5        guided   19.5 [15.9, 23.7]      19.5 [15.0, 24.0]
+Claude Sonnet 5      plain    32.2 [27.9, 37.0]      32.2 [26.8, 37.5]
+Claude Sonnet 5      guided   20.2 [16.6, 24.5]      20.2 [16.5, 24.2]
+DeepSeek V4 Flash    plain    21.2 [17.5, 25.5]      21.2 [17.0, 25.5]
+DeepSeek V4 Flash    guided   12.2 [ 9.4, 15.8]      12.2 [ 9.0, 15.8]
+DeepSeek V4 Pro      plain    22.8 [18.9, 27.1]      22.8 [18.5, 27.5]
+DeepSeek V4 Pro      guided   18.8 [15.2, 22.9]      18.8 [14.5, 22.8]
+GPT-5.6 Luna         plain    32.5 [28.1, 37.2]      32.5 [27.3, 38.2]
+GPT-5.6 Luna         guided   17.0 [13.6, 21.0]      17.0 [13.0, 21.2]
+GPT-5.6 Terra        plain    29.2 [25.0, 33.9]      29.2 [24.2, 34.8]
+GPT-5.6 Terra        guided   13.2 [10.3, 16.9]      13.2 [ 9.8, 17.0]
+GPT-6 Astra          plain    24.5 [20.5, 28.9]      24.5 [19.5, 29.8]
+GPT-6 Astra          guided    5.0 [ 3.3,  7.6]       5.0 [ 2.7,  7.5]
+Gemini 3.1 Pro       plain    12.5 [ 9.6, 16.1]      12.5 [ 9.0, 16.2]
+Gemini 3.1 Pro       guided   10.0 [ 7.4, 13.3]      10.0 [ 6.8, 13.5]
+Gemini 3.8 Flash     plain    15.5 [12.3, 19.4]      15.5 [11.2, 19.8]
+Gemini 3.8 Flash     guided    8.8 [ 6.4, 11.9]       8.8 [ 5.8, 11.8]
+Grok 4.6             plain    18.0 [14.5, 22.1]      18.0 [13.5, 22.5]
+Grok 4.6             guided    3.5 [ 2.1,  5.8]       3.5 [ 1.5,  5.8]
+Llama 4 Maverick     plain    23.8 [19.8, 28.2]      23.8 [19.2, 28.5]
+Llama 4 Maverick     guided   14.0 [10.9, 17.7]      14.0 [10.2, 17.8]
+Mistral Small 2603   plain    20.2 [16.6, 24.5]      20.2 [16.2, 24.5]
+Mistral Small 2603   guided   23.5 [19.6, 27.9]      23.5 [19.2, 27.8]
+Qwen 3.6 27B         plain    21.8 [18.0, 26.1]      21.8 [17.2, 26.2]
+Qwen 3.6 27B         guided   14.5 [11.4, 18.3]      14.5 [11.0, 18.2]
+Qwen 3.8 Max         plain    23.2 [19.4, 27.6]      23.2 [18.5, 28.0]
+Qwen 3.8 Max         guided   14.0 [10.9, 17.7]      14.0 [10.2, 18.0]

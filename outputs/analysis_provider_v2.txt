@@ -1,0 +1,35 @@
+== Provider mix: flags_full.csv (12000 items)
+  Claude Fable 5.1     Anthropic 799 (99.9%), Google 1 (0.1%)
+  DeepSeek V4 Pro      GMICloud 723 (90.4%), AtlasCloud 77 (9.6%)
+  Gemini 3.1 Pro       Google 795 (99.4%), Google AI Studio 5 (0.6%)
+  Gemini 3.8 Flash     Google 751 (93.9%), Google AI Studio 49 (6.1%)
+  (models not listed were served by a single provider)
+== Provider mix: flags_template.csv (6600 items)
+  Claude Fable 5.1     Anthropic 433 (98.4%), Google 7 (1.6%)
+  DeepSeek V4 Pro      GMICloud 438 (99.5%), AtlasCloud 2 (0.5%)
+  Gemini 3.1 Pro       Google 437 (99.3%), Google AI Studio 3 (0.7%)
+  Gemini 3.8 Flash     Google 391 (88.9%), Google AI Studio 49 (11.1%)
+  (models not listed were served by a single provider)
+== Provider mix: flags_wording.csv (3000 items)
+  Claude Fable 5.1     Anthropic 196 (98.0%), Google 4 (2.0%)
+  DeepSeek V4 Pro      GMICloud 198 (99.0%), AtlasCloud 2 (1.0%)
+  Gemini 3.1 Pro       Google 198 (99.0%), Google AI Studio 2 (1.0%)
+  Gemini 3.8 Flash     Google AI Studio 157 (78.5%), Google 43 (21.5%)
+  (models not listed were served by a single provider)
+
+== Main corpus: items served by each model's primary provider: 11868 of 12000
+
+== Within DeepSeek V4 Pro (two providers): outcomes by provider and condition
+  DeepSeek V4 Pro      plain   GMICloud n=362 key-at-A 73.2% any-flaw 22.9%  |  AtlasCloud n=38 key-at-A 92.1% any-flaw 21.1%  |  Fisher p (key-at-A) = 0.010, (any-flaw) = 1.000
+  DeepSeek V4 Pro      guided  GMICloud n=361 key-at-A 66.8% any-flaw 18.0%  |  AtlasCloud n=39 key-at-A 79.5% any-flaw 25.6%  |  Fisher p (key-at-A) = 0.147, (any-flaw) = 0.279
+  Gemini 3.8 Flash     plain   Google n=378 key-at-A 27.8% any-flaw 15.6%  |  Google AI Studio n=22 key-at-A 31.8% any-flaw 13.6%  |  Fisher p (key-at-A) = 0.634, (any-flaw) = 1.000
+  Gemini 3.8 Flash     guided  Google n=373 key-at-A 18.8% any-flaw 8.3%  |  Google AI Studio n=27 key-at-A 25.9% any-flaw 14.8%  |  Fisher p (key-at-A) = 0.446, (any-flaw) = 0.279
+
+== Headline estimates, all items vs primary-provider items only
+  all items              n=12000  plain any-flaw 23.4%  guided 13.6%  OR=0.50 [0.45, 0.56]  plain key-at-A 53.7%  guided key-at-A 43.3%
+  primary provider only  n=11868  plain any-flaw 23.5%  guided 13.5%  OR=0.50 [0.45, 0.55]  plain key-at-A 53.5%  guided key-at-A 43.2%
+
+== Per-model plain-prompt prevalence and key-at-A, all vs primary-provider items (models with a second provider only)
+  DeepSeek V4 Pro      all n=400 any-flaw 22.8% key-at-A 75.0%  |  primary n=362 any-flaw 22.9% key-at-A 73.2%
+  Gemini 3.1 Pro       all n=400 any-flaw 12.5% key-at-A 45.5%  |  primary n=397 any-flaw 12.6% key-at-A 45.8%
+  Gemini 3.8 Flash     all n=400 any-flaw 15.5% key-at-A 28.0%  |  primary n=378 any-flaw 15.6% key-at-A 27.8%

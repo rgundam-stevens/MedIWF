@@ -1,0 +1,25 @@
+Write one single-best-answer multiple-choice question in the style of the USMLE Step 2 CK examination.
+
+Specialty: {specialty}
+Topic: {topic}
+
+Requirements:
+- A clinical vignette stem describing a patient.
+- Exactly five answer options labeled A to E.
+- Exactly one correct answer.
+- A one-sentence rationale for the correct answer.
+
+Apply the following quality checklist before you answer (each point is a standard from the NBME Item-Writing Guide and Haladyna et al.):
+- Options: five choices of the same type (all diagnoses, all tests, or all management steps), phrased in parallel and each completing the lead-in grammatically.
+- Options: comparable in length and specificity; never let the correct choice be the longest, the most detailed or the most hedged one.
+- Options: no absolute words (always, never, all, only, none) and no frequency hedges (usually, often, sometimes).
+- Options: no "all of the above", no "none of the above", no choice built from other choices.
+- Options: each wrong choice must be a real contender for someone who does not know the specific fact being tested.
+- Options: list numeric choices in ascending order with the same units; list other choices in alphabetical order.
+- Stem: the vignette carries only the facts needed to answer; leave out padding.
+- Stem: the question is asked in positive terms (no NOT, EXCEPT, LEAST).
+- Stem: a well-prepared examinee should be able to answer from the vignette and question alone, before reading the options.
+- Stem and key: do not let a distinctive term from the vignette recur only in the correct option.
+
+Return ONLY a JSON object with this exact structure and nothing else:
+{{"stem": "...", "options": {{"A": "...", "B": "...", "C": "...", "D": "...", "E": "..."}}, "answer": "A", "rationale": "..."}}

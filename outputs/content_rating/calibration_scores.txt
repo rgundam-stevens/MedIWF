@@ -1,0 +1,52 @@
+== R1 (calibration_R1.csv): 20 items, 81.0 minutes
+  CAL-01 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-02 planted  expected {"q1": "no", "q3": "no"}     got q1=no q3=yes  -> detected (secondary expectation not met)
+  CAL-03 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-04 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-05 natural  expected {"q1": "no/unsure"}          got q1=no  -> detected
+  CAL-06 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-07 planted  expected {"q2": "no"}                 got q2=yes  -> MISSED
+  CAL-08 planted  expected {"q1": "no"}                 got q1=no  -> detected
+  CAL-09 planted  expected {"q1": "no/unsure"}          got q1=no  -> detected
+  CAL-10 planted  expected {"q1": "no/unsure"}          got q1=yes  -> MISSED
+  CAL-11 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-12 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-13 planted  expected {"q2": "no"}                 got q2=no  -> detected
+  CAL-14 planted  expected {"q3": "no"}                 got q3=no  -> detected
+  CAL-15 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-16 natural  expected {"q1": "no/unsure"}          got q1=no  -> detected
+  CAL-17 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-18 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-19 planted  expected {"q1": "no"}                 got q1=no  -> detected
+  CAL-20 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  planted detected 6 of 8 (strict 5 of 8); natural detected 2 of 2; false alarms 0 of 10 sound items -> PASS
+
+== R2 (calibration_R2.csv): 20 items, 69.0 minutes
+  CAL-01 clean    q1=yes q2=yes q3=yes q4=yes q5=minor edits  
+  CAL-02 planted  expected {"q1": "no", "q3": "no"}     got q1=no q3=yes  -> detected (secondary expectation not met)
+  CAL-03 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-04 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-05 natural  expected {"q1": "no/unsure"}          got q1=no  -> detected
+  CAL-06 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-07 planted  expected {"q2": "no"}                 got q2=yes  -> MISSED
+  CAL-08 planted  expected {"q1": "no"}                 got q1=no  -> detected
+  CAL-09 planted  expected {"q1": "no/unsure"}          got q1=no  -> detected
+  CAL-10 planted  expected {"q1": "no/unsure"}          got q1=no  -> detected
+  CAL-11 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-12 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-13 planted  expected {"q2": "no"}                 got q2=no  -> detected
+  CAL-14 planted  expected {"q3": "no"}                 got q3=no  -> detected
+  CAL-15 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-16 natural  expected {"q1": "no/unsure"}          got q1=no  -> detected
+  CAL-17 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-18 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  CAL-19 planted  expected {"q1": "no"}                 got q1=no  -> detected
+  CAL-20 clean    q1=yes q2=yes q3=yes q4=yes q5=yes  
+  planted detected 7 of 8 (strict 6 of 8); natural detected 2 of 2; false alarms 0 of 10 sound items -> PASS
+
+== Agreement between the two raters on the 20 calibration items (raw agreement; Cohen's kappa for yes vs not-yes)
+  q1 agreement 0.95  kappa 0.89
+  q2 agreement 0.90  kappa 0.46
+  q3 agreement 0.95  kappa 0.64
+  q4 agreement 1.00  kappa nan
+  q5 agreement 0.80  kappa 0.70

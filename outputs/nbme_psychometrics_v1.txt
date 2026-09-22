@@ -1,0 +1,35 @@
+NBME items: 667 | any core flaw: 21.4% | mean core flaws/item: 0.235
+Difficulty: mean 0.488 sd 0.309 | Response time: mean 86.2 sd 29.5
+
+== OLS of difficulty (transformed; higher = harder) on flaw flags, adjusting for exam step, item type and log stem length (HC1 robust SE)
+  n_core                     n_flagged=143  b=-0.045 [-0.095, +0.004]  p=0.0713  q=0.286  (R2=0.040)
+  core_any                   n_flagged=143  b=-0.046 [-0.103, +0.011]  p=0.114  q=0.286  (R2=0.039)
+  longest_option_key         n_flagged= 20  b=+0.069 [-0.065, +0.203]  p=0.312  q=0.347  (R2=0.036)
+  absolute_terms             n_flagged= 21  b=-0.204 [-0.329, -0.079]  p=0.0014  q=0.014  (R2=0.048)
+  clang_cue                  n_flagged= 52  b=-0.053 [-0.146, +0.039]  p=0.258  q=0.347  (R2=0.037)
+  grammatical_cue            n_flagged= 26  b=-0.076 [-0.179, +0.026]  p=0.146  q=0.291  (R2=0.037)
+  nonparallel_options        n_flagged= 24  b=-0.060 [-0.164, +0.043]  p=0.254  q=0.347  (R2=0.036)
+  overlapping_options        n_flagged= 14  b=+0.139 [-0.033, +0.311]  p=0.113  q=0.286  (R2=0.039)
+  option_length_outlier      n_flagged=243  b=-0.025 [-0.074, +0.023]  p=0.307  q=0.347  (R2=0.037)
+  options_not_alphabetical   n_flagged=115  b=-0.021 [-0.085, +0.043]  p=0.521  q=0.521  (R2=0.036)
+
+== OLS of response time (s) on flaw flags, adjusting for exam step, item type and log stem length (HC1 robust SE)
+  n_core                     n_flagged=143  b=-1.504 [-5.894, +2.885]  p=0.502  q=0.601  (R2=0.208)
+  core_any                   n_flagged=143  b=-0.568 [-5.951, +4.814]  p=0.836  q=0.836  (R2=0.207)
+  longest_option_key         n_flagged= 20  b=+6.752 [-8.818, +22.322]  p=0.395  q=0.565  (R2=0.209)
+  absolute_terms             n_flagged= 21  b=-14.283 [-21.390, -7.176]  p=8.18e-05  q=0.000633  (R2=0.214)
+  clang_cue                  n_flagged= 52  b=-6.452 [-13.659, +0.755]  p=0.0793  q=0.187  (R2=0.210)
+  grammatical_cue            n_flagged= 26  b=-7.556 [-15.086, -0.025]  p=0.0492  q=0.164  (R2=0.209)
+  nonparallel_options        n_flagged= 24  b=+7.878 [-1.331, +17.087]  p=0.0936  q=0.187  (R2=0.210)
+  overlapping_options        n_flagged= 14  b=+17.828 [-7.164, +42.820]  p=0.162  q=0.27  (R2=0.215)
+  option_length_outlier      n_flagged=243  b=-7.730 [-11.683, -3.777]  p=0.000127  q=0.000633  (R2=0.223)
+  options_not_alphabetical   n_flagged=115  b=-1.535 [-6.453, +3.382]  p=0.541  q=0.601  (R2=0.207)
+
+== Descriptive: mean difficulty and response time by number of core flaws
+          n  difficulty  response_time
+n_core                                
+0       524       0.495         86.007
+1       129       0.468         87.971
+2        14       0.416         78.504
+
+== Key position (all 667 items): {'A': 135, 'B': 129, 'C': 111, 'D': 147, 'E': 125, 'F': 15, 'G': 3, 'H': 2}

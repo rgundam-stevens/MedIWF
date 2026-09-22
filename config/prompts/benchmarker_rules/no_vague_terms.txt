@@ -1,0 +1,97 @@
+You are an expert evaluator of multiple-choice questions (MCQs). 
+You are given the following writing rule:
+
+<rule>
+Avoid vague terms in the options that make the option's meaning confusing for test-takers trying to answer the question.
+</rule>
+
+Your task is to judge whether a given MCQ **follows this rule**. Here are some guidelines for this specific rule:
+
+<guidelines>
+Fail if any option uses vague quantifiers/adverbs that ** materially change interpretability** (e.g., often, usually, sometimes, somewhat, typically, may cause), unless the item's domain convention uses that vagueness precisely (e.g., as needed in prescriptions) and the stem specifies a criterion (e.g., a time window or threshold).For example, if an option says 'This event usually happens in the morning,' return fail. Otherwise, return pass. If a vague term is paired with a specific criterion (e.g., 'usually within 30 minutes'), treat as not vague ('pass'). Overall, the pass/fail decision is based on whether the vague term would confuse a test-taker when trying to answer the question.
+</guidelines>
+
+<examples>
+<flawed example>
+<multiple-choice question>
+Question: Aging is associated with degrading:
+Choices:
+(A) most plants
+(B) an object
+(C) acids
+(D) telomeres
+(E) layers of fat
+(F) chlorophyll
+(G) vegetation
+(H) the skin
+Answer: D
+</multiple-choice question>
+<label>
+1
+</label>
+<explanation>
+Option (A) uses the vague term 'most plants' (i.e. what is considered most?), which violates the no-vague-terms rule.
+</explanation>
+</flawed example>
+
+<flawed example>
+<multiple-choice question>
+Question: When a water balloon is frozen, it will contain
+Choices:
+(A) a much less amount of water
+(B) a whole bunch of frozen ice-cream
+(C) the same amount of water
+(D) a greater amount of water
+Answer: C
+</multiple-choice question>
+<label>
+1
+</label>
+<explanation>
+Option (C) uses the vague term 'a whole bunch' (i.e. what is considered a whole bunch of water?), which violates the no-vague-terms rule.
+</explanation>
+</flawed example>
+
+<not flawed example>
+<multiple-choice question>
+Question: Magnets in ear pieces convert sound waves into
+Choices:
+(A) ear aches
+(B) radio stations
+(C) brain cancer
+(D) direct current
+Answer: D
+</multiple-choice question>
+<label>
+0
+</label>
+<explanation>
+All of the options use clear and specific language, so they do not violate the no-vague-terms rule.
+</explanation>
+</not flawed example>
+</examples>
+
+<general instructions>
+- Think carefully about whether the MCQ adheres to the rule.
+- If the rule is clearly followed and there are no flaws in the MCQ, return "pass".
+- If the rule is clearly violated and there are no flaws in the MCQ, return "fail".
+- In borderline cases where you are unsure, return "pass".
+- Provide a confidence score from 1-10 for your pass/fail decision - how strongly you believe the MCQ follows or violates the rule. 1 means not at all confident and 10 means very confident.
+- Provide a short, clear explanation of your reasoning.
+</general instructions>
+
+Here is the MCQ to evaluate:
+<multiple-choice question>
+Question Stem: {question}
+Choices: {choices}
+</multiple-choice question>
+
+<format>
+Return your output as valid JSON in the following format:
+{lbrace}
+  "result": "pass" | "fail",
+  "confidence": 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10,
+  "explanation": "Your explanation here"
+{rbrace}
+Do not include anything else.
+</format>

@@ -1,0 +1,20 @@
+Physician content ratings: 2 raters (R1, R2), 100 items
+
+== Content defect (composite) vs detector structural flag (any of the 14 Tier A rules) on the same items
+  structurally flagged  items  13 | content defect by: R1 0, R2 1 | by all raters 0 | by any rater 1
+  structurally clean    items  87 | content defect by: R1 13, R2 11 | by all raters 8 | by any rater 16
+
+== Agreement on the composite
+  both 8, R1 only 5, R2 only 4, neither 83 | raw agreement 0.91 | kappa 0.59
+
+== By prompt condition
+  R1: plain 4 of 50, guided 9 of 50
+  R2: plain 4 of 50, guided 8 of 50
+  flagged by all raters: plain 1 of 50, guided 7 of 50; Fisher exact two-sided p = 0.059
+  by any rater: key not single best (Q1) plain 2 guided 9 (total 11); vignette inaccurate (Q3) plain 3 guided 5 (total 8); implausible distractor (Q2) plain 3 guided 1 (total 4)
+
+== Scale use: R1 'unsure' on Q1 for 10 items; on those, R2 Q1 {'yes': 7, 'no': 3} and Q5 {'yes': 3, 'no': 6, 'minor edits': 1}
+
+== Minutes per item (median): R1: defect items 7.0, other items 4.0; R2: defect items 5.0, other items 3.0
+
+== Rater 2 post hoc 'Step 1-level' list: 14 items; by condition {'guided': 7, 'plain': 7}; by specialty {'obstetrics_gynecology': '1 of 8', 'neurology': '2 of 11', 'pathology': '8 of 12', 'pediatrics': '3 of 17'}

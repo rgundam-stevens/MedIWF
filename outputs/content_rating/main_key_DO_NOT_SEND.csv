@@ -1,0 +1,101 @@
+item_id,job_id,model,condition,specialty
+MAIN-001,51dd2cd340fa,Claude Sonnet 5,plain,obstetrics_gynecology
+MAIN-002,b2d305e67396,GPT-5.6 Terra,plain,neurology
+MAIN-003,376d3a73869e,Claude Fable 5.1,guided,psychiatry
+MAIN-004,a2189625d248,DeepSeek V4 Flash,plain,pathology
+MAIN-005,8eb1c85de476,Mistral Small 2603,guided,neurology
+MAIN-006,2f64f76a7aa9,Llama 4 Maverick,guided,surgery
+MAIN-007,26ce6393db24,GPT-6 Astra,guided,pharmacology
+MAIN-008,02ed4c4f827f,Claude Sonnet 5,guided,surgery
+MAIN-009,a2325333f223,GPT-6 Astra,guided,neurology
+MAIN-010,17c6200367ad,DeepSeek V4 Pro,plain,psychiatry
+MAIN-011,5f74ecdd2a2d,GPT-5.6 Luna,plain,pathology
+MAIN-012,07eb1778e100,Qwen 3.8 Max,plain,pediatrics
+MAIN-013,36a0ff2a63a3,Mistral Small 2603,plain,psychiatry
+MAIN-014,c179e58afe77,DeepSeek V4 Flash,plain,pediatrics
+MAIN-015,fdc1db82b3a4,Claude Sonnet 5,guided,pharmacology
+MAIN-016,dea70903c8a4,DeepSeek V4 Pro,plain,pathology
+MAIN-017,551f34eb2930,GPT-5.6 Luna,plain,internal_medicine
+MAIN-018,c1693ada7e96,Qwen 3.6 27B,guided,pharmacology
+MAIN-019,a56ecebd60a8,GPT-5.6 Luna,guided,pediatrics
+MAIN-020,c9605ccbc95d,Mistral Small 2603,guided,pharmacology
+MAIN-021,d0406c807560,Qwen 3.8 Max,plain,pharmacology
+MAIN-022,9f36d58bf6fe,Qwen 3.8 Max,guided,pediatrics
+MAIN-023,bf6442f9f10b,DeepSeek V4 Flash,guided,surgery
+MAIN-024,4fa4661044cb,Claude Fable 5.1,plain,obstetrics_gynecology
+MAIN-025,9b4fcb1cba16,Gemini 3.8 Flash,plain,pathology
+MAIN-026,6609a469506b,Claude Opus 5,guided,internal_medicine
+MAIN-027,7ecf59fdae58,Claude Sonnet 5,plain,psychiatry
+MAIN-028,2a7023f1a8f2,Gemini 3.1 Pro,plain,surgery
+MAIN-029,30acf60631bc,DeepSeek V4 Flash,guided,psychiatry
+MAIN-030,75f398019927,Grok 4.6,guided,psychiatry
+MAIN-031,1be6d565afd1,Llama 4 Maverick,plain,pathology
+MAIN-032,8c4efdae6033,Claude Sonnet 5,plain,pathology
+MAIN-033,61206c876ef4,Claude Fable 5.1,guided,neurology
+MAIN-034,a5c001e34e4b,DeepSeek V4 Flash,guided,pediatrics
+MAIN-035,4fbf39042896,GPT-5.6 Terra,plain,pathology
+MAIN-036,f503e9585eab,GPT-6 Astra,plain,pathology
+MAIN-037,45a25815bcdc,DeepSeek V4 Pro,plain,psychiatry
+MAIN-038,11d9b00b7f62,GPT-5.6 Luna,guided,neurology
+MAIN-039,5710077aaba1,Gemini 3.8 Flash,plain,surgery
+MAIN-040,9a3237b53c59,Claude Fable 5.1,plain,surgery
+MAIN-041,7a66442fb3d7,Llama 4 Maverick,guided,pathology
+MAIN-042,d9fdb7c531cb,Claude Opus 5,guided,pediatrics
+MAIN-043,61856bb31980,Qwen 3.8 Max,guided,surgery
+MAIN-044,7c5e19923594,Qwen 3.8 Max,guided,neurology
+MAIN-045,3012fff76e73,Gemini 3.8 Flash,guided,pharmacology
+MAIN-046,f0a2f6210607,Claude Opus 5,plain,internal_medicine
+MAIN-047,021182b4c404,Claude Opus 5,guided,pathology
+MAIN-048,1bb0ee20f9f8,DeepSeek V4 Flash,plain,psychiatry
+MAIN-049,7b139566a63e,DeepSeek V4 Pro,guided,pathology
+MAIN-050,3ec6bb2334f2,Llama 4 Maverick,guided,pathology
+MAIN-051,aac1e2a5440c,GPT-5.6 Terra,guided,surgery
+MAIN-052,f6d5d876629c,Grok 4.6,guided,neurology
+MAIN-053,af55c18b01d9,Mistral Small 2603,plain,internal_medicine
+MAIN-054,cbd3b5e8e676,Gemini 3.8 Flash,guided,internal_medicine
+MAIN-055,b60ac012e02c,Claude Fable 5.1,plain,pharmacology
+MAIN-056,107b63c4e0c8,GPT-5.6 Terra,guided,psychiatry
+MAIN-057,293b40e0bb43,DeepSeek V4 Pro,guided,pediatrics
+MAIN-058,f19ce7464de0,GPT-6 Astra,plain,surgery
+MAIN-059,78cee0f15643,Claude Fable 5.1,guided,pediatrics
+MAIN-060,965de9fde3dc,GPT-5.6 Terra,guided,pediatrics
+MAIN-061,1c329ce1ef26,DeepSeek V4 Flash,plain,surgery
+MAIN-062,3fd4152beaf4,GPT-5.6 Luna,plain,pharmacology
+MAIN-063,baa6f9d8ca0c,Grok 4.6,plain,obstetrics_gynecology
+MAIN-064,9441689fd989,Gemini 3.8 Flash,plain,internal_medicine
+MAIN-065,7e9b0a4c80c2,Claude Opus 5,guided,neurology
+MAIN-066,52cd93cedfdd,Gemini 3.1 Pro,guided,internal_medicine
+MAIN-067,8ae34aeaa304,Gemini 3.1 Pro,plain,internal_medicine
+MAIN-068,15ab1b77902a,Grok 4.6,plain,surgery
+MAIN-069,52321e893618,DeepSeek V4 Pro,plain,pharmacology
+MAIN-070,655d2c04f2ef,Gemini 3.8 Flash,guided,pharmacology
+MAIN-071,e0e6c0e2c94b,Claude Fable 5.1,plain,surgery
+MAIN-072,86f0f80a3f13,GPT-6 Astra,plain,internal_medicine
+MAIN-073,b6a262a86165,Qwen 3.6 27B,plain,neurology
+MAIN-074,8cef90f9a758,Claude Sonnet 5,guided,obstetrics_gynecology
+MAIN-075,7e1632603c1b,Grok 4.6,plain,obstetrics_gynecology
+MAIN-076,2417ace3a634,GPT-5.6 Terra,plain,pediatrics
+MAIN-077,1d525b45eacf,Mistral Small 2603,plain,neurology
+MAIN-078,5a8c998ff97e,Claude Opus 5,plain,pediatrics
+MAIN-079,f46310cc0a9f,Qwen 3.6 27B,guided,surgery
+MAIN-080,2f58b501a59e,Qwen 3.6 27B,guided,pediatrics
+MAIN-081,78b5d6c4e02c,GPT-5.6 Luna,guided,internal_medicine
+MAIN-082,5b0fbca93888,Qwen 3.8 Max,plain,internal_medicine
+MAIN-083,45695ed31e42,DeepSeek V4 Pro,guided,surgery
+MAIN-084,d169a7cc3219,DeepSeek V4 Flash,guided,psychiatry
+MAIN-085,f8e8e8579810,Gemini 3.1 Pro,plain,surgery
+MAIN-086,8279ef76a000,Grok 4.6,guided,obstetrics_gynecology
+MAIN-087,903aabd2b387,Claude Opus 5,plain,surgery
+MAIN-088,6d45a8206dba,Claude Fable 5.1,guided,obstetrics_gynecology
+MAIN-089,e00b96f8f71c,Llama 4 Maverick,plain,pediatrics
+MAIN-090,6fd919ea09c1,Qwen 3.6 27B,plain,pediatrics
+MAIN-091,a293b321f217,Claude Opus 5,plain,pediatrics
+MAIN-092,0469a3d1275d,DeepSeek V4 Pro,guided,surgery
+MAIN-093,fc7e264a928b,Claude Sonnet 5,plain,psychiatry
+MAIN-094,ebf6d8f0f288,GPT-6 Astra,guided,internal_medicine
+MAIN-095,e096ffc1dc26,Gemini 3.1 Pro,guided,pediatrics
+MAIN-096,f4f613688b8c,Gemini 3.1 Pro,guided,obstetrics_gynecology
+MAIN-097,17c647d7ddef,Llama 4 Maverick,plain,psychiatry
+MAIN-098,a28d59f69634,Qwen 3.6 27B,plain,neurology
+MAIN-099,1ded9b1a8864,Mistral Small 2603,guided,internal_medicine
+MAIN-100,e72ffda8e681,Claude Sonnet 5,guided,pediatrics

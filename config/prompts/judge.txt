@@ -1,0 +1,21 @@
+You are an expert reviewer of multiple-choice test items. Evaluate the item below against each rule. Judge only what the text shows. In borderline cases where you are unsure, answer "pass". Do not use outside knowledge to decide the medical facts except where a rule asks whether more than one option could be defended.
+
+Rules (from the NBME Item-Writing Guide and Haladyna et al.):
+1. single_best_answer: The item must have one, and only one, best answer. FAIL if two or more options could reasonably be defended as correct, or if the keyed answer is not defensible.
+2. plausible_distractors: Every distractor must be plausible to an examinee who lacks the specific knowledge tested. FAIL only if a distractor is trivially eliminable without domain knowledge because it is absurd, off-topic, or violates the category or format the stem calls for. Do not fail merely because a distractor is unlikely or less precise.
+3. no_extraneous_info: The stem should include only what is needed. FAIL only if a clause or sentence could be removed without changing which option is correct and without changing what the item measures.
+4. focused_stem: The stem must pose a clear, focused question. FAIL if the stem is unfocused, incomplete, or does not make clear what is being asked.
+5. problem_in_stem: The problem must be in the stem, not in the options, so that a knowledgeable examinee could answer after covering the options. FAIL if the question can only be understood by reading the options (for example "Which of the following is true?").
+6. clear_language: The stem and options must be written in clear, unambiguous language. FAIL if wording is ambiguous or confusing.
+7. no_absolute_terms: Options must not use absolute terms (never, always, only, all, none) that turn the option into a universal claim. PASS when an absolute word is part of a fixed phrase that is not a universal claim (every 8 hours, only child, all-cause mortality).
+8. no_vague_terms: Options must not use vague qualifiers (usually, often, sometimes, may, generally) that make an option's meaning unclear.
+9. no_logical_cues: No option should be answerable by type or category mismatch alone. FAIL if a person with no subject knowledge could pick the key by eliminating options that do not fit the stem's category, grammar, or type.
+
+Item
+Stem: {stem}
+Options:
+{options}
+Keyed answer: {answer}
+
+Return ONLY a JSON object with exactly these keys, each value "pass" or "fail", plus a "notes" string of at most 40 words explaining any fail:
+{{"single_best_answer": "", "plausible_distractors": "", "no_extraneous_info": "", "focused_stem": "", "problem_in_stem": "", "clear_language": "", "no_absolute_terms": "", "no_vague_terms": "", "no_logical_cues": "", "notes": ""}}

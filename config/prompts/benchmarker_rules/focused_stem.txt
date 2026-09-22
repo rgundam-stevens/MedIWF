@@ -1,0 +1,90 @@
+You are an expert evaluator of multiple-choice questions (MCQs). 
+You are given the following writing rule:
+
+<rule>
+Each MCQ should have a clear and focused question; avoid unfocused stems.
+</rule>
+
+Your task is to judge whether a given MCQ **follows this rule**. Here are some guidelines for this specific rule:
+
+<guidelines>
+For example, if the stem is ambiguous or has grammar issues, like 'Which color is sky?' or offers a statement to fill in like 'The sky is', return fail. If the stem is clear and focused, return pass. Generally, if the question stem is a clear question and ends with a question mark, it is focused and you should return 'pass'; otherwise, return 'fail'.
+</guidelines>
+
+<examples>
+<flawed example>
+<multiple-choice question>
+Question: What can I do with eggshells?
+Choices:
+(A) the first thing you can do with your egg shells is simply to toss them back to your chickens
+(B) the first thing you can do with your egg shells is simply to throw them back to your chickens
+Answer: A
+</multiple-choice question>
+<label>
+1
+</label>
+<explanation>
+The question 'What can I do with eggshells?' is ambiguous and does not specify the context in which you can do something with eggshells, which violates the focused-stem rule.
+</explanation>
+</flawed example>
+
+<flawed example>
+<multiple-choice question>
+Question: To convert a word document to a pdf format,
+Choices:
+(A) select the print option then select the "print as pdf" option in the printer selection
+(B) select the print option then select the "print to printer" option in the printer selection
+Answer: A
+</multiple-choice question>
+<label>
+1
+</label>
+<explanation>
+The question 'To convert a word document to a pdf format,' is ambiguous and does not pose a clear question (i.e. there is no question mark), which violates the focused-stem rule.
+</explanation>
+</flawed example>
+
+<not flawed example>
+<multiple-choice question>
+Question: A rectangle has a length of 8 centimeters and a width of 3 centimeters. Find the perimeter.
+Choices:
+(A) 18cm
+(B) 22cm
+(C) 20cm
+(D) 30cm
+(E) 28cm
+Answer: B
+</multiple-choice question>
+<label>
+0
+</label>
+<explanation>
+This math question clearly asks for the perimeter of a previously defined rectangle, which does not violate the focused-stem rule.
+</explanation>
+</not flawed example>
+</examples>
+
+<general instructions>
+- Think carefully about whether the MCQ adheres to the rule.
+- If the rule is clearly followed and there are no flaws in the MCQ, return "pass".
+- If the rule is clearly violated and there are no flaws in the MCQ, return "fail".
+- In borderline cases where you are unsure, return "pass".
+- Provide a confidence score from 1-10 for your pass/fail decision - how strongly you believe the MCQ follows or violates the rule. 1 means not at all confident and 10 means very confident.
+- Provide a short, clear explanation of your reasoning.
+</general instructions>
+
+Here is the MCQ to evaluate:
+<multiple-choice question>
+Question Stem: {question}
+Choices: {choices}
+</multiple-choice question>
+
+<format>
+Return your output as valid JSON in the following format:
+{lbrace}
+  "result": "pass" | "fail",
+  "confidence": 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10,
+  "explanation": "Your explanation here"
+{rbrace}
+Do not include anything else.
+</format>

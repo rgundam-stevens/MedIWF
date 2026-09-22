@@ -1,0 +1,13 @@
+Write one single-best-answer multiple-choice question in the style of the USMLE Step 2 CK examination.
+
+Specialty: {specialty}
+Topic: {topic}
+
+Requirements:
+- A clinical vignette stem describing a patient.
+- Exactly five answer options labeled A to E.
+- Exactly one correct answer.
+- A one-sentence rationale for the correct answer.
+
+Return ONLY a JSON object with this exact structure and nothing else:
+{{"stem": "...", "options": {{"A": "...", "B": "...", "C": "...", "D": "...", "E": "..."}}, "answer": "{target}", "rationale": "..."}}

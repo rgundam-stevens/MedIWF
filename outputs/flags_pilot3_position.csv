@@ -1,0 +1,61 @@
+job_id,model_id,model_label,family,tier,specialty,topic_index,condition,rep,reasoning_mode,target_position,provider,reasoning_tokens,negative_stem,none_of_the_above,all_of_the_above,combination_options,fill_in_blank,true_false_stem,longest_option_key,option_length_outlier,absolute_terms,vague_terms,clang_cue,grammatical_cue,nonparallel_options,numeric_not_ordered,numeric_units_inconsistent,overlapping_options,options_not_alphabetical,n_flaws,n_options,key,stem_words,key_chars,mean_distractor_chars
+485095f8969f,openai/gpt-5.6-luna,GPT-5.6 Luna,commercial,base,pediatrics,1,guided_position,0,off,A,OpenAI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,74,50,58.8
+d822d8e6c34f,openai/gpt-5.6-luna,GPT-5.6 Luna,commercial,base,internal_medicine,1,guided_position,0,off,E,OpenAI,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,2,5,E,82,96,46
+d077724cc034,anthropic/claude-sonnet-5,Claude Sonnet 5,commercial,base,pediatrics,0,guided_position,0,off,B,Claude Platform on AWS,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,B,82,56,32.2
+a30bee64ae86,openai/gpt-6-astra,GPT-6 Astra,commercial,flagship,pediatrics,1,guided_position,0,off,A,OpenAI,255,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,5,A,75,33,33.8
+8a056fe6ffc7,openai/gpt-5.6-terra,GPT-5.6 Terra,commercial,base,internal_medicine,0,guided_position,0,off,C,OpenAI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,105,61,49.8
+d2c9670915fe,anthropic/claude-opus-5,Claude Opus 5,commercial,flagship,internal_medicine,1,guided_position,0,off,D,Claude Platform on AWS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,123,42,42.5
+3acf4828c67e,openai/gpt-5.6-terra,GPT-5.6 Terra,commercial,base,pediatrics,0,guided_position,0,off,C,OpenAI,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,C,78,58,37.2
+b64b9222380c,google/gemini-3.1-pro-preview,Gemini 3.1 Pro,commercial,flagship,internal_medicine,0,guided_position,0,off,E,Google,3592,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,117,28,32.5
+c31dee22d180,mistralai/mistral-small-2603,Mistral Small 2603,open,base,pediatrics,0,guided_position,0,off,D,Mistral,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,D,65,80,48.5
+1e30af35da00,deepseek/deepseek-v4-pro,DeepSeek V4 Pro,open,flagship,internal_medicine,1,guided_position,0,off,C,Baidu,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,69,42,38.5
+2fe0fba8ca03,anthropic/claude-sonnet-5,Claude Sonnet 5,commercial,base,internal_medicine,1,guided_position,0,off,B,Claude Platform on AWS,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,B,85,69,56
+6e9dd759cb98,qwen/qwen3.8-max-0902,Qwen 3.8 Max,commercial,flagship,internal_medicine,1,guided_position,0,off,B,Alibaba,1636,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,68,7,9.8
+e6cae696ef48,qwen/qwen3.8-max-0902,Qwen 3.8 Max,commercial,flagship,pediatrics,1,guided_position,0,off,D,Alibaba,1954,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,81,29,31.5
+54f79e947357,openai/gpt-6-astra,GPT-6 Astra,commercial,flagship,internal_medicine,0,guided_position,0,off,D,OpenAI,479,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,99,17,16.8
+f2b36265c4d1,deepseek/deepseek-v4-pro,DeepSeek V4 Pro,open,flagship,pediatrics,0,guided_position,0,off,D,Novita,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,D,92,30,32.5
+abe02a8ce2ec,anthropic/claude-sonnet-5,Claude Sonnet 5,commercial,base,internal_medicine,0,guided_position,0,off,D,Claude Platform on AWS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,88,43,44.5
+b74b1724e6cb,anthropic/claude-opus-5,Claude Opus 5,commercial,flagship,internal_medicine,0,guided_position,0,off,C,Claude Platform on AWS,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,5,C,160,45,25.5
+61e2847466e3,deepseek/deepseek-v4-flash,DeepSeek V4 Flash,open,base,pediatrics,1,guided_position,0,off,D,DeepInfra,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,46,29,30.5
+3c0032642a4e,meta-llama/llama-4-maverick,Llama 4 Maverick,open,base,pediatrics,0,guided_position,0,off,A,DeepInfra,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,50,59,56
+fa8c5d04d6d9,anthropic/claude-sonnet-5,Claude Sonnet 5,commercial,base,pediatrics,1,guided_position,0,off,B,Claude Platform on AWS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,89,46,35.2
+368930d728c1,qwen/qwen3.8-max-0902,Qwen 3.8 Max,commercial,flagship,pediatrics,0,guided_position,0,off,D,Alibaba,1512,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,83,23,26.2
+adcc7ca92040,deepseek/deepseek-v4-flash,DeepSeek V4 Flash,open,base,internal_medicine,1,guided_position,0,off,B,DeepInfra,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,69,79,67
+2f9ba5fa76ac,openai/gpt-5.6-luna,GPT-5.6 Luna,commercial,base,pediatrics,0,guided_position,0,off,E,OpenAI,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,2,5,E,73,47,28.5
+322961f262a3,qwen/qwen3.6-27b,Qwen 3.6 27B,open,base,internal_medicine,1,guided_position,0,off,A,SiliconFlow,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,5,A,94,18,33.5
+a0ca9ef6bc4a,openai/gpt-5.6-terra,GPT-5.6 Terra,commercial,base,internal_medicine,1,guided_position,0,off,E,OpenAI,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,1,3,5,E,70,94,40.5
+81d995d790fc,google/gemini-3.1-pro-preview,Gemini 3.1 Pro,commercial,flagship,internal_medicine,1,guided_position,0,off,D,Google,2129,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,96,36,33.2
+87df400a3e5e,x-ai/grok-4.6,Grok 4.6,commercial,flagship,internal_medicine,0,guided_position,0,off,D,xAI,2421,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,82,12,11.8
+68d29f0b6d04,x-ai/grok-4.6,Grok 4.6,commercial,flagship,pediatrics,0,guided_position,0,off,B,xAI,3350,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,59,18,20.5
+7aff8eeba68a,mistralai/mistral-small-2603,Mistral Small 2603,open,base,internal_medicine,0,guided_position,0,off,D,Mistral,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,5,D,77,28,28
+9cb76f3bd5eb,openai/gpt-5.6-luna,GPT-5.6 Luna,commercial,base,internal_medicine,0,guided_position,0,off,E,OpenAI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,103,46,31.8
+0edfd2d0d1ae,anthropic/claude-opus-5,Claude Opus 5,commercial,flagship,pediatrics,0,guided_position,0,off,E,Claude Platform on AWS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,129,48,39
+0d178c1f3682,qwen/qwen3.6-27b,Qwen 3.6 27B,open,base,pediatrics,0,guided_position,0,off,A,SiliconFlow,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,2,5,A,107,54,32.5
+34811be5ee75,meta-llama/llama-4-maverick,Llama 4 Maverick,open,base,internal_medicine,0,guided_position,0,off,A,DeepInfra,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,47,28,27.5
+b20d65d75d80,deepseek/deepseek-v4-pro,DeepSeek V4 Pro,open,flagship,pediatrics,1,guided_position,0,off,C,DigitalOcean,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,77,18,26.5
+4716e3913b19,deepseek/deepseek-v4-pro,DeepSeek V4 Pro,open,flagship,internal_medicine,0,guided_position,0,off,A,AtlasCloud,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,88,37,46.8
+7f81ecbd2b8e,google/gemini-3.8-flash,Gemini 3.8 Flash,commercial,base,pediatrics,1,guided_position,0,off,C,Google,1219,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,85,52,46.5
+c8b9edf47789,openai/gpt-6-astra,GPT-6 Astra,commercial,flagship,pediatrics,0,guided_position,0,off,B,OpenAI,420,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,84,42,42.2
+b08346030d73,google/gemini-3.1-pro-preview,Gemini 3.1 Pro,commercial,flagship,pediatrics,0,guided_position,0,off,D,Google,2608,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,5,D,95,29,29.5
+be376dc5458a,google/gemini-3.8-flash,Gemini 3.8 Flash,commercial,base,internal_medicine,1,guided_position,0,off,A,Google AI Studio,1885,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,A,69,38,37
+04c4a3d5ebe8,deepseek/deepseek-v4-flash,DeepSeek V4 Flash,open,base,pediatrics,0,guided_position,0,off,A,DeepInfra,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,1,3,5,A,65,70,30.2
+3a297eb18d93,google/gemini-3.8-flash,Gemini 3.8 Flash,commercial,base,internal_medicine,0,guided_position,0,off,E,Google,1754,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,126,45,51
+eba193e5813f,qwen/qwen3.6-27b,Qwen 3.6 27B,open,base,pediatrics,1,guided_position,0,off,A,SiliconFlow,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,96,29,30.2
+e9768200bea5,anthropic/claude-fable-5.1,Claude Fable 5.1,commercial,flagship,pediatrics,0,guided_position,0,off,E,Anthropic,0,0,0,0,0,0,0,1,1,0,0,1,0,1,0,0,0,1,4,5,E,103,54,20.2
+57108b45398a,mistralai/mistral-small-2603,Mistral Small 2603,open,base,pediatrics,1,guided_position,0,off,E,Mistral,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,56,71,56.5
+88d9f548a558,anthropic/claude-fable-5.1,Claude Fable 5.1,commercial,flagship,internal_medicine,0,guided_position,0,off,B,Anthropic,720,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,114,28,18.5
+72432c9ddef3,google/gemini-3.8-flash,Gemini 3.8 Flash,commercial,base,pediatrics,0,guided_position,0,off,E,Google AI Studio,1082,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,E,86,36,35.2
+14496f0ab767,google/gemini-3.1-pro-preview,Gemini 3.1 Pro,commercial,flagship,pediatrics,1,guided_position,0,off,C,Google,2288,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,5,C,99,52,46.8
+9f24639aeece,anthropic/claude-fable-5.1,Claude Fable 5.1,commercial,flagship,pediatrics,1,guided_position,0,off,C,Anthropic,547,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,C,108,18,25.2
+108ecb6a4231,mistralai/mistral-small-2603,Mistral Small 2603,open,base,internal_medicine,1,guided_position,0,off,D,Mistral,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,1,3,5,D,59,97,42
+8c953f59cf62,qwen/qwen3.6-27b,Qwen 3.6 27B,open,base,internal_medicine,0,guided_position,0,off,E,SiliconFlow,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,56,11,20
+65ba9cb1a44e,meta-llama/llama-4-maverick,Llama 4 Maverick,open,base,internal_medicine,1,guided_position,0,off,E,DeepInfra,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,43,36,51.8
+2b601f6ea712,deepseek/deepseek-v4-flash,DeepSeek V4 Flash,open,base,internal_medicine,0,guided_position,0,off,E,DeepInfra,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,82,71,67.5
+9d82a57744c5,meta-llama/llama-4-maverick,Llama 4 Maverick,open,base,pediatrics,1,guided_position,0,off,B,DeepInfra,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,B,48,25,36.8
+282e8a019e1b,x-ai/grok-4.6,Grok 4.6,commercial,flagship,pediatrics,1,guided_position,0,off,D,xAI,3039,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,D,75,18,21
+e49622bd900c,x-ai/grok-4.6,Grok 4.6,commercial,flagship,internal_medicine,1,guided_position,0,off,E,xAI,3630,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,79,34,31
+5f9d4539632e,anthropic/claude-opus-5,Claude Opus 5,commercial,flagship,pediatrics,1,guided_position,0,off,B,Claude Platform on AWS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,B,111,62,46.2
+2e2e044a6fe0,openai/gpt-5.6-terra,GPT-5.6 Terra,commercial,base,pediatrics,1,guided_position,0,off,E,OpenAI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,E,68,51,50.2
+22a76f5e5ebe,anthropic/claude-fable-5.1,Claude Fable 5.1,commercial,flagship,internal_medicine,1,guided_position,0,off,D,Anthropic,827,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,139,39,47.5
+8a821836dd01,openai/gpt-6-astra,GPT-6 Astra,commercial,flagship,internal_medicine,1,guided_position,0,off,D,OpenAI,379,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,D,87,56,57.5
+dbd454d28c33,qwen/qwen3.8-max-0902,Qwen 3.8 Max,commercial,flagship,internal_medicine,0,guided_position,0,off,A,Alibaba,6640,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,A,103,29,33.8

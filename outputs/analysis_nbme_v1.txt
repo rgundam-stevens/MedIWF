@@ -1,0 +1,32 @@
+667 items in outputs/flags_nbme.csv
+
+== NBME: prevalence of each flaw (all 667 retired USMLE items)
+  negative_stem                   1    0.1%  [ 0.0,  0.8]
+  none_of_the_above               0    0.0%  [-0.0,  0.6]
+  all_of_the_above                1    0.1%  [ 0.0,  0.8]
+  combination_options             0    0.0%  [-0.0,  0.6]
+  fill_in_blank                   0    0.0%  [-0.0,  0.6]
+  true_false_stem                 0    0.0%  [-0.0,  0.6]
+  longest_option_key             20    3.0%  [ 1.9,  4.6]
+  option_length_outlier         243   36.4%  [32.9, 40.2]
+  absolute_terms                 21    3.1%  [ 2.1,  4.8]
+  vague_terms                     3    0.4%  [ 0.2,  1.3]
+  clang_cue                      52    7.8%  [ 6.0, 10.1]
+  grammatical_cue                26    3.9%  [ 2.7,  5.7]
+  nonparallel_options            24    3.6%  [ 2.4,  5.3]
+  numeric_not_ordered             1    0.1%  [ 0.0,  0.8]
+  numeric_units_inconsistent      1    0.1%  [ 0.0,  0.8]
+  overlapping_options            14    2.1%  [ 1.3,  3.5]
+  options_not_alphabetical      115   17.2%  [14.6, 20.3]
+
+== NBME: key position {'C': 111, 'A': 135, 'D': 147, 'E': 125, 'B': 129, 'F': 15, 'G': 3, 'H': 2} chi2 vs uniform = 5.4
+
+== NBME: mean difficulty / response time, flagged vs unflagged (any flaw excl. alphabetical)
+  n_flaws                      n_flagged= 330  d(difficulty)=-0.032  d(response_time)=-4.7s
+  longest_option_key           n_flagged=  20  d(difficulty)=+0.082  d(response_time)=+8.3s
+  option_length_outlier        n_flagged= 243  d(difficulty)=-0.020  d(response_time)=-6.6s
+  absolute_terms               n_flagged=  21  d(difficulty)=-0.182  d(response_time)=-17.7s
+  clang_cue                    n_flagged=  52  d(difficulty)=-0.029  d(response_time)=-2.6s
+  grammatical_cue              n_flagged=  26  d(difficulty)=-0.063  d(response_time)=-3.6s
+  nonparallel_options          n_flagged=  24  d(difficulty)=-0.057  d(response_time)=+8.6s
+  overlapping_options          n_flagged=  14  d(difficulty)=+0.132  d(response_time)=+16.0s

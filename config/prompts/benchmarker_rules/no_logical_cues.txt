@@ -1,0 +1,109 @@
+You are an expert evaluator of multiple-choice questions (MCQs). 
+You are given the following writing rule:
+
+<rule>
+Avoid logical cues in the stem and correct option that reveal the answer.
+</rule>
+
+Your task is to judge whether a given MCQ **follows this rule**. Here are some guidelines for this specific rule:
+
+<guidelines>
+Use this rule to catch structural cues, not content correctness.'.
+
+Definitions
+- Target property (T): what the question is testing for (e.g., “is a chemical reaction”, “is inheritable”, “was born in the 20th century”). A stem may include multiple target properties; they are all part of T.
+- Type/fit constraints (S): surface requirements that every option should satisfy to be meaningfully comparable (e.g., being a process/trait/person as the stem implies; grammatical fit with the stem).
+
+Decision procedure
+1) Identify T (the concept(s) the stem explicitly asks for).
+2) Identify S (the expected semantic type and grammatical form that all options must share to fit the stem).
+3) FAIL only if any option violates S (type/category/grammar mismatch) or if only the key satisfies S.
+4) Do NOT fail because an option lacks T. Lack of T is normal for distractors.
+5) “Zero-knowledge test”: If someone with no subject knowledge but normal language understanding could still pick the answer by eliminating options that violate S, then fail.
+
+Examples
+- PASS: “Which of the following is a chemical reaction?” with options that are all processes (e.g., burning, boiling, melting, dissolving) but only one is actually chemical. Discriminating chemical vs. physical change is T (content knowledge), not a cue.
+- FAIL: Same stem, but options include non-processes (e.g., “oxygen”, “tree”). Those violate S (type mismatch), so a test-taker can eliminate them by structure alone.
+
+This does not apply to meta-options like 'all of the above' and 'none of the above'. If that is the only logical cue, return 'pass'.
+
+When failing, state the S constraints the stem implies (e.g., “must be a process” / “must be a trait”) and point out which options violate S. Do not fail merely because an option lacks T. Refer to T and S as target and surface constraints, respectively.
+
+</guidelines>
+
+<examples>
+<flawed example>
+<multiple-choice question>
+Question: It was Aubrey's birthday and Aubrey invited friends over. Jan came to celebrate Aubrey's birthday. What will Jan want to do next?
+Choices:
+(A) eat cake
+(B) go to the house before this
+(C) give aubrey a smack
+Answer: A
+</multiple-choice question>
+<label>
+1
+</label>
+<explanation>
+The target constraint is the next plausible action for Jan, while the surface constraints are that the choice must be an action that can happen next. Choice (B) with 'before this' is not an action that could happen next and thus violates the surface constraints and the no-logical-cues rule.
+</explanation>
+</flawed example>
+
+<flawed example>
+<multiple-choice question>
+Question: Attach tooth picks to a cork board to create a thread spool holder.
+Choices:
+(A) place tooth picks pointed side down into cork board at 3 inch intervals lightly tap the top of the tooth pick at a horizontal angle with a rubber mallet to anchor into the cork board to create a thread spool holder
+(B) place tooth picks pointed side down into cork board at 3 inch intervals lightly tap the top of the tooth pick at a horizontal angle with a rubber mallet to anchor into the cookie sheet to create a thread spool holder
+Answer: A
+</multiple-choice question>
+<label>
+1
+</label>
+<explanation>
+The target constraint is to provide steps for attaching tooth picks to a cork board to create a thread spool holder, while the surface constraints are that the choice must be a step that uses the cork board. Choice (B) with 'cookie sheet' does not describe a cork board, which violates the surface constraints and the no-logical-cues rule.
+</explanation>
+</flawed example>
+
+<not flawed example>
+<multiple-choice question>
+Question: Sasha made decisions for Remy that led to Remy losing her business. What will happen to Sasha?
+Choices:
+(A) be appreciated by remy
+(B) have to find a new job
+(C) lose the trust of others
+Answer: C
+</multiple-choice question>
+<label>
+0
+</label>
+<explanation>
+The target constraint is the next plausible action for Sasha, while the surface constraints are that the choice must be an action that can happen next. All choices could happen next which satisfy the surface constraints and thus do not violate the no-logical-cues rule.
+</explanation>
+</not flawed example>
+</examples>
+
+<general instructions>
+- Think carefully about whether the MCQ adheres to the rule.
+- If the rule is clearly followed and there are no flaws in the MCQ, return "pass".
+- If the rule is clearly violated and there are no flaws in the MCQ, return "fail".
+- In borderline cases where you are unsure, return "pass".
+- Provide a confidence score from 1-10 for your pass/fail decision - how strongly you believe the MCQ follows or violates the rule. 1 means not at all confident and 10 means very confident.
+- Provide a short, clear explanation of your reasoning.
+</general instructions>
+
+Here is the MCQ to evaluate:
+<multiple-choice question>
+Question Stem: {question}
+Choices: {choices}
+</multiple-choice question>
+
+<format>
+Return your output as valid JSON in the following format:
+{lbrace}
+  "result": "pass" | "fail",
+  "confidence": 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10,
+  "explanation": "Your explanation here"
+{rbrace}
+Do not include anything else.
+</format>

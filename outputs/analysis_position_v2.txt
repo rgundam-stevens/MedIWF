@@ -1,0 +1,74 @@
+Position arm: 2998 items, 15 models; requested positions: {'A': 600, 'B': 600, 'C': 599, 'D': 600, 'E': 599}
+
+== Compliance with the requested key position (key == target), Wilson 95% CI; BH over chi-square tests of the realised key distribution
+  Claude Fable 5.1     flagship  n=200  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 40, 'E': 40}  chi2=  0.0 p=1 q=1
+  Claude Opus 5        flagship  n=198  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 39, 'D': 40, 'E': 39}  chi2=  0.0 p=1 q=1
+  Claude Sonnet 5      base      n=200  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 40, 'E': 40}  chi2=  0.0 p=1 q=1
+  DeepSeek V4 Flash    base      n=200  compliance= 99.5% [97.2, 99.9]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 41, 'E': 39}  chi2=  0.1 p=1 q=1
+  DeepSeek V4 Pro      flagship  n=200  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 40, 'E': 40}  chi2=  0.0 p=1 q=1
+  GPT-5.6 Luna         base      n=200  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 40, 'E': 40}  chi2=  0.0 p=1 q=1
+  GPT-5.6 Terra        base      n=200  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 40, 'E': 40}  chi2=  0.0 p=1 q=1
+  GPT-6 Astra          flagship  n=200  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 40, 'E': 40}  chi2=  0.0 p=1 q=1
+  Gemini 3.1 Pro       flagship  n=200  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 40, 'E': 40}  chi2=  0.0 p=1 q=1
+  Gemini 3.8 Flash     base      n=200  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 40, 'E': 40}  chi2=  0.0 p=1 q=1
+  Grok 4.6             flagship  n=200  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 40, 'E': 40}  chi2=  0.0 p=1 q=1
+  Llama 4 Maverick     base      n=200  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 40, 'E': 40}  chi2=  0.0 p=1 q=1
+  Mistral Small 2603   base      n=200  compliance=100.0% [98.1, 100.0]  keys={'A': 40, 'B': 40, 'C': 40, 'D': 40, 'E': 40}  chi2=  0.0 p=1 q=1
+  Qwen 3.6 27B         base      n=200  compliance= 92.0% [87.4, 95.0]  keys={'A': 45, 'B': 45, 'C': 43, 'D': 33, 'E': 34}  chi2=  3.6 p=0.46 q=1
+  Qwen 3.8 Max         flagship  n=200  compliance= 99.5% [97.2, 99.9]  keys={'A': 40, 'B': 40, 'C': 41, 'D': 40, 'E': 39}  chi2=  0.1 p=1 q=1
+  ALL                            n=2998  compliance= 99.4% [99.1, 99.6]  keys={'A': 605, 'B': 605, 'C': 603, 'D': 594, 'E': 591}  chi2=  0.3 p=0.99
+
+== Compliance by requested position (pooled over models)
+  target A  n= 600  compliance= 99.8% [99.1, 100.0]  realised keys={'A': 599, 'B': 1}
+  target B  n= 600  compliance=100.0% [99.4, 100.0]  realised keys={'B': 600}
+  target C  n= 599  compliance= 99.7% [98.8, 99.9]  realised keys={'A': 1, 'B': 1, 'C': 597}
+  target D  n= 600  compliance= 98.8% [97.6, 99.4]  realised keys={'A': 2, 'B': 2, 'C': 3, 'D': 593}
+  target E  n= 599  compliance= 98.7% [97.4, 99.3]  realised keys={'A': 3, 'B': 1, 'C': 3, 'D': 1, 'E': 591}
+
+== Where non-compliant items put the key (pooled)
+  n=18; realised keys={'A': 6, 'B': 5, 'C': 6, 'D': 1}
+
+== Any validated Tier-A flaw: position arm vs guided arm (same models), adjusted for specialty; cluster-robust by topic
+   (the position prompt replaces the alphabetical-ordering guideline with the explicit position instruction; other 9 guidelines identical)
+  pooled: guided 13.5% -> position 14.0%  OR=1.04 [0.91, 1.20] p=0.55
+  Claude Fable 5.1     guided   9.5% -> position   9.5%  OR=1.00 [0.59, 1.70] p=1 q=1
+  Claude Opus 5        guided  19.3% -> position  12.6%  OR=0.60 [0.37, 0.96] p=0.035 q=0.28
+  Claude Sonnet 5      guided  20.2% -> position  19.0%  OR=0.92 [0.62, 1.38] p=0.69 q=0.95
+  DeepSeek V4 Flash    guided  12.2% -> position  17.0%  OR=1.47 [0.92, 2.35] p=0.1 q=0.39
+  DeepSeek V4 Pro      guided  18.5% -> position  19.0%  OR=1.03 [0.70, 1.53] p=0.87 q=0.97
+  GPT-5.6 Luna         guided  16.8% -> position  19.5%  OR=1.21 [0.82, 1.80] p=0.34 q=0.66
+  GPT-5.6 Terra        guided  13.2% -> position  15.5%  OR=1.21 [0.80, 1.82] p=0.38 q=0.66
+  GPT-6 Astra          guided   5.0% -> position   5.5%  OR=1.11 [0.54, 2.29] p=0.78 q=0.97
+  Gemini 3.1 Pro       guided  10.0% -> position   6.5%  OR=0.61 [0.37, 1.01] p=0.055 q=0.28
+  Gemini 3.8 Flash     guided   8.5% -> position  10.0%  OR=1.21 [0.75, 1.93] p=0.44 q=0.66
+  Grok 4.6             guided   3.5% -> position   5.0%  OR=1.46 [0.61, 3.50] p=0.4 q=0.66
+  Llama 4 Maverick     guided  13.8% -> position  19.5%  OR=1.54 [1.02, 2.33] p=0.039 q=0.28
+  Mistral Small 2603   guided  23.6% -> position  24.0%  OR=1.02 [0.71, 1.46] p=0.91 q=0.97
+  Qwen 3.6 27B         guided  14.2% -> position  16.5%  OR=1.19 [0.78, 1.82] p=0.41 q=0.66
+  Qwen 3.8 Max         guided  14.0% -> position  10.5%  OR=0.71 [0.42, 1.22] p=0.22 q=0.65
+
+== Per-flaw prevalence (%), guided arm vs position arm, pooled over the same models
+                          guided  position
+longest_option_key          5.35      5.94
+absolute_terms              1.10      1.27
+clang_cue                   6.05      6.20
+combination_options         0.00      0.00
+negative_stem               0.00      0.00
+none_of_the_above           0.00      0.00
+all_of_the_above            0.00      0.00
+fill_in_blank               0.00      0.00
+true_false_stem             0.00      0.00
+numeric_not_ordered         0.07      0.57
+overlapping_options         1.10      0.83
+grammatical_cue             0.03      0.00
+nonparallel_options         1.45      1.03
+vague_terms                 0.02      0.03
+option_length_outlier      19.36     15.94
+options_not_alphabetical   17.95     85.89
+
+== Longest-option-is-key by requested position (does forcing the key to a position change its length?)
+  target A  longest_option_key=6.0%  key_chars mean=34  mean_distractor_chars=33
+  target B  longest_option_key=5.2%  key_chars mean=35  mean_distractor_chars=33
+  target C  longest_option_key=5.0%  key_chars mean=35  mean_distractor_chars=33
+  target D  longest_option_key=5.2%  key_chars mean=35  mean_distractor_chars=32
+  target E  longest_option_key=8.3%  key_chars mean=37  mean_distractor_chars=33

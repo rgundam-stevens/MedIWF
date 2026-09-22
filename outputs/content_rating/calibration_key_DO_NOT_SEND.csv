@@ -1,0 +1,21 @@
+item_id,job_id,model,kind,expected,note
+CAL-01,7d17a688dca3,Claude Fable 5.1,clean,{},
+CAL-02,7c22e038e0f7,Gemini 3.1 Pro,planted,"{""q1"": ""no"", ""q3"": ""no""}","At 31 weeks without severe features, induction is wrong (expectant management + steroids); key no longer fits the vignette"
+CAL-03,0ed825c3adb6,DeepSeek V4 Pro,clean,{},
+CAL-04,6ad1cf710e8b,Claude Opus 5,clean,{},
+CAL-05,111ffc6b6ea5,Mistral Small 2603,natural,"{""q1"": ""no/unsure""}",Levofloxacin or moxifloxacin monotherapy is also guideline-acceptable for non-severe CAP: more than one defensible answer
+CAL-06,9a3db1ecbf2b,GPT-6 Astra,clean,{},
+CAL-07,b71ce62a520d,Mistral Small 2603,planted,"{""q2"": ""no""}",Implausible distractor: chemotherapy without a diagnosis
+CAL-08,fd03b6de9e7e,GPT-5.6 Terra,planted,"{""q1"": ""no""}","Wrong key: jaundice <24 h with ABO setup needs a direct antiglobulin test, not TSH"
+CAL-09,c00689d607d5,Gemini 3.8 Flash,planted,"{""q1"": ""no/unsure""}",Two defensible answers: cefotaxime + albumin is equivalent to ceftriaxone + albumin
+CAL-10,770fa022473d,DeepSeek V4 Pro,planted,"{""q1"": ""no/unsure""}",Two defensible answers: both stimulants are first-line initial pharmacotherapy
+CAL-11,8d2aedb2a39e,Gemini 3.1 Pro,clean,{},
+CAL-12,56985d12a8cf,Grok 4.6,clean,{},
+CAL-13,69f584f2640f,DeepSeek V4 Flash,planted,"{""q2"": ""no""}",Implausible distractor: a surgical procedure among histologic patterns
+CAL-14,3b2ea3c1eefd,GPT-5.6 Luna,planted,"{""q3"": ""no""}",Internally inconsistent: normal haemoglobin but the item is built around iron-deficiency anaemia
+CAL-15,3acd8c2d4021,Gemini 3.8 Flash,clean,{},
+CAL-16,65b55b5c5027,Llama 4 Maverick,natural,"{""q1"": ""no/unsure""}",Watchful waiting is an accepted option for an asymptomatic inguinal hernia; rationale contradicts the vignette (says symptomatic)
+CAL-17,b226bc9fa3ea,DeepSeek V4 Flash,clean,{},
+CAL-18,a7baa94623e2,GPT-5.6 Terra,clean,{},
+CAL-19,e49ed90c7759,Claude Opus 5,planted,"{""q1"": ""no""}","Wrong key: hypovolaemic, ketotic patient needs IV fluids first, not doxylamine-pyridoxine"
+CAL-20,275e601aa389,Claude Fable 5.1,clean,{},

@@ -1,0 +1,50 @@
+667 items in outputs/flags_nbme.csv
+
+== NBME: prevalence of each flaw (all 667 retired USMLE items)
+  negative_stem                   0    0.0%  [-0.0,  0.6]
+  none_of_the_above               0    0.0%  [-0.0,  0.6]
+  all_of_the_above                1    0.1%  [ 0.0,  0.8]
+  combination_options             0    0.0%  [-0.0,  0.6]
+  fill_in_blank                   0    0.0%  [-0.0,  0.6]
+  true_false_stem                 0    0.0%  [-0.0,  0.6]
+  longest_option_key             20    3.0%  [ 1.9,  4.6]
+  option_length_outlier         243   36.4%  [32.9, 40.2]
+  absolute_terms                 21    3.1%  [ 2.1,  4.8]
+  vague_terms                     3    0.4%  [ 0.2,  1.3]
+  clang_cue                      47    7.0%  [ 5.3,  9.2]
+  grammatical_cue                 0    0.0%  [-0.0,  0.6]
+  nonparallel_options            24    3.6%  [ 2.4,  5.3]
+  numeric_not_ordered             1    0.1%  [ 0.0,  0.8]
+  numeric_units_inconsistent      2    0.3%  [ 0.1,  1.1]
+  overlapping_options             7    1.0%  [ 0.5,  2.2]
+  options_not_alphabetical      115   17.2%  [14.6, 20.3]
+
+== NBME: key position {'C': 111, 'A': 135, 'D': 147, 'E': 125, 'B': 129, 'F': 15, 'G': 3, 'H': 2} chi2 vs uniform (all items, A-E) = 5.4
+== NBME: five-option items only (n=525, the comparable set): key position {'A': 110, 'B': 99, 'C': 89, 'D': 118, 'E': 109} chi2 vs uniform = 4.8
+== NBME: prevalence of each flaw, five-option items only
+  negative_stem                   0    0.0%  [ 0.0,  0.7]
+  none_of_the_above               0    0.0%  [ 0.0,  0.7]
+  all_of_the_above                0    0.0%  [ 0.0,  0.7]
+  combination_options             0    0.0%  [ 0.0,  0.7]
+  fill_in_blank                   0    0.0%  [ 0.0,  0.7]
+  true_false_stem                 0    0.0%  [ 0.0,  0.7]
+  longest_option_key             15    2.9%  [ 1.7,  4.7]
+  option_length_outlier         207   39.4%  [35.3, 43.7]
+  absolute_terms                 16    3.0%  [ 1.9,  4.9]
+  vague_terms                     3    0.6%  [ 0.2,  1.7]
+  clang_cue                      40    7.6%  [ 5.6, 10.2]
+  grammatical_cue                 0    0.0%  [ 0.0,  0.7]
+  nonparallel_options            17    3.2%  [ 2.0,  5.1]
+  numeric_not_ordered             1    0.2%  [ 0.0,  1.1]
+  numeric_units_inconsistent      2    0.4%  [ 0.1,  1.4]
+  overlapping_options             3    0.6%  [ 0.2,  1.7]
+  options_not_alphabetical       95   18.1%  [15.0, 21.6]
+
+== NBME: mean difficulty / response time, flagged vs unflagged (any flaw excl. alphabetical)
+  n_flaws                      n_flagged= 309  d(difficulty)=-0.025  d(response_time)=-4.5s
+  longest_option_key           n_flagged=  20  d(difficulty)=+0.082  d(response_time)=+8.3s
+  option_length_outlier        n_flagged= 243  d(difficulty)=-0.020  d(response_time)=-6.6s
+  absolute_terms               n_flagged=  21  d(difficulty)=-0.182  d(response_time)=-17.7s
+  clang_cue                    n_flagged=  47  d(difficulty)=-0.013  d(response_time)=-6.3s
+  nonparallel_options          n_flagged=  24  d(difficulty)=-0.057  d(response_time)=+8.6s
+  overlapping_options          n_flagged=   7  d(difficulty)=+0.056  d(response_time)=+5.6s

@@ -1,0 +1,2 @@
+main set: 100 items; 100 in the main corpus; cells: 30; per-cell counts: {4: 10, 3: 20}; plain/guided: 50/50
+calibration items: 20; overlap with main set: 0

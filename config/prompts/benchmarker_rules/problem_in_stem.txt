@@ -1,0 +1,95 @@
+You are an expert evaluator of multiple-choice questions (MCQs). 
+You are given the following writing rule:
+
+<rule>
+Each MCQ should have the problem in the stem, not in the options, so a test-taker can understand the question without looking at the options.
+</rule>
+
+Your task is to judge whether a given MCQ **follows this rule**. Here are some guidelines for this specific rule:
+
+<guidelines>
+For example, if the stem just says 'Mitochondria is:', return fail. If the question stem clearly states the problem, like 'What is the function of mitochondria?', return pass.
+</guidelines>
+
+<examples>
+<flawed example>
+<multiple-choice question>
+Question: Heat energy has been added to
+Choices:
+(A) red velvet cupcakes
+(B) greek yogurt
+(C) ceviche
+(D) caesar salad
+Answer: A
+</multiple-choice question>
+<label>
+1
+</label>
+<explanation>
+The question states 'Heat energy has been added to', which does not make it clear what the question is unless the choices are read, which violates the problem-in-stem rule.
+</explanation>
+</flawed example>
+
+<flawed example>
+<multiple-choice question>
+Question: What would happen if you are having a good time while chatting with friends?
+Choices:
+(A) agreement
+(B) communication
+(C) love
+(D) happiness
+(E) discord
+Answer: D
+</multiple-choice question>
+<label>
+0
+</label>
+<explanation>
+The question stem clearly states the problem of 'What would happen if you are having a good time while chatting with friends?', which does not violate the problem-in-stem rule.
+</explanation>
+</flawed example>
+
+<not flawed example>
+<multiple-choice question>
+Question: In a railway station, there are two trains going. One in the harbor line and one in the main line, each having a frequency of 10 minutes. The main line service starts at 5 o'clock and the harbor line starts at 5.02 A.M. A man goes to the station every day to catch the first train that comes. What is the probability of the man catching the first train?
+Choices:
+(A) 0.9
+(B) 0.8
+(C) 0.6
+(D) 0.65
+(E) 1.5
+Answer: B
+</multiple-choice question>
+<label>
+0
+</label>
+<explanation>
+The math question clearly asks for the probability of the man catching the first train, which does not violate the problem-in-stem rule.
+</explanation>
+</not flawed example>
+</examples>
+
+<general instructions>
+- Think carefully about whether the MCQ adheres to the rule.
+- If the rule is clearly followed and there are no flaws in the MCQ, return "pass".
+- If the rule is clearly violated and there are no flaws in the MCQ, return "fail".
+- In borderline cases where you are unsure, return "pass".
+- Provide a confidence score from 1-10 for your pass/fail decision - how strongly you believe the MCQ follows or violates the rule. 1 means not at all confident and 10 means very confident.
+- Provide a short, clear explanation of your reasoning.
+</general instructions>
+
+Here is the MCQ to evaluate:
+<multiple-choice question>
+Question Stem: {question}
+Choices: {choices}
+</multiple-choice question>
+
+<format>
+Return your output as valid JSON in the following format:
+{lbrace}
+  "result": "pass" | "fail",
+  "confidence": 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10,
+  "explanation": "Your explanation here"
+{rbrace}
+Do not include anything else.
+</format>

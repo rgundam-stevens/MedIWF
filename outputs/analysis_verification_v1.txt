@@ -1,0 +1,33 @@
+items labelled: 439 of 439; items with blank cells: 0
+strata (n sampled / population): flagged:absolute_terms 50/267, flagged:clang_cue 50/689, flagged:longest_option_key 50/976, flagged:nonparallel_options 30/170, flagged:numeric_not_ordered 15/15, flagged:overlapping_options 30/98, flagged:vague_terms 4/4, unflagged 210/9781
+note: rules with no detector-positive items in the corpus (negatives, meta-options, K-type) have no estimable precision; their recall rests on the unflagged stratum
+
+== Design-based precision and recall of each rule against the human labels (whole-corpus estimates; 95% CI by stratified bootstrap, 2000 resamples)
+rule                                    det+  hum+  both | precision [CI]         recall [CI]            | sample kappa
+negative_stem                              0     0     0 | nan [nan, nan]      nan [nan, nan]      | nan
+meta_option (all/none of the above)        0     0     0 | nan [nan, nan]      nan [nan, nan]      | nan
+combination_options                        0     0     0 | nan [nan, nan]      nan [nan, nan]      | nan
+longest_option_key                        50    50    50 | 1.00 [1.00, 1.00]      1.00 [1.00, 1.00]      | 1.00
+absolute_terms                            53    53    52 | 0.94 [0.83, 1.00]      0.87 [0.66, 1.00]      | 0.98
+vague_terms                                4     4     4 | 1.00 [1.00, 1.00]      1.00 [1.00, 1.00]      | 1.00
+clang_cue                                 60    69    48 | 0.79 [0.68, 0.89]      0.52 [0.42, 0.66]      | 0.70
+grammatical_cue                            1     1     1 | 1.00 [1.00, 1.00]      1.00 [1.00, 1.00]      | 1.00
+nonparallel_options                       34    35    33 | 0.98 [0.92, 1.00]      0.90 [0.75, 1.00]      | 0.95
+overlapping_options                       33    33    33 | 1.00 [1.00, 1.00]      1.00 [1.00, 1.00]      | 1.00
+
+== Unweighted sample estimates with exact (Clopper-Pearson) 95%% bounds and bootstrap kappa intervals (added 21 Sep 2026 at reviewers' request; rules with fewer than 10 positives are marked)
+rule                                   precision both/det+ [exact] recall both/hum+ [exact] kappa [bootstrap]
+negative_stem                          no positives
+meta_option (all/none of the above)    no positives
+combination_options                    no positives
+longest_option_key                     50/50 = 1.00 [0.93, 1.00]   50/50 = 1.00 [0.93, 1.00]   1.00 [1.00, 1.00]
+absolute_terms                         52/53 = 0.98 [0.90, 1.00]   52/53 = 0.98 [0.90, 1.00]   0.98 [0.94, 1.00]
+vague_terms                             4/ 4 = 1.00 [0.40, 1.00]    4/ 4 = 1.00 [0.40, 1.00]   1.00 [1.00, 1.00]  (<10 positives: interval uninformative)
+clang_cue                              48/60 = 0.80 [0.68, 0.89]   48/69 = 0.70 [0.57, 0.80]   0.70 [0.59, 0.79]
+grammatical_cue                         1/ 1 = 1.00 [0.02, 1.00]    1/ 1 = 1.00 [0.02, 1.00]   1.00 [1.00, 1.00]  (<10 positives: interval uninformative)
+nonparallel_options                    33/34 = 0.97 [0.85, 1.00]   33/35 = 0.94 [0.81, 0.99]   0.95 [0.89, 1.00]
+overlapping_options                    33/33 = 1.00 [0.89, 1.00]   33/33 = 1.00 [0.89, 1.00]   1.00 [1.00, 1.00]
+
+== Composite over the ten hand-checked rules (design-weighted; whole-corpus estimates)
+  any of the 10 rules                precision 0.95 [0.91, 0.98]  recall 0.79 [0.70, 0.88]  | weighted prevalence: detector 18.4%, human 22.1% [19.5, 24.9]
+  any of the 10 rules except clang   precision 1.00 [0.99, 1.00]  recall 0.97 [0.92, 1.00]  | weighted prevalence: detector 12.7%, human 13.1% [12.5, 14.0]

@@ -1,0 +1,189 @@
+N items = 12000; models = 15 (8 base, 7 flagship); topics = 200
+items per model x condition:
+condition           guided  plain
+model_label                      
+Claude Fable 5.1       400    400
+Claude Opus 5          400    400
+Claude Sonnet 5        400    400
+DeepSeek V4 Flash      400    400
+DeepSeek V4 Pro        400    400
+GPT-5.6 Luna           400    400
+GPT-5.6 Terra          400    400
+GPT-6 Astra            400    400
+Gemini 3.1 Pro         400    400
+Gemini 3.8 Flash       400    400
+Grok 4.6               400    400
+Llama 4 Maverick       400    400
+Mistral Small 2603     400    400
+Qwen 3.6 27B           400    400
+Qwen 3.8 Max           400    400
+
+== Prevalence of ANY core structural flaw (validated rules), with Wilson 95% CI
+  plain   Claude Fable 5.1     flagship   30.5% [26.2, 35.2]  n=400
+  plain   Claude Opus 5        flagship   31.5% [27.1, 36.2]  n=400
+  plain   Claude Sonnet 5      base       34.8% [30.2, 39.5]  n=400
+  plain   DeepSeek V4 Flash    base       25.5% [21.5, 30.0]  n=400
+  plain   DeepSeek V4 Pro      flagship   26.0% [21.9, 30.5]  n=400
+  plain   GPT-5.6 Luna         base       36.8% [32.2, 41.6]  n=400
+  plain   GPT-5.6 Terra        base       33.5% [29.1, 38.3]  n=400
+  plain   GPT-6 Astra          flagship   27.3% [23.1, 31.8]  n=400
+  plain   Gemini 3.1 Pro       flagship   18.2% [14.8, 22.3]  n=400
+  plain   Gemini 3.8 Flash     base       20.8% [17.1, 25.0]  n=400
+  plain   Grok 4.6             flagship   23.2% [19.4, 27.6]  n=400
+  plain   Llama 4 Maverick     base       27.0% [22.9, 31.6]  n=400
+  plain   Mistral Small 2603   base       24.2% [20.3, 28.7]  n=400
+  plain   Qwen 3.6 27B         base       26.2% [22.2, 30.8]  n=400
+  plain   Qwen 3.8 Max         flagship   28.5% [24.3, 33.1]  n=400
+  guided  Claude Fable 5.1     flagship   16.0% [12.7, 19.9]  n=400
+  guided  Claude Opus 5        flagship   21.2% [17.5, 25.5]  n=400
+  guided  Claude Sonnet 5      base       25.5% [21.5, 30.0]  n=400
+  guided  DeepSeek V4 Flash    base       16.2% [13.0, 20.2]  n=400
+  guided  DeepSeek V4 Pro      flagship   27.8% [23.6, 32.3]  n=400
+  guided  GPT-5.6 Luna         base       21.5% [17.8, 25.8]  n=400
+  guided  GPT-5.6 Terra        base       20.5% [16.8, 24.7]  n=400
+  guided  GPT-6 Astra          flagship   10.0% [ 7.4, 13.3]  n=400
+  guided  Gemini 3.1 Pro       flagship   14.2% [11.2, 18.0]  n=400
+  guided  Gemini 3.8 Flash     base       12.8% [ 9.8, 16.4]  n=400
+  guided  Grok 4.6             flagship   11.5% [ 8.7, 15.0]  n=400
+  guided  Llama 4 Maverick     base       17.0% [13.6, 21.0]  n=400
+  guided  Mistral Small 2603   base       28.2% [24.1, 32.9]  n=400
+  guided  Qwen 3.6 27B         base       18.2% [14.8, 22.3]  n=400
+  guided  Qwen 3.8 Max         flagship   18.8% [15.2, 22.9]  n=400
+  plain   ALL BASE                        28.6% [27.1, 30.2]  n=3200
+  guided  ALL BASE                        20.0% [18.7, 21.4]  n=3200
+  plain   ALL FLAGSHIP                    26.5% [24.9, 28.1]  n=2800
+  guided  ALL FLAGSHIP                    17.1% [15.7, 18.5]  n=2800
+
+== Effect of the guided prompt on any core flaw, adjusted for model and specialty (cluster-robust by topic)
+  overall OR (guided vs plain) = 0.59 [0.54, 0.66], p = 8.50e-25
+  base      OR (guided vs plain) = 0.62 [0.55, 0.69], p = 4.62e-17
+  flagship  OR (guided vs plain) = 0.56 [0.49, 0.65], p = 1.21e-14
+
+== Tier comparison: flagship vs base, any core flaw (adjusted for condition and specialty; cluster-robust by topic)
+   note: models are nested in tiers, so this compares the two groups of models, not a within-model change
+  flagship OR = 0.86 [0.79, 0.94], p = 1.36e-03   (guided OR in same model = 0.60)
+  interaction flagship x guided: OR = 0.92 [0.78, 1.07], p = 0.28
+  plain   flagship vs base OR = 0.90 [0.80, 1.00], p = 0.055
+  guided  flagship vs base OR = 0.82 [0.72, 0.94], p = 0.0032
+
+== Per-model effect of the guided prompt on any core flaw (separate models per generator, adjusted for specialty); BH over 15 tests
+  Claude Fable 5.1     flagship  OR=0.42 [0.30, 0.61]  p=2.76e-06  q(BH)=1.38e-05
+  Claude Opus 5        flagship  OR=0.58 [0.42, 0.80]  p=0.00076  q(BH)=0.00142
+  Claude Sonnet 5      base      OR=0.64 [0.47, 0.87]  p=0.00392  q(BH)=0.0049
+  DeepSeek V4 Flash    base      OR=0.56 [0.41, 0.78]  p=0.000484  q(BH)=0.00105
+  DeepSeek V4 Pro      flagship  OR=1.10 [0.83, 1.44]  p=0.517  q(BH)=0.517
+  GPT-5.6 Luna         base      OR=0.47 [0.34, 0.64]  p=1.75e-06  q(BH)=1.31e-05
+  GPT-5.6 Terra        base      OR=0.51 [0.37, 0.69]  p=2.19e-05  q(BH)=8.22e-05
+  GPT-6 Astra          flagship  OR=0.29 [0.19, 0.43]  p=1.96e-09  q(BH)=2.95e-08
+  Gemini 3.1 Pro       flagship  OR=0.74 [0.51, 1.07]  p=0.107  q(BH)=0.123
+  Gemini 3.8 Flash     base      OR=0.55 [0.37, 0.80]  p=0.00168  q(BH)=0.00247
+  Grok 4.6             flagship  OR=0.42 [0.28, 0.64]  p=4.13e-05  q(BH)=0.000124
+  Llama 4 Maverick     base      OR=0.54 [0.38, 0.76]  p=0.000489  q(BH)=0.00105
+  Mistral Small 2603   base      OR=1.23 [0.91, 1.67]  p=0.172  q(BH)=0.184
+  Qwen 3.6 27B         base      OR=0.62 [0.46, 0.83]  p=0.00162  q(BH)=0.00247
+  Qwen 3.8 Max         flagship  OR=0.57 [0.40, 0.81]  p=0.00181  q(BH)=0.00247
+
+== Per-flaw effect of the guided prompt, pooled over models (adjusted for model and specialty); flaws with >= 30 events
+  longest_option_key         events= 975  plain  10.9% -> guided   5.3%  OR=0.45 [0.40, 0.52]  p=1e-28  q=5.2e-28
+  absolute_terms             events= 339  plain   4.5% -> guided   1.1%  OR=0.23 [0.17, 0.30]  p=1.7e-24  q=5.6e-24
+  clang_cue                  events=1004  plain   9.7% -> guided   7.0%  OR=0.70 [0.62, 0.81]  p=4.8e-07  q=6.9e-07
+  combination_options        events= 133  plain   1.2% -> guided   1.0%  OR=0.79 [0.53, 1.19]  p=0.27  q=0.27
+  overlapping_options        events= 165  plain   1.1% -> guided   1.7%  OR=1.59 [1.15, 2.20]  p=0.0046  q=0.0058
+  grammatical_cue            events= 368  plain   2.9% -> guided   3.3%  OR=1.16 [0.90, 1.49]  p=0.25  q=0.27
+  nonparallel_options        events= 273  plain   3.1% -> guided   1.5%  OR=0.46 [0.35, 0.59]  p=3.6e-09  q=5.9e-09
+  option_length_outlier      events=2818  plain  27.6% -> guided  19.4%  OR=0.63 [0.57, 0.69]  p=8.7e-21  q=2.2e-20
+  options_not_alphabetical   events=5933  plain  80.9% -> guided  18.0%  OR=0.01 [0.01, 0.02]  p=2.3e-216  q=2.3e-215
+  keyA                       events=5819  plain  53.6% -> guided  43.3%  OR=0.57 [0.51, 0.65]  p=4.1e-20  q=8.2e-20
+
+== Per-flaw prevalence by tier (plain / guided), %
+tier                    base       flagship      
+condition             guided plain   guided plain
+longest_option_key       6.5  11.4      4.0  10.3
+absolute_terms           1.3   5.3      0.9   3.7
+clang_cue                7.9  10.3      6.1   9.0
+combination_options      0.9   0.9      1.1   1.6
+negative_stem            0.0   0.0      0.0   0.0
+none_of_the_above        0.0   0.0      0.0   0.0
+all_of_the_above         0.0   0.0      0.0   0.0
+fill_in_blank            0.0   0.0      0.0   0.0
+true_false_stem          0.0   0.0      0.0   0.0
+numeric_not_ordered      0.1   0.2      0.1   0.1
+overlapping_options      1.2   1.0      2.2   1.2
+grammatical_cue          3.1   2.7      3.5   3.0
+nonparallel_options      1.6   2.5      1.2   3.8
+vague_terms              0.0   0.2      0.0   0.0
+option_length_outlier   19.2  25.5     19.6  29.9
+
+== Model differences in any core flaw, plain condition (reference = Claude Fable 5.1), adjusted for specialty
+  model_label[Claude Opus 5]     OR=1.05 [0.80, 1.38] p=0.73
+  model_label[Claude Sonnet 5]   OR=1.22 [0.87, 1.71] p=0.25
+  model_label[DeepSeek V4 Flash] OR=0.78 [0.55, 1.09] p=0.14
+  model_label[DeepSeek V4 Pro]   OR=0.80 [0.58, 1.10] p=0.17
+  model_label[GPT-5.6 Luna]      OR=1.33 [0.98, 1.82] p=0.071
+  model_label[GPT-5.6 Terra]     OR=1.15 [0.83, 1.59] p=0.39
+  model_label[GPT-6 Astra]       OR=0.85 [0.61, 1.19] p=0.35
+  model_label[Gemini 3.1 Pro]    OR=0.50 [0.35, 0.72] p=0.00015
+  model_label[Gemini 3.8 Flash]  OR=0.59 [0.43, 0.81] p=0.0009
+  model_label[Grok 4.6]          OR=0.69 [0.49, 0.96] p=0.03
+  model_label[Llama 4 Maverick]  OR=0.84 [0.61, 1.15] p=0.28
+  model_label[Mistral Small 2603] OR=0.72 [0.53, 1.00] p=0.049
+  model_label[Qwen 3.6 27B]      OR=0.81 [0.59, 1.11] p=0.19
+  model_label[Qwen 3.8 Max]      OR=0.91 [0.65, 1.26] p=0.56
+
+== Key position: share at A and chi-square vs uniform (A-E), by model x condition; BH-FDR over the 30 tests
+  Claude Fable 5.1     flagship  plain   n=400  P(key=A)=0.49  chi2=  302.1  p=3.8e-64  q=9.4e-64  {'A': 197, 'B': 111, 'C': 68, 'D': 20, 'E': 4}
+  Claude Fable 5.1     flagship  guided  n=400  P(key=A)=0.20  chi2=    1.4  p=0.84  q=0.84  {'A': 82, 'B': 82, 'C': 86, 'D': 78, 'E': 72}
+  Claude Opus 5        flagship  plain   n=400  P(key=A)=0.63  chi2=  539.6  p=1.8e-115  q=5.4e-115  {'A': 253, 'B': 100, 'C': 31, 'D': 14, 'E': 2}
+  Claude Opus 5        flagship  guided  n=400  P(key=A)=0.33  chi2=   51.0  p=2.2e-10  q=3e-10  {'A': 133, 'B': 81, 'C': 67, 'D': 71, 'E': 48}
+  Claude Sonnet 5      base      plain   n=400  P(key=A)=0.28  chi2=  186.9  p=2.4e-39  q=4e-39  {'A': 111, 'B': 151, 'C': 105, 'D': 28, 'E': 5}
+  Claude Sonnet 5      base      guided  n=400  P(key=A)=0.31  chi2=   38.5  p=8.7e-08  q=1.1e-07  {'A': 123, 'B': 82, 'C': 84, 'D': 58, 'E': 53}
+  DeepSeek V4 Flash    base      plain   n=400  P(key=A)=0.77  chi2=  809.3  p=7.4e-174  q=3.2e-173  {'A': 306, 'B': 43, 'C': 33, 'D': 11, 'E': 7}
+  DeepSeek V4 Flash    base      guided  n=400  P(key=A)=0.51  chi2=  270.4  p=2.7e-57  q=6.2e-57  {'A': 205, 'B': 72, 'C': 69, 'D': 37, 'E': 17}
+  DeepSeek V4 Pro      flagship  plain   n=400  P(key=A)=0.75  chi2=  769.6  p=2.9e-165  q=1.1e-164  {'A': 300, 'B': 49, 'C': 31, 'D': 12, 'E': 8}
+  DeepSeek V4 Pro      flagship  guided  n=400  P(key=A)=0.68  chi2=  582.6  p=8.9e-125  q=3e-124  {'A': 272, 'B': 31, 'C': 45, 'D': 38, 'E': 14}
+  GPT-5.6 Luna         base      plain   n=400  P(key=A)=0.94  chi2= 1360.6  p=2.4e-293  q=7.3e-292  {'A': 375, 'B': 12, 'C': 8, 'D': 2, 'E': 3}
+  GPT-5.6 Luna         base      guided  n=400  P(key=A)=0.92  chi2= 1278.9  p=1.2e-275  q=1.9e-274  {'A': 366, 'B': 15, 'C': 9, 'D': 6, 'E': 4}
+  GPT-5.6 Terra        base      plain   n=400  P(key=A)=0.61  chi2=  480.4  p=1.2e-102  q=3.2e-102  {'A': 245, 'B': 86, 'C': 53, 'D': 14, 'E': 2}
+  GPT-5.6 Terra        base      guided  n=400  P(key=A)=0.34  chi2=   96.1  p=6.7e-20  q=1e-19  {'A': 137, 'B': 104, 'C': 74, 'D': 65, 'E': 20}
+  GPT-6 Astra          flagship  plain   n=400  P(key=A)=0.19  chi2=  226.0  p=9.6e-48  q=2.1e-47  {'A': 77, 'B': 107, 'C': 177, 'D': 37, 'E': 2}
+  GPT-6 Astra          flagship  guided  n=400  P(key=A)=0.18  chi2=   14.0  p=0.0074  q=0.0082  {'A': 74, 'B': 71, 'C': 107, 'D': 84, 'E': 64}
+  Gemini 3.1 Pro       flagship  plain   n=400  P(key=A)=0.46  chi2=  190.8  p=3.5e-40  q=6.2e-40  {'A': 182, 'B': 79, 'C': 74, 'D': 45, 'E': 20}
+  Gemini 3.1 Pro       flagship  guided  n=400  P(key=A)=0.21  chi2=    1.8  p=0.78  q=0.8  {'A': 86, 'B': 76, 'C': 87, 'D': 76, 'E': 75}
+  Gemini 3.8 Flash     base      plain   n=400  P(key=A)=0.28  chi2=   35.3  p=4e-07  q=5e-07  {'A': 112, 'B': 92, 'C': 90, 'D': 60, 'E': 46}
+  Gemini 3.8 Flash     base      guided  n=400  P(key=A)=0.19  chi2=    7.4  p=0.11  q=0.12  {'A': 77, 'B': 95, 'C': 88, 'D': 63, 'E': 77}
+  Grok 4.6             flagship  plain   n=400  P(key=A)=0.17  chi2=   76.2  p=1.1e-15  q=1.6e-15  {'A': 68, 'B': 107, 'C': 120, 'D': 85, 'E': 20}
+  Grok 4.6             flagship  guided  n=400  P(key=A)=0.18  chi2=   26.9  p=2.1e-05  q=2.5e-05  {'A': 71, 'B': 95, 'C': 112, 'D': 68, 'E': 54}
+  Llama 4 Maverick     base      plain   n=400  P(key=A)=0.91  chi2= 1252.7  p=6.1e-270  q=6.1e-269  {'A': 363, 'B': 16, 'C': 12, 'D': 6, 'E': 3}
+  Llama 4 Maverick     base      guided  n=400  P(key=A)=0.89  chi2= 1192.0  p=8.7e-257  q=6.6e-256  {'A': 356, 'B': 18, 'C': 15, 'D': 8, 'E': 3}
+  Mistral Small 2603   base      plain   n=400  P(key=A)=0.85  chi2= 1061.7  p=1.5e-228  q=9.2e-228  {'A': 340, 'B': 26, 'C': 24, 'D': 9, 'E': 1}
+  Mistral Small 2603   base      guided  n=400  P(key=A)=0.82  chi2=  962.5  p=4.7e-207  q=2.4e-206  {'A': 328, 'B': 24, 'C': 19, 'D': 20, 'E': 9}
+  Qwen 3.6 27B         base      plain   n=400  P(key=A)=0.27  chi2=  176.6  p=4.1e-37  q=6.4e-37  {'A': 106, 'B': 155, 'C': 98, 'D': 35, 'E': 6}
+  Qwen 3.6 27B         base      guided  n=400  P(key=A)=0.46  chi2=  218.1  p=4.9e-46  q=9.7e-46  {'A': 183, 'B': 98, 'C': 67, 'D': 42, 'E': 10}
+  Qwen 3.8 Max         flagship  plain   n=400  P(key=A)=0.46  chi2=  217.7  p=5.9e-46  q=1.1e-45  {'A': 184, 'B': 86, 'C': 82, 'D': 36, 'E': 12}
+  Qwen 3.8 Max         flagship  guided  n=400  P(key=A)=0.27  chi2=   25.0  p=5e-05  q=5.8e-05  {'A': 107, 'B': 75, 'C': 83, 'D': 89, 'E': 46}
+  ALL                  base      plain   n=3200  P(key=A)=0.61  chi2= 3648.1  p=0  {'A': 1958, 'B': 581, 'C': 423, 'D': 165, 'E': 73}
+  ALL                  base      guided  n=3200  P(key=A)=0.55  chi2= 2606.2  p=0  {'A': 1775, 'B': 508, 'C': 425, 'D': 299, 'E': 193}
+  ALL                  flagship  plain   n=2800  P(key=A)=0.45  chi2= 1494.6  p=0  {'A': 1261, 'B': 639, 'C': 583, 'D': 249, 'E': 68}
+  ALL                  flagship  guided  n=2800  P(key=A)=0.29  chi2=  199.0  p=6.1e-42  {'A': 825, 'B': 511, 'C': 587, 'D': 504, 'E': 373}
+  number of model x condition cells whose key distribution is not distinguishable from uniform (q >= 0.05): 3 of 30
+
+== Exploratory: hidden reasoning tokens (models where reasoning could not be disabled) and any core flaw
+   per model: median reasoning tokens; OR per doubling of reasoning tokens (log2), adjusted for condition and specialty, cluster-robust by topic
+  Claude Fable 5.1     median tokens=   392 (IQR     0-  786)  OR per doubling=1.00 [0.87, 1.14]  p=0.96
+  GPT-6 Astra          median tokens=   264 (IQR   177-  384)  OR per doubling=1.13 [0.93, 1.38]  p=0.21
+  Gemini 3.1 Pro       median tokens=  1678 (IQR  1366- 2137)  OR per doubling=1.49 [0.83, 2.69]  p=0.18
+  Gemini 3.8 Flash     median tokens=  1394 (IQR  1098- 1927)  OR per doubling=0.83 [0.48, 1.41]  p=0.48
+  Grok 4.6             median tokens=  1732 (IQR  1198- 2914)  OR per doubling=0.65 [0.42, 1.01]  p=0.053
+  Qwen 3.8 Max         median tokens=  1566 (IQR   760- 2967)  OR per doubling=1.09 [0.84, 1.40]  p=0.53
+
+== Specialty: any core flaw prevalence (plain / guided)
+condition              guided  plain
+specialty                           
+internal_medicine       0.153  0.235
+neurology               0.172  0.241
+obstetrics_gynecology   0.236  0.349
+pathology               0.185  0.233
+pediatrics              0.209  0.356
+pharmacology            0.164  0.189
+psychiatry              0.147  0.245
+surgery                 0.224  0.359

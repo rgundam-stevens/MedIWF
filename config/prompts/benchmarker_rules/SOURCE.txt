@@ -1,0 +1,68 @@
+Per-rule judge prompt templates from BenchMarker (Balepur et al., ACL 2026), https://github.com/nbalepur/BenchMarker, MIT License, file prompts/writing_flaw_prompts.py, exported 2026-09-14. Placeholders: {question} {choices} {answer} {lbrace} {rbrace}.
+{
+ "clear_language": {
+  "data": [
+   "question",
+   "choices"
+  ],
+  "chars": 3568
+ },
+ "focused_stem": {
+  "data": [
+   "question",
+   "choices"
+  ],
+  "chars": 3269
+ },
+ "no_absolute_terms": {
+  "data": [
+   "question",
+   "choices"
+  ],
+  "chars": 3412
+ },
+ "no_extraneous_info": {
+  "data": [
+   "question",
+   "choices"
+  ],
+  "chars": 3395
+ },
+ "no_logical_cues": {
+  "data": [
+   "question",
+   "choices"
+  ],
+  "chars": 5487
+ },
+ "no_vague_terms": {
+  "data": [
+   "question",
+   "choices"
+  ],
+  "chars": 3381
+ },
+ "plausible_distractors": {
+  "data": [
+   "question",
+   "choices",
+   "answer"
+  ],
+  "chars": 3373
+ },
+ "problem_in_stem": {
+  "data": [
+   "question",
+   "choices"
+  ],
+  "chars": 3209
+ },
+ "single_best_answer": {
+  "data": [
+   "question",
+   "choices",
+   "answer"
+  ],
+  "chars": 3168
+ }
+}

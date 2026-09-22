@@ -1,0 +1,69 @@
+{
+  "internal_medicine": [
+    "community-acquired pneumonia management", "acute coronary syndrome initial management", "heart failure with reduced ejection fraction therapy",
+    "type 2 diabetes mellitus pharmacotherapy", "diabetic ketoacidosis management", "hypothyroidism diagnosis", "hyperthyroidism and Graves disease",
+    "chronic kidney disease complications", "acute kidney injury evaluation", "hyponatremia evaluation", "hyperkalemia management",
+    "community-acquired urinary tract infection", "infective endocarditis diagnosis", "COPD exacerbation management", "asthma step-up therapy",
+    "pulmonary embolism diagnosis", "iron deficiency anemia evaluation", "vitamin B12 deficiency", "rheumatoid arthritis initial therapy",
+    "systemic lupus erythematosus diagnosis", "gout acute management", "cirrhosis complications", "upper GI bleeding management",
+    "hypertension first-line therapy", "hyperlipidemia statin therapy"
+  ],
+  "surgery": [
+    "acute appendicitis diagnosis", "acute cholecystitis management", "small bowel obstruction evaluation", "perioperative cardiac risk assessment",
+    "postoperative fever evaluation", "inguinal hernia repair indications", "colorectal cancer screening and staging", "breast cancer surgical management",
+    "thyroid nodule evaluation", "acute pancreatitis management", "abdominal aortic aneurysm screening", "peripheral arterial disease management",
+    "trauma primary survey", "hemorrhagic shock resuscitation", "burn injury fluid resuscitation", "compartment syndrome recognition",
+    "diverticulitis management", "melanoma excision margins", "postoperative ileus", "deep venous thrombosis prophylaxis after surgery",
+    "surgical site infection prevention", "pneumothorax management", "splenic injury management", "bariatric surgery complications",
+    "wound healing and dehiscence"
+  ],
+  "pediatrics": [
+    "bronchiolitis management", "croup management", "febrile infant evaluation", "neonatal jaundice evaluation", "developmental milestones assessment",
+    "immunization schedule", "otitis media treatment", "streptococcal pharyngitis", "Kawasaki disease diagnosis", "intussusception diagnosis",
+    "pyloric stenosis diagnosis", "failure to thrive evaluation", "iron deficiency in toddlers", "asthma in children", "type 1 diabetes presentation",
+    "nephrotic syndrome in children", "acute otitis externa", "congenital heart disease cyanotic lesions", "sickle cell disease complications",
+    "child abuse recognition", "attention-deficit hyperactivity disorder management", "lead poisoning", "urinary tract infection in infants",
+    "hand-foot-and-mouth disease", "precocious puberty evaluation"
+  ],
+  "obstetrics_gynecology": [
+    "preeclampsia diagnosis and management", "gestational diabetes screening", "ectopic pregnancy diagnosis", "first-trimester bleeding evaluation",
+    "postpartum hemorrhage management", "preterm labor management", "placenta previa versus abruption", "Rh alloimmunization prevention",
+    "contraception selection", "polycystic ovary syndrome diagnosis", "abnormal uterine bleeding evaluation", "cervical cancer screening",
+    "pelvic inflammatory disease treatment", "menopause hormone therapy", "endometriosis management", "ovarian torsion diagnosis",
+    "hyperemesis gravidarum", "intrahepatic cholestasis of pregnancy", "group B streptococcus prophylaxis", "labor dystocia management",
+    "postpartum depression", "amenorrhea evaluation", "prenatal genetic screening", "urinary incontinence types", "vulvovaginal candidiasis"
+  ],
+  "psychiatry": [
+    "major depressive disorder first-line treatment", "bipolar disorder acute mania", "schizophrenia antipsychotic selection",
+    "generalized anxiety disorder treatment", "panic disorder diagnosis", "obsessive-compulsive disorder treatment", "post-traumatic stress disorder",
+    "alcohol withdrawal management", "opioid use disorder treatment", "serotonin syndrome recognition", "neuroleptic malignant syndrome",
+    "lithium toxicity", "anorexia nervosa management", "bulimia nervosa treatment", "delirium versus dementia", "suicide risk assessment",
+    "borderline personality disorder", "adjustment disorder", "somatic symptom disorder", "autism spectrum disorder diagnosis",
+    "insomnia management", "antidepressant discontinuation syndrome", "electroconvulsive therapy indications", "conversion disorder",
+    "attention-deficit hyperactivity disorder in adults"
+  ],
+  "neurology": [
+    "acute ischemic stroke thrombolysis", "transient ischemic attack workup", "subarachnoid hemorrhage diagnosis", "migraine prophylaxis",
+    "cluster headache treatment", "epilepsy first seizure evaluation", "status epilepticus management", "Parkinson disease treatment",
+    "multiple sclerosis diagnosis", "myasthenia gravis diagnosis", "Guillain-Barre syndrome", "bacterial meningitis management",
+    "Bell palsy management", "carpal tunnel syndrome", "peripheral neuropathy evaluation", "essential tremor", "Alzheimer disease management",
+    "normal pressure hydrocephalus", "trigeminal neuralgia", "spinal cord compression", "amyotrophic lateral sclerosis", "Huntington disease",
+    "vertigo evaluation", "idiopathic intracranial hypertension", "concussion management"
+  ],
+  "pharmacology": [
+    "warfarin drug interactions", "aminoglycoside toxicity", "acetaminophen overdose treatment", "beta-blocker overdose", "digoxin toxicity",
+    "ACE inhibitor adverse effects", "statin myopathy", "antibiotic selection in penicillin allergy", "opioid conversion and dosing",
+    "cytochrome P450 inducers and inhibitors", "drug dosing in renal impairment", "tricyclic antidepressant overdose", "anticholinergic toxicity",
+    "vancomycin dosing and monitoring", "heparin-induced thrombocytopenia", "direct oral anticoagulant reversal", "insulin types and timing",
+    "corticosteroid adverse effects", "methotrexate toxicity", "QT-prolonging drugs", "salicylate toxicity", "local anesthetic toxicity",
+    "immunosuppressants after transplant", "teratogenic medications", "antihypertensives in pregnancy"
+  ],
+  "pathology": [
+    "acute versus chronic inflammation", "types of necrosis", "cell injury and apoptosis", "amyloidosis", "hypersensitivity reaction types",
+    "neoplasia hallmarks and tumor markers", "colorectal adenoma-carcinoma sequence", "breast carcinoma histologic subtypes", "lung cancer histology",
+    "thyroid carcinoma subtypes", "glomerulonephritis patterns", "hepatitis histology", "myocardial infarction histologic timeline",
+    "atherosclerosis pathogenesis", "thrombosis and embolism", "leukemia classification", "lymphoma classification", "anemia morphology",
+    "cirrhosis histology", "celiac disease histology", "prostate carcinoma grading", "melanoma versus nevus", "granulomatous inflammation",
+    "wound healing phases", "transfusion reactions"
+  ]
+}

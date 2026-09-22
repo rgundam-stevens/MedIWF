@@ -1,0 +1,81 @@
+Template-control arm: 3000 neutral items, 600 rotated items; plain comparison items (same topics): 6000
+
+model                | P(A) plain [CI]        | P(A) neutral [CI]      | rotated: P(key=example) [CI]   | any core flaw: plain / neutral / rotated
+Claude Fable 5.1     | 0.49 [0.44, 0.54] n=400 | 0.23 [0.18, 0.30] n=200 | 0.82 [0.68, 0.91] n= 40       |  24.5% /  25.5% /  20.0%
+Claude Opus 5        | 0.63 [0.58, 0.68] n=400 | 0.65 [0.58, 0.71] n=200 | 0.75 [0.60, 0.86] n= 40       |  29.0% /  20.0% /  35.0%
+Claude Sonnet 5      | 0.28 [0.24, 0.33] n=400 | 0.17 [0.12, 0.23] n=200 | 0.38 [0.24, 0.53] n= 40       |  32.2% /  33.0% /  35.0%
+DeepSeek V4 Flash    | 0.77 [0.72, 0.80] n=400 | 0.22 [0.17, 0.28] n=200 | 0.80 [0.65, 0.90] n= 40       |  21.2% /  17.5% /  20.0%
+DeepSeek V4 Pro      | 0.75 [0.71, 0.79] n=400 | 0.25 [0.20, 0.31] n=200 | 0.80 [0.65, 0.90] n= 40       |  22.8% /  28.0% /  32.5%
+GPT-5.6 Luna         | 0.94 [0.91, 0.96] n=400 | 0.26 [0.20, 0.32] n=200 | 0.88 [0.74, 0.95] n= 40       |  32.5% /  35.0% /  30.0%
+GPT-5.6 Terra        | 0.61 [0.56, 0.66] n=400 | 0.32 [0.26, 0.39] n=200 | 0.62 [0.47, 0.76] n= 40       |  29.2% /  29.5% /  27.5%
+GPT-6 Astra          | 0.19 [0.16, 0.23] n=400 | 0.04 [0.02, 0.07] n=200 | 0.85 [0.71, 0.93] n= 40       |  24.5% /  25.0% /  27.5%
+Gemini 3.1 Pro       | 0.46 [0.41, 0.50] n=400 | 0.26 [0.20, 0.32] n=200 | 0.23 [0.12, 0.38] n= 40       |  12.5% /  14.5% /  20.0%
+Gemini 3.8 Flash     | 0.28 [0.24, 0.33] n=400 | 0.18 [0.14, 0.24] n=200 | 0.28 [0.16, 0.43] n= 40       |  15.5% /  15.5% /  10.0%
+Grok 4.6             | 0.17 [0.14, 0.21] n=400 | 0.14 [0.10, 0.19] n=200 | 0.42 [0.29, 0.58] n= 40       |  18.0% /  18.0% /  30.0%
+Llama 4 Maverick     | 0.91 [0.88, 0.93] n=400 | 0.18 [0.13, 0.24] n=200 | 0.82 [0.68, 0.91] n= 40       |  23.8% /  22.5% /  10.0%
+Mistral Small 2603   | 0.85 [0.81, 0.88] n=400 | 0.16 [0.12, 0.22] n=200 | 0.70 [0.55, 0.82] n= 40       |  20.2% /  19.0% /  12.5%
+Qwen 3.6 27B         | 0.27 [0.22, 0.31] n=400 | 0.18 [0.14, 0.24] n=200 | 0.38 [0.24, 0.53] n= 40       |  21.8% /  24.5% /  25.0%
+Qwen 3.8 Max         | 0.46 [0.41, 0.51] n=400 | 0.20 [0.15, 0.26] n=200 | 0.33 [0.20, 0.48] n= 40       |  23.2% /  25.0% /  27.5%
+
+Key distribution under the neutral template (chi-square vs uniform, BH over models):
+  Claude Fable 5.1     keys={'A': 47, 'B': 90, 'C': 45, 'D': 18} chi2= 116.4 p=3.1e-24 q=1.1e-23
+  Claude Opus 5        keys={'A': 129, 'B': 52, 'C': 12, 'D': 7} chi2= 288.4 p=3.4e-61 q=5e-60
+  Claude Sonnet 5      keys={'A': 34, 'B': 78, 'C': 72, 'D': 12, 'E': 4} chi2= 114.6 p=7.6e-24 q=2.3e-23
+  DeepSeek V4 Flash    keys={'A': 44, 'B': 65, 'C': 64, 'D': 22, 'E': 5} chi2=  69.2 p=3.4e-14 q=5.1e-14
+  DeepSeek V4 Pro      keys={'A': 50, 'B': 83, 'C': 50, 'D': 14, 'E': 3} chi2= 102.3 p=3.1e-21 q=6.7e-21
+  GPT-5.6 Luna         keys={'A': 51, 'B': 74, 'C': 53, 'D': 21, 'E': 1} chi2=  83.2 p=3.7e-17 q=6.9e-17
+  GPT-5.6 Terra        keys={'A': 64, 'B': 82, 'C': 41, 'D': 13} chi2= 116.8 p=2.6e-24 q=1.1e-23
+  GPT-6 Astra          keys={'A': 7, 'B': 77, 'C': 90, 'D': 23, 'E': 3} chi2= 165.4 p=1e-34 q=7.6e-34
+  Gemini 3.1 Pro       keys={'A': 51, 'B': 57, 'C': 44, 'D': 33, 'E': 15} chi2=  27.5 p=1.6e-05 q=1.7e-05
+  Gemini 3.8 Flash     keys={'A': 37, 'B': 51, 'C': 50, 'D': 32, 'E': 30} chi2=   9.8 p=0.043 q=0.043
+  Grok 4.6             keys={'A': 28, 'B': 51, 'C': 70, 'D': 43, 'E': 8} chi2=  55.0 p=3.3e-11 q=3.8e-11
+  Llama 4 Maverick     keys={'A': 36, 'B': 68, 'C': 63, 'D': 27, 'E': 6} chi2=  66.3 p=1.3e-13 q=1.8e-13
+  Mistral Small 2603   keys={'A': 32, 'B': 73, 'C': 58, 'D': 32, 'E': 5} chi2=  69.2 p=3.4e-14 q=5.1e-14
+  Qwen 3.6 27B         keys={'A': 37, 'B': 89, 'C': 55, 'D': 14, 'E': 5} chi2= 113.4 p=1.4e-23 q=3.4e-23
+  Qwen 3.8 Max         keys={'A': 39, 'B': 58, 'C': 69, 'D': 29, 'E': 5} chi2=  62.8 p=7.5e-13 q=9.3e-13
+
+Pooled: P(A) plain=0.54 neutral=0.23 | rotated P(key=example)=0.60; rotated key distribution={'A': 100, 'B': 147, 'C': 175, 'D': 111, 'E': 67}
+
+Interpretation guide: if P(A) under the neutral template stays high, the bias is the model's own; if it falls to ~0.2 and rotated
+keys follow the example letter, the bias in the main corpus was largely induced by the example letter in the output template.
+
+== Guided prompt with the neutral template (Amendment 3): 3000 items vs 6000 guided items on the same topics
+model                | P(A) guided [CI]           | P(A) guided-neutral [CI]   | non-alphabetical guided / guided-neutral | any flaw guided / guided-neutral
+Claude Fable 5.1     | 0.20 [0.17, 0.25] n=400 | 0.19 [0.14, 0.25] n=200 |   3.0% /   1.0%                     |   9.5% /  10.0%
+Claude Opus 5        | 0.33 [0.29, 0.38] n=400 | 0.29 [0.24, 0.36] n=200 |   8.2% /   7.5%                     |  19.5% /  16.5%
+Claude Sonnet 5      | 0.31 [0.26, 0.35] n=400 | 0.25 [0.20, 0.31] n=200 |   7.5% /  12.0%                     |  20.2% /  23.5%
+DeepSeek V4 Flash    | 0.51 [0.46, 0.56] n=400 | 0.28 [0.22, 0.34] n=200 |  12.2% /   8.5%                     |  12.2% /  14.0%
+DeepSeek V4 Pro      | 0.68 [0.63, 0.72] n=400 | 0.29 [0.24, 0.36] n=200 |  22.0% /   7.0%                     |  18.8% /  14.0%
+GPT-5.6 Luna         | 0.92 [0.88, 0.94] n=400 | 0.28 [0.23, 0.35] n=200 |  40.8% /  14.0%                     |  17.0% /  17.0%
+GPT-5.6 Terra        | 0.34 [0.30, 0.39] n=400 | 0.34 [0.27, 0.40] n=200 |   9.0% /   6.5%                     |  13.2% /  13.5%
+GPT-6 Astra          | 0.18 [0.15, 0.23] n=400 | 0.17 [0.12, 0.23] n=200 |   1.8% /   1.5%                     |   5.0% /   5.0%
+Gemini 3.1 Pro       | 0.21 [0.18, 0.26] n=400 | 0.21 [0.16, 0.27] n=200 |   1.0% /   3.5%                     |  10.0% /   7.5%
+Gemini 3.8 Flash     | 0.19 [0.16, 0.23] n=400 | 0.17 [0.13, 0.23] n=200 |   0.5% /   1.0%                     |   8.8% /   8.0%
+Grok 4.6             | 0.18 [0.14, 0.22] n=400 | 0.17 [0.12, 0.23] n=200 |   1.2% /   0.5%                     |   3.5% /   1.5%
+Llama 4 Maverick     | 0.89 [0.86, 0.92] n=400 | 0.21 [0.16, 0.27] n=200 |  79.8% /  45.5%                     |  14.0% /  15.5%
+Mistral Small 2603   | 0.82 [0.78, 0.85] n=400 | 0.24 [0.19, 0.31] n=200 |  30.8% /  12.0%                     |  23.5% /  16.5%
+Qwen 3.6 27B         | 0.46 [0.41, 0.51] n=400 | 0.32 [0.26, 0.39] n=200 |  39.0% /  29.0%                     |  14.5% /  15.5%
+Qwen 3.8 Max         | 0.27 [0.23, 0.31] n=400 | 0.20 [0.15, 0.26] n=200 |  12.0% /   4.5%                     |  14.0% /  11.5%
+  guided-neutral key distributions compatible with uniform (q >= 0.05): 5 of 15; pooled keys={'A': 724, 'B': 714, 'C': 701, 'D': 525, 'E': 336}
+  pooled: P(A) guided=0.43 guided-neutral=0.24; any flaw guided=13.6% guided-neutral=12.6%
+  any core flaw, guided-neutral vs guided: OR=0.92 [0.81, 1.04] p=0.18 (adjusted for model and specialty; topic clusters)
+  any core flaw, guided-neutral vs plain-neutral (the guideline effect with both templates neutral): 12.6% vs 23.5%; OR=0.46 [0.40, 0.53] p=2.4e-28; 11-rule composite OR=0.55 [0.47, 0.63]
+  non-alphabetical items: guided 17.9% -> guided-neutral 10.3%
+  key at A among ALPHABETIZED items only (guided -> guided-neutral):
+    Claude Fable 5.1     20% (n=388) -> 19% (n=198)
+    Claude Opus 5        32% (n=367) -> 28% (n=185)
+    Claude Sonnet 5      31% (n=370) -> 26% (n=176)
+    DeepSeek V4 Flash    51% (n=351) -> 28% (n=183)
+    DeepSeek V4 Pro      63% (n=312) -> 29% (n=186)
+    GPT-5.6 Luna         89% (n=237) -> 30% (n=172)
+    GPT-5.6 Terra        36% (n=364) -> 33% (n=187)
+    GPT-6 Astra          18% (n=393) -> 17% (n=197)
+    Gemini 3.1 Pro       22% (n=396) -> 21% (n=193)
+    Gemini 3.8 Flash     19% (n=398) -> 17% (n=198)
+    Grok 4.6             18% (n=395) -> 17% (n=199)
+    Llama 4 Maverick     89% (n=81) -> 21% (n=109)
+    Mistral Small 2603   78% (n=277) -> 24% (n=176)
+    Qwen 3.6 27B         48% (n=244) -> 35% (n=142)
+    Qwen 3.8 Max         26% (n=352) -> 19% (n=191)
+  any core flaw pooled: plain 23.4% (n=6000), plain-neutral 23.5% (n=3000), plain-rotated 24.2% (n=600)
+  any core flaw, plain-neutral vs plain: OR=1.01 [0.92, 1.10] p=0.9

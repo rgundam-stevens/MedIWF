@@ -1,0 +1,41 @@
+Detector 1.2. LLM plain-prompt items: 6000 (all five-option). NBME five-option items: 525 of 667.
+
+== 1. Prevalence (%%) with Wilson 95%% CI: LLM plain vs NBME five-option
+                             LLM plain                NBME five-option        
+any core flaw (14)            23.4 [22.3, 24.5]         17.3 [14.3, 20.8]
+any validated-rule flaw (10)  12.8 [12.0, 13.7]         11.4 [ 9.0, 14.4]
+negative_stem                  0.0 [ 0.0,  0.1]          0.0 [ 0.0,  0.7]
+none_of_the_above              0.0 [ 0.0,  0.1]          0.0 [ 0.0,  0.7]
+all_of_the_above               0.0 [ 0.0,  0.1]          0.0 [ 0.0,  0.7]
+combination_options            0.0 [ 0.0,  0.1]          0.0 [ 0.0,  0.7]
+fill_in_blank                  0.0 [ 0.0,  0.1]          0.0 [ 0.0,  0.7]
+true_false_stem                0.0 [ 0.0,  0.1]          0.0 [ 0.0,  0.7]
+longest_option_key            10.9 [10.1, 11.7]          2.9 [ 1.7,  4.7]
+absolute_terms                 4.6 [ 4.1,  5.1]          3.0 [ 1.9,  4.9]
+vague_terms                    0.1 [ 0.0,  0.2]          0.6 [ 0.2,  1.7]
+clang_cue                      8.3 [ 7.7,  9.1]          8.4 [ 6.3, 11.1]
+grammatical_cue                0.0 [ 0.0,  0.1]          0.0 [ 0.0,  0.7]
+nonparallel_options            3.1 [ 2.7,  3.6]          3.2 [ 2.0,  5.1]
+numeric_not_ordered            0.2 [ 0.1,  0.3]          0.2 [ 0.0,  1.1]
+overlapping_options            0.9 [ 0.7,  1.2]          0.6 [ 0.2,  1.7]
+option_length_outlier         27.6 [26.5, 28.7]         39.4 [35.3, 43.7]
+options_not_alphabetical      80.9 [79.9, 81.9]         18.1 [15.0, 21.6]
+  stem length (words): LLM median 89 (IQR 71-111); NBME median 112 (IQR 83-154)
+
+== 2. Source effect adjusted for log stem length (logistic regression, robust SEs); OR for LLM vs NBME
+  any core flaw (14)           unadjusted OR 1.46 [1.15, 1.84] p=0.0016   adjusted for stem length OR 1.55 [1.23, 1.96] p=0.00027
+  any validated-rule flaw (10) unadjusted OR 1.14 [0.86, 1.51] p=0.36   adjusted for stem length OR 1.17 [0.88, 1.55] p=0.27
+  clang_cue                    unadjusted OR 0.99 [0.72, 1.37] p=0.97   adjusted for stem length OR 1.17 [0.85, 1.62] p=0.33
+  longest_option_key           unadjusted OR 4.16 [2.47, 7.00] p=7.7e-08   adjusted for stem length OR 4.51 [2.67, 7.61] p=1.7e-08
+  absolute_terms               unadjusted OR 1.53 [0.92, 2.55] p=0.1   adjusted for stem length OR 1.32 [0.79, 2.21] p=0.3
+
+== 3. Clang-cue prevalence (%) by stem-length quintile (quintiles of the pooled distribution)
+  quintile 1 (stem  26- 68 words): LLM   6.2% (n=1302)   NBME   5.1% (n=78)
+  quintile 2 (stem  69- 83 words): LLM   8.4% (n=1208)   NBME   3.4% (n=58)
+  quintile 3 (stem  84- 99 words): LLM   8.2% (n=1242)   NBME   5.6% (n=71)
+  quintile 4 (stem 100-119 words): LLM   9.0% (n=1187)   NBME   6.0% (n=83)
+  quintile 5 (stem 120-348 words): LLM  10.2% (n=1061)   NBME  12.3% (n=235)
+
+== 4. Absolute-terms audit: triggering word and position (key vs distractor); aggregate counts only
+  LLM plain              flagged items 275; hits by word: {'only': 248, 'all': 60, 'completely': 10, 'entirely': 5, 'exclusively': 3, 'never': 1, 'always': 1}; hits in key vs distractor: {'distractor': 308, 'key': 15}
+  NBME (all 667 items)   flagged items 21; hits by word: {'only': 19, 'all': 3, 'none': 3, 'impossible': 1, 'never': 1, 'completely': 1, 'always': 1}; hits in key vs distractor: {'distractor': 23, 'key': 6}

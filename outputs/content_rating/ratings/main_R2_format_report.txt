@@ -1,0 +1,9 @@
+Format check of outputs/content_rating/ratings/main_R2_raw.xlsx (R2): 100 rows read; 5 problems
+  MAIN-003: justification missing for a no/unsure/minor-edits rating
+  MAIN-018: minutes spent is blank or not a number
+  MAIN-038: minutes spent is blank or not a number
+  MAIN-076: minutes spent is blank or not a number
+  MAIN-099: minutes spent is blank or not a number
+Rating counts: Q1 {'yes': 97, 'no': 3}; Q2 {'yes': 98, 'no': 2}; Q3 {'yes': 93, 'no': 7}; Q4 {'yes': 100}; Q5 {'minor edits': 15, 'yes': 77, 'no': 8}
+Minutes: total 338, median 3.0, min 1.0, max 10.0, items with < 1 minute: 0
+Internal-consistency notes (0):

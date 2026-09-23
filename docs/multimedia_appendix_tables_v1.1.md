@@ -1,8 +1,8 @@
-# MedIWF: supplementary tables for Multimedia Appendices 4 and 5 (manuscript v1.1)
+# MedIWF: supplementary tables for Multimedia Appendix 1 (manuscript v1.1)
 
-Tables S1–S3 belong to Multimedia Appendix 4 and Table S4 to Multimedia Appendix 5. They are the tables of manuscript v1.0 (Tables 2, 3, 6 and 7) moved out of the main text unchanged; every value comes from the released output files.
+Tables S1–S4 form Multimedia Appendix 1. They are the tables of manuscript v1.0 (Tables 2, 3, 6 and 7) moved out of the main text unchanged; every value comes from the released output files.
 
-## Multimedia Appendix 4
+## Multimedia Appendix 1
 
 **Table S1. Agreement of detector v1.2 with the BenchMarker human labels.**
 
@@ -21,7 +21,7 @@ Tables S1–S3 belong to Multimedia Appendix 4 and Table S4 to Multimedia Append
 | Option-length outlier (feature) | 0.39 | 0.25 / 0.39 / 0.14 (0.00–0.29) | 0.26 |
 | Longest option is the key; non-parallel; overlapping; true/false | — (no BenchMarker counterpart) | — | — |
 
-[7,282 labels after collapsing duplicates, of which 1,797 development and 2,376 examination labels (495 on health-sciences items) concern the ten mapped rules and the option-length feature. Item–rule pairs without a human label are excluded, not treated as negatives. κ intervals: percentile bootstrap. Confusion matrices follow below.]{.caption}
+[7,282 labels after collapsing duplicates, of which 1,797 development and 2,376 examination labels (495 on health-sciences items) concern the ten mapped rules and the option-length feature. Item–rule pairs without a human label are excluded, not treated as negatives. κ intervals: percentile bootstrap. Confusion matrices are in the released output file validation_benchmarker_v3.txt.]{.caption}
 
 **Table S2. Hand-check of detector v1.2 against the author's blind labels (439 items; precision and recall design-weighted to the whole corpus with 95% CI by stratified bootstrap; where every sampled item agreed, the exact lower 95% bound on the unweighted count is given instead).**
 
@@ -55,7 +55,6 @@ Tables S1–S3 belong to Multimedia Appendix 4 and Table S4 to Multimedia Append
 
 [Rater 1 gave 1 "no" and 10 "unsure" on the single-best-answer question. Composite: raw agreement 0.91, positive specific agreement 0.64.]{.caption}
 
-## Multimedia Appendix 5
 
 **Table S4. Departures from the protocol.**
 
@@ -63,7 +62,7 @@ Tables S1–S3 belong to Multimedia Appendix 4 and Table S4 to Multimedia Append
 | ------------------------------ | ------------------------------ |
 | Mixed-effects regression | Fixed-effects regression with topic-clustered errors |
 | Pre-specified two-way interactions | Separate per-model estimates |
-| Several external label corpora | BenchMarker only ([TODO]{.mark}: state availability of the others) |
+| Validation on five external label corpora | BenchMarker only. SAQUET (Moore et al., 2024) released its code but not its labeled items; Law et al. (2025) deposited aggregate flaw counts without item text; MCQG-SRefine (Yao et al., 2025) releases items with GPT-4 judgments rather than human flaw labels; the Rush et al. (2016) Zenodo record is access-restricted |
 | Hand-check on a simple random sample of 300 items | Flag-enriched sample of 439 items |
 | Tier comparison at the item level | Moved to the model level after the item-level analysis was found to overstate the evidence |
 | Faculty-written comparison set | Replaced by the NBME items |
@@ -71,3 +70,4 @@ Tables S1–S3 belong to Multimedia Appendix 4 and Table S4 to Multimedia Append
 | Stronger-judge arm with a per-judge cost threshold | Run under an overall cost cap set after a pilot |
 | Stability re-run after at least fourteen days | Run after eight days |
 | Optional arms: flagship models with reasoning; sampling temperature | Not run |
+| Conversation transcripts of the AI assistance submitted as a supplementary appendix | Retained by the author; available to the editor on request |

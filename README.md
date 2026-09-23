@@ -2,7 +2,7 @@
 
 Item-writing flaws and answer-position bias in large language model-generated medical multiple-choice questions:
 an open corpus of 28,280 generated items, a rule-based detector for 14 structural flaws, physician content ratings of a
-100-item sample, and the analysis code and outputs behind the paper (Gundam R., 2026; JMIR Medical Education, submitted).
+100-item sample, and the analysis code and outputs behind the paper (Gundam R., 2026; manuscript under review).
 
 Author: Rohit Gundam, independent researcher (ORCID 0009-0001-3018-9663). Code: MIT License. Data and documents: CC BY 4.0
 (see LICENSE-DATA.md and DATASET_CARD.md).

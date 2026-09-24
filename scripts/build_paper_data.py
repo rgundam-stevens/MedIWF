@@ -55,7 +55,9 @@ def dataset1_items():
                 if not line.strip():
                     continue
                 r = json.loads(line)
-                p = r.get("parsed") or {}
+                item = usable_record(r) if (r["job_id"] in flagged and r["job_id"] not in chosen) else None
+                analysed = item is not None
+                p = item if analysed else (r.get("parsed") or {})          # analysed rows: the text the detector analysed
                 opts = p.get("options") or {}
                 row = {k: r.get(k, "") for k in ITEM_COLS}
                 row["run"] = run
@@ -66,9 +68,8 @@ def dataset1_items():
                 row["answer"] = p.get("answer", "")
                 row["rationale"] = p.get("rationale", "")
                 row["n_options"] = p.get("n_options", "")
-                analysed = False
-                if r["job_id"] in flagged and r["job_id"] not in chosen and usable_record(r):
-                    analysed = True; chosen.add(r["job_id"]); n_analysed += 1
+                if analysed:
+                    chosen.add(r["job_id"]); n_analysed += 1
                 row["analysed"] = analysed
                 for k in ("reparsed", "retry_index", "parse_repair", "seed_used", "generation_id"):
                     if k not in r:

@@ -8,7 +8,7 @@ Author: Rohit Gundam, independent researcher (ORCID 0009-0001-3018-9663). Code: 
 with the exceptions listed in LICENSE-DATA.md (see also DATASET_CARD.md).
 
 Archive: https://doi.org/10.5281/zenodo.22903818 (Zenodo, all versions). Corpus: https://huggingface.co/datasets/rgundam/MedIWF
-Version 1.0.1; the changes since 1.0 are listed in CHANGELOG.md.
+Version 1.0.2; the changes since 1.0 are listed in CHANGELOG.md.
 
 ## Layout
 - `src/mediwf/`     detector (14 rules, version 1.2; versions 1.0 and 1.1 kept for the version history), composites, statistics, gateway client
@@ -63,11 +63,12 @@ python3 scripts/make_figures_paper.py outputs/flags_full.csv outputs/nbme_aggreg
 python3 scripts/build_paper_data.py repro/paper_data                                                                        # the paper's Datasets 1-6 and their MANIFEST
 ```
 In a fresh environment (Python 3.10.12, NumPy 2.2.6, pandas 2.3.3, no SciPy) every command above reproduced the released
-file byte for byte, with three exceptions: rows with equal counts may print in a different order in
-`analysis_leadin_v1.txt`; the NBME columns and section of `analysis_composites_v1.txt` (n/a) and the NBME lines of
-`analysis_leadin_v1.txt` and `analysis_clang_sensitivity_v1.txt` ("not computed") need the NBME items; and the rating scripts print
-"minutes not released" where the released logs give per-rater totals (the per-item minutes were removed from the public
-rating files in version 1.0.1).
+file byte for byte, with these exceptions: rows with equal counts may print in a different order in `analysis_leadin_v1.txt`
+and `model_contrasts_v1.txt` (2 models with an exactly tied estimate); the NBME columns and section of `analysis_composites_v1.txt`
+(n/a) and the NBME lines of `analysis_leadin_v1.txt` and `analysis_clang_sensitivity_v1.txt` ("not computed") need the NBME items;
+the rating scripts print "minutes not released" where the released logs give per-rater totals (the per-item minutes were removed
+from the public rating files in version 1.0.1); and the SVG and PDF figure files carry a Matplotlib timestamp and random ids (the
+PNG and TIFF files are byte-identical).
 
 Scripts that need files not in the repository. With the BenchMarker labels in `data/external/benchmarker/`
 (see `data/external/README.md`): `validate_benchmarker.py` (-> validation_benchmarker_v3.txt), `validate_judge.py
@@ -85,8 +86,9 @@ openai/gpt-5.6-terra openai/gpt-5.6-luna anthropic/claude-sonnet-5 qwen/qwen3.6-
 position --conditions guided_position --reps 1` (position arm); `--template-control` (rotating example letter, 5 topics
 per specialty) together with `--full --run template --conditions plain_neutral --reps 1` and `--full --run template
 --conditions guided_neutral --reps 1` (neutral template); `--full --run wording --conditions guided2 --reps 1`
-(paraphrased guidelines); `--stability` (re-run). Every record in `data/generated/` carries its run name, condition,
-topic, seed, model and provider, so the parameters of each arm can be read from the data. Judges: `python3
+(paraphrased guidelines); `--stability` (re-run). Every record in `data/generated/` carries its condition, topic, seed and
+model (the run is the file name; provider and token fields are absent on failed requests; temperature is recorded from the
+template arm onward), so the parameters of each arm can be read from the data. Judges: `python3
 scripts/judge_perrule.py --judge <model id> --validate` (216 course items) or `--physician` (100 physician-rated items),
 with `--reasoning` for the reasoning-requested runs. Models change over time, so regenerated items will not reproduce
 the released corpus; the analyses above run on the released files. Costs are recorded per attempt; `costs.py` (above)

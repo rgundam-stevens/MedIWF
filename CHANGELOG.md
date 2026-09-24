@@ -1,5 +1,25 @@
 # Changes
 
+## 1.0.2 (24 September 2026)
+- `CITATION.cff`: `license` is a single string again (MIT, as in 1.0; the data license is described in LICENSE-DATA.md), so that
+  Zenodo can read the metadata; version 1.0.2.
+- `scripts/build_paper_data.py`: for an analysed attempt the item text is taken from the re-parse the detector used; in
+  `MedIWF_Dataset1_items_full.csv` exactly 18 rows marked `analysed = True` that had empty item text gain their text, every other
+  cell is unchanged.
+- `scripts/independent_nbme_check.py` and `outputs/independent_nbme_check_output.txt`: 181 checks (162 in 1.0.1): the
+  guided-prompt vs NBME comparison, the cells below the NBME rate, the share of the gap from the longest-option cue and the
+  14-rule count regressions added, the v1.0-loader comparison split into 2 matching checks; 179 match, 2 differences explained
+  in the output.
+- `src/mediwf/detector.py`: the `n_flaws` column of `outputs/flags_*.csv` counted the 14 rules plus the 2 feature checks
+  (`option_length_outlier`, `numeric_units_inconsistent`); it now counts the 14 rules, as `mediwf.rules.n_flaws` and the paper's
+  data files always did; the 6 flag files of the analysed runs were regenerated and only that column changed (the 4 pilot flag
+  files are the pilot-time records and are unchanged). No analysis script reads the column.
+- `docs/errata_2026-09-24.md`: note 1 rewritten (the disable request and the recorded reasoning tokens per judge), note 2
+  names both protocol passages, note 3 added (the combined-prompt judge run of 14 September).
+- `README.md`: the reproduction paragraph lists every non-identical file (tie order in `model_contrasts_v1.txt`, the SVG/PDF
+  figures); the record fields of `data/generated/` described exactly; `DATASET_CARD.md` names the `judge_*` files;
+  `data/external/README.md` gives the exact path of the BenchMarker label file.
+
 ## 1.0.1 (24 September 2026)
 - README: the sentence describing the manuscript's status was removed; the reproduction commands were re-tested in a fresh
   environment and now write to `repro/` under the version names the paper uses; commands that need withheld files are listed separately.

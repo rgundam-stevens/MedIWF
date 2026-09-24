@@ -284,7 +284,7 @@ class Detector:
         features = {
             "n_options": len(letters), "key": key, "stem_words": len(stem.split()), "lead_in": lead,
             "key_chars": len(key_text), "mean_distractor_chars": round(statistics.mean(len(d) for d in distractors), 1) if distractors else None,
-            "n_flaws": sum(1 for k in self.FLAWS if f.get(k) and k != "options_not_alphabetical"),
+            "n_flaws": sum(1 for k in self.FLAWS if f.get(k) and k not in ("options_not_alphabetical", "option_length_outlier", "numeric_units_inconsistent")),  # the 14 rules (v1.0.2 of the release: the 2 feature checks were counted before)
         }
         return {"flaws": f, "evidence": ev, "features": features}
 

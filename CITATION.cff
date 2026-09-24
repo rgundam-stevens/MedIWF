@@ -5,11 +5,9 @@ authors:
   - family-names: Gundam
     given-names: Rohit
     orcid: https://orcid.org/0009-0001-3018-9663
-version: "1.0.1"
+version: "1.0.2"
 date-released: "2026-09-24"
-license:
-  - MIT
-  - CC-BY-4.0
+license: MIT
 repository-code: https://github.com/rgundam-stevens/MedIWF
 doi: 10.5281/zenodo.22903818
 identifiers:

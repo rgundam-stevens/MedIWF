@@ -9,7 +9,8 @@ stability re-run made eight days later is included.
 **Files.** `data/generated/items_<run>.jsonl.gz`, one JSON object per generation attempt (`gunzip` before use):
 `items_full` (main corpus), `items_full_reasoning` (reasoning arm), `items_position` (position arm), `items_template`
 (template-control and guided-neutral arms), `items_wording` (paraphrase arm), `items_stability` (re-run), `items_pilot*`
-(pilots, not analysed). Judge outputs: `judgeR_<judge>_<set>.jsonl.gz`. Detector flags: `outputs/flags_<run>.csv`.
+(pilots, not analysed). Judge outputs: `judgeR_<judge>_<set>.jsonl.gz` (the per-rule prompts used in the paper) and `judge_<judge>_benchmarker.jsonl.gz`
+(an earlier single combined-prompt run of `scripts/judge.py`, reported in Supplement 1 of the paper). Detector flags: `outputs/flags_<run>.csv`.
 
 **Intended use.** Research on item quality, prompt effects, answer-position bias and detector validation. The items are
 not clinically validated and are not intended for use in examinations or teaching without expert review; two physicians

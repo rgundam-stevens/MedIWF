@@ -883,6 +883,14 @@ def main():
     ck("Response_Time", "cueing_count", "q", 0.012, 3, src="main text, Supplement 1")
     ck("Difficulty", "cueing_count", "b", -0.056, 3, src="Supplement 1; nbme_psychometrics_v3.txt l.5")
     ck("Difficulty", "cueing_count", "p", 0.09, 2, src="main text, Supplement 1")
+    ck("Response_Time", "count14", "b", -1.5, 1, src="main text, Supplement 1")
+    ck("Response_Time", "count14", "lo", -6.5, 1, src="Supplement 1")
+    ck("Response_Time", "count14", "hi", 3.4, 1, src="Supplement 1")
+    ck("Response_Time", "count14", "p", 0.55, 2, src="main text, Supplement 1")
+    ck("Difficulty", "count14", "b", -0.056, 3, src="main text, Supplement 1")
+    ck("Difficulty", "count14", "lo", -0.109, 3, src="Supplement 1")
+    ck("Difficulty", "count14", "hi", -0.004, 3, src="Supplement 1")
+    ck("Difficulty", "count14", "p", 0.04, 2, src="main text, Supplement 1")
     ck("Difficulty", "absolute_terms", "b", -0.204, 3, src="Supplement 1; nbme_psychometrics_v3.txt l.8")
     ck("Difficulty", "absolute_terms", "lo", -0.329, 3, src="Supplement 1")
     ck("Difficulty", "absolute_terms", "hi", -0.079, 3, src="Supplement 1")
@@ -931,6 +939,9 @@ def main():
                 outcome, labels.get(v, v), b, b - Z * se, b + Z * se, fp(pv), base[0], fp(base[3])))
     r = RQo.get(("Response_Time", "option_length_outlier"))
     check("RQ5 + option length: Response_Time option_length_outlier coef", r[0] if r else None, -5.3, nd=1, source="Supplement 1")
+    r = RQo.get(("Difficulty", "count14"))
+    check("RQ5 + option length: Difficulty flaw count (14 rules) coef", r[0] if r else None, -0.035, nd=3, source="main text, Supplement 1")
+    check("RQ5 + option length: Difficulty flaw count (14 rules) P", r[1] if r else None, 0.20, nd=2, source="main text, Supplement 1")
     r = RQo.get(("Difficulty", "cueing_count"))
     check("RQ5 + option length: Difficulty cueing count coef", r[0] if r else None, -0.038, nd=3, source="Supplement 1")
     check("RQ5 + option length: Difficulty cueing count P", r[1] if r else None, 0.25, nd=2, source="Supplement 1")
@@ -1078,13 +1089,67 @@ def main():
                     except (ValueError, np.linalg.LinAlgError):
                         parts.append("%s not estimable" % outcome[:4])
                 P("    %-5s %-22s n>0=%3d  %s" % (vname, v, npos, " | ".join(parts)))
-        check("NBME five-option any of 14 under v1.0 (current loader), %", 100 * vals[("v1.0", 0)][1] / vals[("v1.0", 0)][2], 21.9, nd=1, source="Supplement 1; reviewer_addendum l.15")
+        check("NBME five-option any of 14 under v1.0 (current loader), %", 100 * vals[("v1.0", 0)][1] / vals[("v1.0", 0)][2], 21.5, nd=1, source="not printed; Supplement 1 gives the v1.0-loader value")
         check("NBME five-option any of 14 under v1.0 (v1.0 loader), %", 100 * vals[("v1.0", 1)][1] / vals[("v1.0", 1)][2], 21.9, nd=1, source="Supplement 1")
         check("NBME five-option any of 14 under v1.1, %", 100 * vals[("v1.1", 0)][1] / vals[("v1.1", 0)][2], 16.8, nd=1, source="Supplement 1; reviewer_addendum l.16")
         check("NBME all-item any of 14 under v1.1, %", 100 * vals[("v1.1", 0)][0] / n_all, 17.1, nd=1, source="detector_changelog v1.2; Amendment 4 A15")
         check("NBME all-item any of 14 under v1.0, %", 100 * vals[("v1.0", 0)][0] / n_all, 22.0, nd=1, source="detector_changelog v1.1")
     except ImportError as e:
         P("  earlier detector versions not found (%s)" % e)
+
+    # ---------------------------------------------------------------- 9b. guided-prompt items vs NBME; cells; share of the gap
+    P("\n== 9b. Guided-prompt items vs NBME five-option items (unadjusted; Woolf interval; Fisher exact test), cells below the NBME rate,")
+    P("  and the share of the plain-prompt LLM vs NBME gap that the longest-option cue accounts for (risk-difference scale)")
+    fg = pd.read_csv(a.llm_flags)
+    if "run" in fg.columns:
+        fg = fg[fg["run"] == "full"]
+    if "reasoning_mode" in fg.columns:
+        fg = fg[fg["reasoning_mode"].fillna("off") == "off"]
+    fg = fg.copy()
+    fg["any14"] = (fg[CORE].sum(axis=1) > 0).astype(int)
+    fgu = fg[fg["condition"] == "guided"]
+    k_g, n_g = int(fgu.any14.sum()), len(fgu)
+    k_n, n_n = int(five.any14.sum()), int(len(five))
+    p_g, p_n = k_g / n_g, k_n / n_n
+    lor = math.log((k_g / (n_g - k_g)) / (k_n / (n_n - k_n)))
+    se_lor = math.sqrt(1 / k_g + 1 / (n_g - k_g) + 1 / k_n + 1 / (n_n - k_n))
+    orr, lo, hi = math.exp(lor), math.exp(lor - Z * se_lor), math.exp(lor + Z * se_lor)
+    # two-sided Fisher exact test: sum of hypergeometric probabilities not exceeding the observed one
+    N = n_g + n_n; K = k_g + k_n
+    def hyp(x):
+        return math.comb(K, x) * math.comb(N - K, n_g - x) / math.comb(N, n_g)
+    p_obs = hyp(k_g)
+    p_fisher = sum(hyp(x) for x in range(max(0, K - n_n), min(K, n_g) + 1) if hyp(x) <= p_obs * (1 + 1e-9))
+    P("  guided any of 14: %s | NBME five-option: %s | OR %.4f [%.4f, %.4f] | Fisher exact P = %s" % (pct(k_g, n_g, 2), pct(k_n, n_n, 2), orr, lo, hi, fp(p_fisher)))
+    check("guided-prompt any of 14, %", 100 * p_g, 13.6, nd=1, source="main text, Supplement 1")
+    check("OR guided vs NBME five-option, unadjusted", orr, 0.75, nd=2, source="main text, Supplement 1")
+    check("OR guided vs NBME, CI low", lo, 0.59, nd=2, source="main text, Supplement 1")
+    check("OR guided vs NBME, CI high", hi, 0.95, nd=2, source="main text, Supplement 1")
+    check("guided vs NBME, Fisher exact P", p_fisher, 0.02, nd=2, source="main text, Supplement 1")
+    below_g = below_g_ub = below_p = 0
+    for cond, lab_ in (("guided", "guided"), ("plain", "plain")):
+        sub = fg[fg["condition"] == cond]
+        col = "model_label" if "model_label" in sub.columns else ("model" if "model" in sub.columns else "model_id")
+        for mname, grp in sub.groupby(col):
+            k, n = int(grp.any14.sum()), len(grp)
+            pr, wlo, whi = wilson(k, n)
+            if pr < p_n:
+                if cond == "guided":
+                    below_g += 1
+                    if whi < p_n:
+                        below_g_ub += 1
+                else:
+                    below_p += 1
+                    P("    plain cell below the NBME rate: %s %s" % (mname, pct(k, n, 1)))
+    P("  guided cells below the NBME rate: %d of 15 (%d with the Wilson upper bound below it); plain cells below it: %d" % (below_g, below_g_ub, below_p))
+    check("guided-prompt cells below the NBME rate", below_g, 11, nd=0, source="Supplement 1")
+    check("guided-prompt cells with the upper bound below the NBME rate", below_g_ub, 7, nd=0, source="Supplement 1")
+    check("plain-prompt cells below the NBME rate", below_p, 2, nd=0, source="Supplement 1")
+    p_plain = fl.any14.mean(); p_plain13 = fl.any13_no_longest.mean(); p_n13 = five.any13_no_longest.mean()
+    share = 1 - (p_plain13 - p_n13) / (p_plain - p_n)
+    P("  plain vs NBME gap %.4f points; without the longest-option rule %.4f points; share attributable to the longest-option cue %.3f" % (
+        100 * (p_plain - p_n), 100 * (p_plain13 - p_n13), share))
+    check("share of the plain-NBME gap from the longest-option cue is 'about 80%' (0.75-0.85)", 0.75 <= share <= 0.85, True, source="main text, Supplement 1")
 
     # ---------------------------------------------------------------- self-check summary
     P("\n== SELF-CHECK against the values printed in the manuscript, Supplement 1, Dataset 6 and the logs (rounded half up)")
@@ -1094,9 +1159,7 @@ def main():
     P("\n  %d checks: %d MATCH, %d DIFF" % (len(CHECKS), n_ok, len(CHECKS) - n_ok))
     P("  Differences explained: (1) q for absolute terms on difficulty: Supplement 1 states that t tails were computed by a normal")
     P("  approximation (q=0.011); this script uses the exact t distribution (q=0.012). (2) nbme_psychometrics_v3.txt prints P=0.297")
-    P("  for the clang cue on difficulty where the value is 0.2978 (log formatting; the value is not in the paper). (3) 21.9% is the")
-    P("  five-option rate under detector version 1.0 computed with that version's item loader (517 five-option items); the current")
-    P("  loader gives 21.5% (113/525) for the same rules; the check under the v1.0 loader matches.")
+    P("  for the clang cue on difficulty where the value is 0.2978 (log formatting; the value is not in the paper).")
     P("  Lines printed: %d. No item text, item number or per-item value was printed; no file was written." % (P.lines + 1))
 
 

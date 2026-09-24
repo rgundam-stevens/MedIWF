@@ -310,6 +310,14 @@ Composite definitions in this script identical to src/mediwf/rules.py (CORE, VAL
     v1.2  cueing_count           n>0= 85  Diff   -0.056 [  -0.121,   +0.009] P=0.09091 | Resp   -6.890 [ -11.794,   -1.987] P=0.006049
     v1.2  any14                  n>0=117  Diff   -0.049 [  -0.111,   +0.013] P=0.1205 | Resp   -0.612 [  -6.675,   +5.451] P=0.8432
 
+== 9b. Guided-prompt items vs NBME five-option items (unadjusted; Woolf interval; Fisher exact test), cells below the NBME rate,
+  and the share of the plain-prompt LLM vs NBME gap that the longest-option cue accounts for (risk-difference scale)
+  guided any of 14:  815/6000 13.58% [12.74, 14.47] | NBME five-option:   91/525  17.33% [14.34, 20.81] | OR 0.7496 [0.5910, 0.9508] | Fisher exact P = 0.02104
+    plain cell below the NBME rate: Gemini 3.1 Pro   50/400  12.5% [9.6, 16.1]
+    plain cell below the NBME rate: Gemini 3.8 Flash   62/400  15.5% [12.3, 19.4]
+  guided cells below the NBME rate: 11 of 15 (7 with the Wilson upper bound below it); plain cells below it: 2
+  plain vs NBME gap 6.0667 points; without the longest-option rule 1.1690 points; share attributable to the longest-option cue 0.807
+
 == SELF-CHECK against the values printed in the manuscript, Supplement 1, Dataset 6 and the logs (rounded half up)
   MATCH items, all                                                                                   computed 667.0        printed 667      [main text, Supplement 1; analysis_nbme_v3.txt l.1]
   MATCH items, five-option                                                                           computed 525.0        printed 525      [main text, Table 2, Supplement 1]
@@ -422,6 +430,14 @@ Composite definitions in this script identical to src/mediwf/rules.py (CORE, VAL
   MATCH RQ5 Response_Time cueing_count q                                                             computed 0.012099     printed 0.012    [main text, Supplement 1]
   MATCH RQ5 Difficulty cueing_count b                                                                computed -0.056303    printed -0.056   [Supplement 1; nbme_psychometrics_v3.txt l.5]
   MATCH RQ5 Difficulty cueing_count p                                                                computed 0.090906     printed 0.09     [main text, Supplement 1]
+  MATCH RQ5 Response_Time count14 b                                                                  computed -1.528107    printed -1.5     [main text, Supplement 1]
+  MATCH RQ5 Response_Time count14 lo                                                                 computed -6.493062    printed -6.5     [Supplement 1]
+  MATCH RQ5 Response_Time count14 hi                                                                 computed 3.436848     printed 3.4      [Supplement 1]
+  MATCH RQ5 Response_Time count14 p                                                                  computed 0.546552     printed 0.55     [main text, Supplement 1]
+  MATCH RQ5 Difficulty count14 b                                                                     computed -0.056264    printed -0.056   [main text, Supplement 1]
+  MATCH RQ5 Difficulty count14 lo                                                                    computed -0.108629    printed -0.109   [Supplement 1]
+  MATCH RQ5 Difficulty count14 hi                                                                    computed -0.003899    printed -0.004   [Supplement 1]
+  MATCH RQ5 Difficulty count14 p                                                                     computed 0.035586     printed 0.04     [main text, Supplement 1]
   MATCH RQ5 Difficulty absolute_terms b                                                              computed -0.204165    printed -0.204   [Supplement 1; nbme_psychometrics_v3.txt l.8]
   MATCH RQ5 Difficulty absolute_terms lo                                                             computed -0.329462    printed -0.329   [Supplement 1]
   MATCH RQ5 Difficulty absolute_terms hi                                                             computed -0.078868    printed -0.079   [Supplement 1]
@@ -449,6 +465,8 @@ Composite definitions in this script identical to src/mediwf/rules.py (CORE, VAL
   DIFF  RQ5 Difficulty clang_cue p                                                                   computed 0.297807     printed 0.297    [nbme_psychometrics_v3.txt l.9]
   MATCH RQ5 no flaw variable associated with harder items (no positive difficulty coefficient with P < 0.05) computed True         printed True     [Supplement 1]
   MATCH RQ5 + option length: Response_Time option_length_outlier coef                                computed -5.295295    printed -5.3     [Supplement 1]
+  MATCH RQ5 + option length: Difficulty flaw count (14 rules) coef                                   computed -0.034645    printed -0.035   [main text, Supplement 1]
+  MATCH RQ5 + option length: Difficulty flaw count (14 rules) P                                      computed 0.197084     printed 0.2      [main text, Supplement 1]
   MATCH RQ5 + option length: Difficulty cueing count coef                                            computed -0.037759    printed -0.038   [Supplement 1]
   MATCH RQ5 + option length: Difficulty cueing count P                                               computed 0.252818     printed 0.25     [Supplement 1]
   MATCH RQ5 categories: Response_Time, 1 cueing flaw vs none, coef (s)                               computed -4.87988     printed -4.9     [Supplement 1]
@@ -468,16 +486,23 @@ Composite definitions in this script identical to src/mediwf/rules.py (CORE, VAL
   MATCH NBME flagged options in a distractor                                                         computed 23.0         printed 23       [Supplement 1]
   MATCH LLM plain share of flagged options in a distractor, %                                        computed 95.356037    printed 95       [Supplement 1]
   MATCH NBME stems without a lead-in                                                                 computed 0.0          printed 0        [Supplement 1 ('absent from all 667 NBME items')]
-  DIFF  NBME five-option any of 14 under v1.0 (current loader), %                                    computed 21.52381     printed 21.9     [Supplement 1; reviewer_addendum l.15]
+  MATCH NBME five-option any of 14 under v1.0 (current loader), %                                    computed 21.52381     printed 21.5     [not printed; Supplement 1 gives the v1.0-loader value]
   MATCH NBME five-option any of 14 under v1.0 (v1.0 loader), %                                       computed 21.856867    printed 21.9     [Supplement 1]
   MATCH NBME five-option any of 14 under v1.1, %                                                     computed 16.761905    printed 16.8     [Supplement 1; reviewer_addendum l.16]
   MATCH NBME all-item any of 14 under v1.1, %                                                        computed 17.091454    printed 17.1     [detector_changelog v1.2; Amendment 4 A15]
   MATCH NBME all-item any of 14 under v1.0, %                                                        computed 22.038981    printed 22.0     [detector_changelog v1.1]
+  MATCH guided-prompt any of 14, %                                                                   computed 13.583333    printed 13.6     [main text, Supplement 1]
+  MATCH OR guided vs NBME five-option, unadjusted                                                    computed 0.749648     printed 0.75     [main text, Supplement 1]
+  MATCH OR guided vs NBME, CI low                                                                    computed 0.591026     printed 0.59     [main text, Supplement 1]
+  MATCH OR guided vs NBME, CI high                                                                   computed 0.95084      printed 0.95     [main text, Supplement 1]
+  MATCH guided vs NBME, Fisher exact P                                                               computed 0.021042     printed 0.02     [main text, Supplement 1]
+  MATCH guided-prompt cells below the NBME rate                                                      computed 11.0         printed 11       [Supplement 1]
+  MATCH guided-prompt cells with the upper bound below the NBME rate                                 computed 7.0          printed 7        [Supplement 1]
+  MATCH plain-prompt cells below the NBME rate                                                       computed 2.0          printed 2        [Supplement 1]
+  MATCH share of the plain-NBME gap from the longest-option cue is 'about 80%' (0.75-0.85)           computed True         printed True     [main text, Supplement 1]
 
-  162 checks: 159 MATCH, 3 DIFF
+  181 checks: 179 MATCH, 2 DIFF
   Differences explained: (1) q for absolute terms on difficulty: Supplement 1 states that t tails were computed by a normal
   approximation (q=0.011); this script uses the exact t distribution (q=0.012). (2) nbme_psychometrics_v3.txt prints P=0.297
-  for the clang cue on difficulty where the value is 0.2978 (log formatting; the value is not in the paper). (3) 21.9% is the
-  five-option rate under detector version 1.0 computed with that version's item loader (517 five-option items); the current
-  loader gives 21.5% (113/525) for the same rules, as the next line shows.
-  Lines printed: 464. No item text, item number or per-item value was printed; no file was written.
+  for the clang cue on difficulty where the value is 0.2978 (log formatting; the value is not in the paper).
+  Lines printed: 488. No item text, item number or per-item value was printed; no file was written.

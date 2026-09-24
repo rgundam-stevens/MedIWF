@@ -3,7 +3,7 @@ A stem counts as having a lead-in if it contains a question mark, ends with a co
 form, e.g. "The most likely diagnosis is"), or has a sentence that begins with an interrogative or imperative lead-in word
 (which, what, who, where, when, how, why, identify, select, choose).
 Everything else is 'no lead-in': the options follow a vignette that never poses a question. Aggregate counts only.
-Usage: python3 scripts/analyze_leadin.py   -> outputs/analysis_leadin_v1.txt
+Usage: python3 scripts/analyze_leadin.py [out.txt]   (default: outputs/analysis_leadin_v1.txt)
 """
 import re, json, sys, pathlib, collections
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "src"))
@@ -47,7 +47,7 @@ def main():
     except Exception as e:
         out.append("NBME: not computed (%s)" % e)
     txt = "\n".join(out); print(txt)
-    (root / "outputs" / "analysis_leadin_v1.txt").write_text(txt + "\n")
+    (pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else root / "outputs" / "analysis_leadin_v1.txt").write_text(txt + "\n")
 
 if __name__ == "__main__":
     main()

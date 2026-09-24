@@ -1,101 +1,101 @@
-item_id,keyed_answer,q1,q2,q3,q4,q5,justification,minutes,rater,submitted_utc,q1_raw,q2_raw,q3_raw,q4_raw,q5_raw
-MAIN-001,A,yes,yes,yes,yes,minor edits,This case represents preterm labour which is defined by cervical change but this question has no cervical change mentioned or cervix dilated greater than 2,5.0,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
-MAIN-002,A,yes,yes,yes,yes,yes,,1.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-003,A,yes,yes,yes,yes,minor edits,"(added from the rater's chat reply, 21 Sep 06:52) ADHD is diagnosed when it is present in 2 settings but the scenario talks about only 1 setting",3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
-MAIN-004,A,yes,no,yes,yes,minor edits,Foam cells accumulate in intima and smooth muscle proliferate in intima after migrating from media,5.0,R2,2026-09-21T10:17,yes,no,yes,yes,minor edits
-MAIN-005,A,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-006,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-007,D,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-008,C,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-009,A,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-010,A,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-011,C,yes,yes,yes,yes,yes,This question can be more appropiate for step 1 than step 2,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-012,A,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-013,B,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-014,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-015,B,yes,yes,yes,yes,minor edits,The initial management should be immediate resuscitation/CPR and airway management so the question should be most appropiate specific pharmacotherapy,6.0,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
-MAIN-016,A,yes,yes,yes,yes,minor edits,BCR ABL is diagnostic genetic marker rather than tumor marker,5.0,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
-MAIN-017,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-018,A,yes,no,yes,yes,no,Bivalirudin can also be an answer,4,R2,2026-09-21T10:17,yes,no,yes,yes,no
-MAIN-019,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-020,E,yes,yes,no,yes,no,Patient already had diabetes so new onset diabetes cannot happen,4.0,R2,2026-09-21T10:17,yes,yes,no,yes,no
-MAIN-021,A,yes,yes,yes,yes,minor edits,Hypertension during pregnancy is known as preeclampsia not chronic hypertension,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
-MAIN-022,E,no,yes,yes,yes,no,Methylphenidate and Dextroamphetamine both are first line therapy.,5.0,R2,2026-09-21T10:17,No,yes,yes,yes,no
-MAIN-023,A,yes,yes,no,yes,minor edits,The case of cholangitis is not properly described like mention jaundice or dilated common bile duct,5.0,R2,2026-09-21T10:17,yes,yes,No,yes,minor edits
-MAIN-024,C,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-025,E,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-026,C,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-027,C,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-028,E,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-029,C,yes,yes,yes,yes,yes,,5.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-030,D,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-031,A,yes,yes,yes,yes,minor edits,"Usually in step 2 ck,we don’t ask about diagnosis but we ask for management",4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
-MAIN-032,A,yes,yes,yes,yes,yes,,5.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-033,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-034,B,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-035,A,yes,yes,yes,yes,minor edits,Not a good clinical question for step 2.It is good for step 1,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
-MAIN-036,C,yes,yes,yes,yes,minor edits,Not a good clinical question for step 2.It is good for step 1,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
-MAIN-037,A,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-038,A,yes,yes,yes,yes,minor edits,Not a good clinical question for step 2.It is good for step 1,2,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
-MAIN-039,D,yes,yes,yes,yes,yes,,10.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-040,B,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-041,A,yes,yes,yes,yes,yes,,6.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-042,B,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-043,D,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-044,C,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-045,E,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-046,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-047,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-048,A,yes,yes,yes,yes,yes,,5.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-049,A,yes,yes,yes,yes,minor edits,Not a good clinical question for step 2.It is good for step 1,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
-MAIN-050,A,yes,yes,no,yes,no,It should mention hypocomplementemia otherwise the diagnosis can go towards IGA nephropathy,4.0,R2,2026-09-21T10:17,yes,yes,no,yes,no
-MAIN-051,D,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-052,C,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-053,A,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-054,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-055,A,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-056,D,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-057,A,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-058,C,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-059,E,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-060,D,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-061,A,yes,yes,yes,yes,yes,,5.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-062,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-063,B,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-064,A,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-065,D,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-066,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-067,D,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-068,C,yes,yes,yes,yes,yes,,1.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-069,A,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-070,E,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-071,A,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-072,C,yes,yes,yes,yes,yes,,5.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-073,A,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-074,C,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-075,C,yes,yes,no,yes,minor edits,The answer should be  planned delivery between 36 to 39 weeks and Urodeoxycholic acid according to SMFM guidelines,10.0,R2,2026-09-21T10:17,yes,yes,No,yes,minor edits
-MAIN-076,A,yes,yes,yes,yes,minor edits,Not a good clinical question for step 2.It is good for step 1,2,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits (corrected by chat reply 21 Sep 06:52; sheet said yes)
-MAIN-077,A,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-078,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-079,C,no,yes,yes,yes,no,"For an asymptomativc hernia,observation is chosen.Repair is chosen when there is risk and patient is symptomatic than we can decide btw elective or laproscopy",7.0,R2,2026-09-21T10:17,no,yes,yes,yes,no
-MAIN-080,B,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-081,B,yes,yes,no,yes,minor edits,The ABG should be mention like ph less than 7.35 and paco2 elevated as this is the best indication for noninvasive positive pressure ventilation,6.0,R2,2026-09-21T10:17,yes,yes,no,yes,minor edits
-MAIN-082,B,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-083,C,yes,yes,yes,yes,minor edits,Medical therapy can also be added in the answer,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
-MAIN-084,B,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-085,A,yes,yes,yes,yes,yes,,5.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-086,A,yes,yes,yes,yes,yes,,2.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-087,B,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-088,C,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-089,A,yes,yes,no,yes,no,The question stem is incomplete as it should be complete by asking what is the most appropiate treatment?,2.0,R2,2026-09-21T10:17,yes,yes,No,yes,No
-MAIN-090,C,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-091,C,yes,yes,yes,yes,yes,,4.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-092,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-093,D,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-094,D,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-095,B,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-096,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-097,A,yes,yes,yes,yes,yes,,3.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
-MAIN-098,A,no,yes,yes,yes,no,Propranolol and topiramate are first line so both can be answer,6.0,R2,2026-09-21T10:17,no,yes,yes,yes,no
-MAIN-099,A,yes,yes,no,yes,no,SbP usually presents with fever and abdominal pain or it should mention paracentesis with pmn greater than 250,7,R2,2026-09-21T10:17,yes,yes,no,yes,no
-MAIN-100,C,yes,yes,yes,yes,yes,,5.0,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+item_id,keyed_answer,q1,q2,q3,q4,q5,justification,rater,submitted_utc,q1_raw,q2_raw,q3_raw,q4_raw,q5_raw
+MAIN-001,A,yes,yes,yes,yes,minor edits,This case represents preterm labour which is defined by cervical change but this question has no cervical change mentioned or cervix dilated greater than 2,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
+MAIN-002,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-003,A,yes,yes,yes,yes,minor edits,"(added from the rater's chat reply, 21 Sep 06:52) ADHD is diagnosed when it is present in 2 settings but the scenario talks about only 1 setting",R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
+MAIN-004,A,yes,no,yes,yes,minor edits,Foam cells accumulate in intima and smooth muscle proliferate in intima after migrating from media,R2,2026-09-21T10:17,yes,no,yes,yes,minor edits
+MAIN-005,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-006,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-007,D,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-008,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-009,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-010,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-011,C,yes,yes,yes,yes,yes,This question can be more appropiate for step 1 than step 2,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-012,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-013,B,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-014,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-015,B,yes,yes,yes,yes,minor edits,The initial management should be immediate resuscitation/CPR and airway management so the question should be most appropiate specific pharmacotherapy,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
+MAIN-016,A,yes,yes,yes,yes,minor edits,BCR ABL is diagnostic genetic marker rather than tumor marker,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
+MAIN-017,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-018,A,yes,no,yes,yes,no,Bivalirudin can also be an answer,R2,2026-09-21T10:17,yes,no,yes,yes,no
+MAIN-019,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-020,E,yes,yes,no,yes,no,Patient already had diabetes so new onset diabetes cannot happen,R2,2026-09-21T10:17,yes,yes,no,yes,no
+MAIN-021,A,yes,yes,yes,yes,minor edits,Hypertension during pregnancy is known as preeclampsia not chronic hypertension,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
+MAIN-022,E,no,yes,yes,yes,no,Methylphenidate and Dextroamphetamine both are first line therapy.,R2,2026-09-21T10:17,No,yes,yes,yes,no
+MAIN-023,A,yes,yes,no,yes,minor edits,The case of cholangitis is not properly described like mention jaundice or dilated common bile duct,R2,2026-09-21T10:17,yes,yes,No,yes,minor edits
+MAIN-024,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-025,E,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-026,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-027,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-028,E,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-029,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-030,D,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-031,A,yes,yes,yes,yes,minor edits,"Usually in step 2 ck,we don’t ask about diagnosis but we ask for management",R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
+MAIN-032,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-033,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-034,B,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-035,A,yes,yes,yes,yes,minor edits,Not a good clinical question for step 2.It is good for step 1,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
+MAIN-036,C,yes,yes,yes,yes,minor edits,Not a good clinical question for step 2.It is good for step 1,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
+MAIN-037,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-038,A,yes,yes,yes,yes,minor edits,Not a good clinical question for step 2.It is good for step 1,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
+MAIN-039,D,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-040,B,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-041,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-042,B,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-043,D,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-044,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-045,E,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-046,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-047,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-048,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-049,A,yes,yes,yes,yes,minor edits,Not a good clinical question for step 2.It is good for step 1,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
+MAIN-050,A,yes,yes,no,yes,no,It should mention hypocomplementemia otherwise the diagnosis can go towards IGA nephropathy,R2,2026-09-21T10:17,yes,yes,no,yes,no
+MAIN-051,D,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-052,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-053,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-054,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-055,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-056,D,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-057,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-058,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-059,E,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-060,D,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-061,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-062,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-063,B,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-064,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-065,D,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-066,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-067,D,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-068,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-069,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-070,E,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-071,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-072,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-073,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-074,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-075,C,yes,yes,no,yes,minor edits,The answer should be  planned delivery between 36 to 39 weeks and Urodeoxycholic acid according to SMFM guidelines,R2,2026-09-21T10:17,yes,yes,No,yes,minor edits
+MAIN-076,A,yes,yes,yes,yes,minor edits,Not a good clinical question for step 2.It is good for step 1,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits (corrected by chat reply 21 Sep 06:52; sheet said yes)
+MAIN-077,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-078,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-079,C,no,yes,yes,yes,no,"For an asymptomativc hernia,observation is chosen.Repair is chosen when there is risk and patient is symptomatic than we can decide btw elective or laproscopy",R2,2026-09-21T10:17,no,yes,yes,yes,no
+MAIN-080,B,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-081,B,yes,yes,no,yes,minor edits,The ABG should be mention like ph less than 7.35 and paco2 elevated as this is the best indication for noninvasive positive pressure ventilation,R2,2026-09-21T10:17,yes,yes,no,yes,minor edits
+MAIN-082,B,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-083,C,yes,yes,yes,yes,minor edits,Medical therapy can also be added in the answer,R2,2026-09-21T10:17,yes,yes,yes,yes,minor edits
+MAIN-084,B,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-085,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-086,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-087,B,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-088,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-089,A,yes,yes,no,yes,no,The question stem is incomplete as it should be complete by asking what is the most appropiate treatment?,R2,2026-09-21T10:17,yes,yes,No,yes,No
+MAIN-090,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-091,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-092,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-093,D,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-094,D,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-095,B,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-096,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-097,A,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes
+MAIN-098,A,no,yes,yes,yes,no,Propranolol and topiramate are first line so both can be answer,R2,2026-09-21T10:17,no,yes,yes,yes,no
+MAIN-099,A,yes,yes,no,yes,no,SbP usually presents with fever and abdominal pain or it should mention paracentesis with pmn greater than 250,R2,2026-09-21T10:17,yes,yes,no,yes,no
+MAIN-100,C,yes,yes,yes,yes,yes,,R2,2026-09-21T10:17,yes,yes,yes,yes,yes

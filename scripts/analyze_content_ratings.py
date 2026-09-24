@@ -119,7 +119,8 @@ def report(out_path=None):
     P("Physician content ratings, main set: %d rater file(s): %s; %d items in key" % (len(raters), ", ".join(raters), len(key)))
     labels = {"q1": "keyed answer is the single best answer", "q2": "every distractor plausible", "q3": "vignette accurate and consistent", "q4": "tests a meaningful decision", "q5": "acceptable as written"}
     for rn, rows in raters.items():
-        P("\n== %s: %d items rated; minutes total %.0f" % (rn, len(rows), sum(float(r["minutes"] or 0) for r in rows.values())))
+        mins = [r["minutes"] for r in rows.values() if r.get("minutes") not in (None, "")]
+        P("\n== %s: %d items rated; minutes total %s" % (rn, len(rows), ("%.0f" % sum(float(m) for m in mins)) if mins else "not released (per-item minutes are not in the public rating files)"))
         for q in QS:
             neg = "no" if q != "q5" else "no"
             n = len(rows); k_no = sum(r[q] == "no" for r in rows.values()); k_uns = sum(r[q] == "unsure" for r in rows.values()); k_min = sum(r[q] == "minor edits" for r in rows.values())

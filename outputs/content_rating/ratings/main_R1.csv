@@ -1,101 +1,101 @@
-item_id,keyed_answer,q1,q2,q3,q4,q5,justification,minutes,rater,submitted_utc,q1_raw,q2_raw,q3_raw,q4_raw,q5_raw
-MAIN-001,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-002,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-003,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-004,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-005,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-006,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-007,D,yes,yes,yes,yes,yes,,7.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-008,C,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-009,A,yes,yes,yes,yes,yes,,7.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-010,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-011,C,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-012,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-013,B,unsure,no,yes,yes,no,"Choices C and E both are correct. although propranolol and lorazepam are first line, benztropine (Choice C) is used off-label (Source: UWorld Step 2 ck)",7.0,R1,2026-09-17T11:56,unsure,no,yes,yes,no
-MAIN-014,A,yes,yes,no,yes,minor edits,"For mild lead elevation 5-44, we remove from house or source and repeat testing, starting from blood lead levels above 45, we begin with chelation therapy. the number in the stem is very borderline (45), a higher number would be suitable for the keyed answer.",7.0,R1,2026-09-17T11:56,yes,yes,no,yes,minor edits
-MAIN-015,B,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-016,A,yes,no,yes,yes,minor edits,Choice E is very irrelevant.,7.0,R1,2026-09-17T11:56,yes,no,yes,yes,minor edits
-MAIN-017,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-018,A,unsure,yes,yes,yes,no,"If you want A to be uniquely correct, you’d need to add a feature such as significant renal dysfunction, which would make argatroban preferable because it is hepatically cleared whereas bivalirudin requires renal dose consideration. otherwise, A and B both are correct",7.0,R1,2026-09-17T11:56,unsure,yes,yes,yes,no
-MAIN-019,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-020,E,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-021,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-022,E,unsure,yes,yes,yes,no,Choices C and E both are valid and correct.,4.0,R1,2026-09-17T11:56,unsure,yes,yes,yes,no
-MAIN-023,A,no,yes,yes,yes,no,"(added from the rater's chat reply, 17 Sep 07:58) ERCP is not routinely indicated for acute gallstone pancreatitis unless there is concomitant cholangitis or persistent biliary obstruction. The vignette does not provide evidence of either, so the keyed answer is insufficiently supported. The best answer would be supportive care and IV fluids, not listed.",4.0,R1,2026-09-17T11:56,no,yes,yes,yes,no
-MAIN-024,C,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-025,E,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-026,C,yes,yes,yes,yes,yes,,6.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-027,C,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-028,E,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-029,C,unsure,yes,yes,yes,no,"Choice D is not wrong, patients generally start CBT before SSRI, so the stem should be adjusted to make the patient has tried CBT( without improvement, or Choice D should be changed.",7.0,R1,2026-09-17T11:56,unsure,yes,yes,yes,no
-MAIN-030,D,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-031,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-032,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-033,A,yes,yes,yes,yes,yes,,6.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-034,B,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-035,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-036,C,yes,yes,yes,yes,yes,,5.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-037,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-038,A,yes,yes,yes,yes,yes,,5.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-039,D,yes,yes,yes,yes,yes,,8.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-040,B,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-041,A,yes,yes,yes,yes,yes,,2.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-042,B,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-043,D,yes,yes,yes,yes,yes,,5.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-044,C,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-045,E,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-046,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-047,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-048,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-049,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-050,A,unsure,yes,no,yes,no,"If the intended answer is A which is PSGN ,normal complement levels is not suitable with PSGN, instead, reduced complement levels is the way to go.",8.0,R1,2026-09-17T11:56,unsure,yes,no,yes,no
-MAIN-051,D,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-052,C,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-053,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-054,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-055,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-056,D,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-057,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-058,C,yes,yes,yes,yes,yes,,5.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-059,E,yes,yes,yes,yes,yes,,5.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-060,D,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-061,A,yes,yes,yes,yes,yes,,5.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-062,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-063,B,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-064,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-065,D,yes,yes,yes,yes,yes,,5.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-066,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-067,D,yes,yes,yes,yes,yes,,5.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-068,C,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-069,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-070,E,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-071,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-072,C,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-073,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-074,C,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-075,C,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-076,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-077,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-078,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-079,C,unsure,yes,yes,yes,no,"There is not previllege for choice C over D in the question, both approaches are valid. you may add a something that serve as a contraindication for laparoscopic surgery.",7.0,R1,2026-09-17T11:56,unsure,yes,yes,yes,no
-MAIN-080,B,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-081,B,unsure,yes,no,yes,no,"For a NIPPV to be a correct answer, ABG must be provided in the stem, and it must show hypercapnic respiratory failure. Also, the stem should tell us whether patient has received IV methylprednisolone or not, otherwise, choice A is a competing answer.",7.0,R1,2026-09-17T11:56,unsure,yes,no,yes,no
-MAIN-082,B,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-083,C,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-084,B,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-085,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-086,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-087,B,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-088,C,unsure,yes,yes,yes,no,B is also a valid PID regimen.,5.0,R1,2026-09-17T11:56,unsure,yes,yes,yes,no
-MAIN-089,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-090,C,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-091,C,yes,yes,yes,yes,yes,,5.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-092,A,yes,yes,yes,yes,yes,,3.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-093,D,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-094,D,yes,yes,yes,yes,yes,,5.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-095,B,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-096,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-097,A,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
-MAIN-098,A,unsure,yes,yes,yes,no,"Choices A, B and C are valid answer choices. The stem must add something to prefer one over the others.",6.0,R1,2026-09-17T11:56,unsure,yes,yes,yes,no
-MAIN-099,A,unsure,yes,no,yes,no,"The absence of fever does not exclude SBP, as cirrhotic patients may have subtle or atypical presentations. However, the vignette provides no diagnostic evidence of SBP, making it insufficient to establish SBP as the single most likely precipitant. A diagnostic paracentesis result should be provided.",8.0,R1,2026-09-17T11:56,unsure,yes,no,yes,no
-MAIN-100,C,yes,yes,yes,yes,yes,,4.0,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+item_id,keyed_answer,q1,q2,q3,q4,q5,justification,rater,submitted_utc,q1_raw,q2_raw,q3_raw,q4_raw,q5_raw
+MAIN-001,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-002,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-003,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-004,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-005,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-006,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-007,D,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-008,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-009,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-010,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-011,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-012,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-013,B,unsure,no,yes,yes,no,"Choices C and E both are correct. although propranolol and lorazepam are first line, benztropine (Choice C) is used off-label (Source: UWorld Step 2 ck)",R1,2026-09-17T11:56,unsure,no,yes,yes,no
+MAIN-014,A,yes,yes,no,yes,minor edits,"For mild lead elevation 5-44, we remove from house or source and repeat testing, starting from blood lead levels above 45, we begin with chelation therapy. the number in the stem is very borderline (45), a higher number would be suitable for the keyed answer.",R1,2026-09-17T11:56,yes,yes,no,yes,minor edits
+MAIN-015,B,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-016,A,yes,no,yes,yes,minor edits,Choice E is very irrelevant.,R1,2026-09-17T11:56,yes,no,yes,yes,minor edits
+MAIN-017,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-018,A,unsure,yes,yes,yes,no,"If you want A to be uniquely correct, you’d need to add a feature such as significant renal dysfunction, which would make argatroban preferable because it is hepatically cleared whereas bivalirudin requires renal dose consideration. otherwise, A and B both are correct",R1,2026-09-17T11:56,unsure,yes,yes,yes,no
+MAIN-019,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-020,E,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-021,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-022,E,unsure,yes,yes,yes,no,Choices C and E both are valid and correct.,R1,2026-09-17T11:56,unsure,yes,yes,yes,no
+MAIN-023,A,no,yes,yes,yes,no,"(added from the rater's chat reply, 17 Sep 07:58) ERCP is not routinely indicated for acute gallstone pancreatitis unless there is concomitant cholangitis or persistent biliary obstruction. The vignette does not provide evidence of either, so the keyed answer is insufficiently supported. The best answer would be supportive care and IV fluids, not listed.",R1,2026-09-17T11:56,no,yes,yes,yes,no
+MAIN-024,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-025,E,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-026,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-027,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-028,E,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-029,C,unsure,yes,yes,yes,no,"Choice D is not wrong, patients generally start CBT before SSRI, so the stem should be adjusted to make the patient has tried CBT( without improvement, or Choice D should be changed.",R1,2026-09-17T11:56,unsure,yes,yes,yes,no
+MAIN-030,D,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-031,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-032,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-033,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-034,B,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-035,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-036,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-037,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-038,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-039,D,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-040,B,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-041,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-042,B,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-043,D,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-044,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-045,E,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-046,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-047,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-048,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-049,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-050,A,unsure,yes,no,yes,no,"If the intended answer is A which is PSGN ,normal complement levels is not suitable with PSGN, instead, reduced complement levels is the way to go.",R1,2026-09-17T11:56,unsure,yes,no,yes,no
+MAIN-051,D,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-052,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-053,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-054,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-055,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-056,D,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-057,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-058,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-059,E,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-060,D,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-061,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-062,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-063,B,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-064,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-065,D,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-066,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-067,D,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-068,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-069,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-070,E,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-071,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-072,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-073,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-074,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-075,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-076,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-077,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-078,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-079,C,unsure,yes,yes,yes,no,"There is not previllege for choice C over D in the question, both approaches are valid. you may add a something that serve as a contraindication for laparoscopic surgery.",R1,2026-09-17T11:56,unsure,yes,yes,yes,no
+MAIN-080,B,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-081,B,unsure,yes,no,yes,no,"For a NIPPV to be a correct answer, ABG must be provided in the stem, and it must show hypercapnic respiratory failure. Also, the stem should tell us whether patient has received IV methylprednisolone or not, otherwise, choice A is a competing answer.",R1,2026-09-17T11:56,unsure,yes,no,yes,no
+MAIN-082,B,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-083,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-084,B,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-085,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-086,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-087,B,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-088,C,unsure,yes,yes,yes,no,B is also a valid PID regimen.,R1,2026-09-17T11:56,unsure,yes,yes,yes,no
+MAIN-089,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-090,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-091,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-092,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-093,D,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-094,D,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-095,B,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-096,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-097,A,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes
+MAIN-098,A,unsure,yes,yes,yes,no,"Choices A, B and C are valid answer choices. The stem must add something to prefer one over the others.",R1,2026-09-17T11:56,unsure,yes,yes,yes,no
+MAIN-099,A,unsure,yes,no,yes,no,"The absence of fever does not exclude SBP, as cirrhotic patients may have subtle or atypical presentations. However, the vignette provides no diagnostic evidence of SBP, making it insufficient to establish SBP as the single most likely precipitant. A diagnostic paracentesis result should be provided.",R1,2026-09-17T11:56,unsure,yes,no,yes,no
+MAIN-100,C,yes,yes,yes,yes,yes,,R1,2026-09-17T11:56,yes,yes,yes,yes,yes

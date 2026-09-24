@@ -13,11 +13,11 @@ stability re-run made eight days later is included.
 
 **Intended use.** Research on item quality, prompt effects, answer-position bias and detector validation. The items are
 not clinically validated and are not intended for use in examinations or teaching without expert review; two physicians
-found a content defect in about one item in eight of a 100-item sample (see the paper).
+found a content defect in about one item in eight of a 100-item sample (outputs/content_rating/).
 
 **Provenance and license.** Generated through the OpenRouter gateway under the prompts in `config/prompts/`; item text is
-released as generated and each model's terms of use may apply; labels, metadata and the compilation are CC BY 4.0.
-No human subjects data; the physician ratings in `outputs/content_rating/` are released with both raters' written consent.
+released as generated and each model's terms of use may apply; labels, metadata and the compilation are CC BY 4.0 with the exceptions in LICENSE-DATA.md.
+No human subjects data; the physician ratings in `outputs/content_rating/` are released with both raters' written consent, without their per-item rating times.
 
 **Known limitations.** Snapshot of model versions and hosts recorded in the metadata; 2.7% of repetition pairs are
-near-identical; the detector's rules are surface-form rules with the validation reported in the paper.
+near-identical; the detector's rules are surface-form rules with the validation reported in outputs/.

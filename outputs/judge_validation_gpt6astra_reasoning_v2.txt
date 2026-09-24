@@ -1,0 +1,17 @@
+labels: 7542 rows -> 7282 after collapsing 233 duplicated (item, rule) groups (25 conflicting groups dropped)
+
+== Judge vs human labels, exam block (216 items)
+rule                       tp   fp   fn   tn |  prec   rec    F1  kappa [95% bootstrap CI]
+focused_stem               13   44    0  159 |  0.23  1.00  0.37   0.30 [0.17, 0.43]
+no_extraneous_info          9   31    1  175 |  0.23  0.90  0.36   0.31 [0.14, 0.46]
+plausible_distractors      13   13   13  176 |  0.50  0.50  0.50   0.43 [0.24, 0.60]
+single_best_answer          0   21    0  171 | no human positive after collapsing: kappa not interpretable
+
+== Judge vs human labels, healthcare subset (45 items)
+rule                       tp   fp   fn   tn |  prec   rec    F1  kappa [95% bootstrap CI]
+focused_stem                0    2    0   43 | no human positive after collapsing: kappa not interpretable
+no_extraneous_info          0    3    0   42 | no human positive after collapsing: kappa not interpretable
+plausible_distractors       2    0    4   38 |  1.00  0.33  0.50   0.46 [0.00, 0.85]
+single_best_answer          0    2    0   32 | no human positive after collapsing: kappa not interpretable
+
+judged items: 216 | total cost $13.981 (all records in the file, including pilot and gap-filling runs)

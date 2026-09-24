@@ -2,7 +2,7 @@
 v1.2 rule (reported): an exclusive stem-key content word AND (two such words OR key-stem overlap >= 2x the best distractor's).
 One-word rule (the Rater Guide's definition): any content word shared by stem and key and absent from every distractor.
 One-word, plural-folding only: the same with the hand-check helper's lemmatiser (singular/plural folding, no -ing/-ed).
-Aggregate counts only. Usage: python3 scripts/clang_sensitivity.py -> outputs/analysis_clang_sensitivity_v1.txt
+Aggregate counts only. Usage: python3 scripts/clang_sensitivity.py [out.txt]   (default: outputs/analysis_clang_sensitivity_v1.txt)
 """
 import sys, re, json, pathlib, collections
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "src")); sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "scripts"))
@@ -85,7 +85,7 @@ def main():
         out.append("NBME five-option items, %d: " % len(nb5) + ", ".join("%s %.1f%%" % (k, 100 * sum(v[k] for v in nb5) / len(nb5)) for k in V))
     except Exception as e:
         out.append("NBME: not computed (%s)" % e)
-    txt = "\n".join(out); print(txt); (root / "outputs" / "analysis_clang_sensitivity_v1.txt").write_text(txt + "\n")
+    txt = "\n".join(out); print(txt); (pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else root / "outputs" / "analysis_clang_sensitivity_v1.txt").write_text(txt + "\n")
 
 if __name__ == "__main__":
     main()

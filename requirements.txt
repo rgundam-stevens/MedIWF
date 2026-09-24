@@ -1,4 +1,10 @@
-requests>=2.28
+# MedIWF. Python 3.9 or 3.10. The released logs were produced with Python 3.9.6, NumPy 2.0.2, pandas 2.3.3 and openpyxl 3.1.5
+# (analyses) and Python 3.10.12, NumPy 2.2.6 and Matplotlib 3.10.9 (figures), without SciPy. The statistics code uses SciPy for
+# t and chi-square tails when it is installed and exact normal tails / a normal approximation for t otherwise, as the paper
+# states; with SciPy installed a few t-based P values differ from the released logs in the second or third decimal (for
+# example the Welch P values in tier_model_level_v3.txt: 0.400 -> 0.42). Leave SciPy uninstalled to reproduce the logs byte for byte.
+numpy>=1.23
 pandas>=1.5
 openpyxl>=3.1
-numpy>=1.23
+matplotlib>=3.7     # figures only
+requests>=2.28      # generation and judging only (OpenRouter)

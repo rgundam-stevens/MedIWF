@@ -1,0 +1,483 @@
+==============================================================================================================
+INDEPENDENT NBME CHECK. Aggregates only. Detector version loaded: 1.2 (detector.py)
+numpy 2.2.6, pandas 2.3.3, Python 3.10.12
+Composite definitions in this script identical to src/mediwf/rules.py (CORE, VALIDATED, SENSITIVITY, CUEING): True
+
+== 0. NBME files (structure and loading; counts only)
+  train_final  rows  466, columns 18: ItemNum, ItemStem_Text, Answer__A, Answer__B, Answer__C, Answer__D, Answer__E, Answer__F, Answer__G, Answer__H, Answer__I, Answer__J, Answer_Key, Answer_Text, ItemType, EXAM, Difficulty, Response_Time
+  test_final   rows  201, columns 16: ItemNum, ItemStem_Text, Answer__A, Answer__B, Answer__C, Answer__D, Answer__E, Answer__F, Answer__G, Answer__H, Answer__I, Answer__J, Answer_Key, Answer_Text, ItemType, EXAM
+  gold_final   rows  201, columns  3: ItemNum, Difficulty, Response_Time
+  test rows 201, gold rows 201, joined on ItemNum (inner) 201; gold columns also present in test: none
+  ItemNum unique within train: True
+  ItemNum unique within test : True
+  ItemNum unique within gold : True
+  ItemNum values shared by train and test: 0
+  option columns found: train 'Answer__%s', test 'Answer__%s' (the author's code reads 'Answer__%s')
+  cell conversions (counts): {'date cells written back as month-day': 1, 'integer-valued numeric cells': 12, 'non-integer numeric cells': 23}
+  detector features vs independent counts: n_options differ in 0 items, stem word counts differ in 0, key letter differs from the Answer_Key cell in 0
+  items with an unreadable key (key-dependent rules disabled): 0
+
+== 1. Counts
+  items: 667 (train 466, test 201); five-option items: 525; other: 142
+  number of options per item (count of items): {4: 47, 5: 525, 6: 71, 7: 8, 8: 12, 9: 3, 10: 1}
+  by split: train {4: 32, 5: 366, 6: 51, 7: 6, 8: 7, 9: 3, 10: 1} | test {4: 15, 5: 159, 6: 20, 7: 2, 8: 5}
+  EXAM levels (all / five-option): {'STEP 1': 273, 'STEP 2': 220, 'STEP 3': 174} / {'STEP 1': 216, 'STEP 2': 159, 'STEP 3': 150}
+  ItemType (all / five-option): {'PIX': 72, 'Text': 595} / {'PIX': 59, 'Text': 466}
+  missing Difficulty: 0, missing Response_Time: 0
+
+== 2. Prevalence with Wilson 95% CI (z = 1.96), % with 3 decimals
+  rule / composite                   five-option items (n=525)      all items (n=667)             
+  negative_stem                         0/525  0.000% [0.000, 0.726]    0/667  0.000% [0.000, 0.573]
+  none_of_the_above                     0/525  0.000% [0.000, 0.726]    0/667  0.000% [0.000, 0.573]
+  all_of_the_above                      0/525  0.000% [0.000, 0.726]    1/667  0.150% [0.026, 0.844]
+  combination_options                   0/525  0.000% [0.000, 0.726]    0/667  0.000% [0.000, 0.573]
+  fill_in_blank                         0/525  0.000% [0.000, 0.726]    0/667  0.000% [0.000, 0.573]
+  true_false_stem                       0/525  0.000% [0.000, 0.726]    0/667  0.000% [0.000, 0.573]
+  longest_option_key                   15/525  2.857% [1.739, 4.660]   20/667  2.999% [1.949, 4.586]
+  absolute_terms                       16/525  3.048% [1.884, 4.893]   21/667  3.148% [2.068, 4.765]
+  vague_terms                           3/525  0.571% [0.195, 1.666]    3/667  0.450% [0.153, 1.314]
+  clang_cue                            44/525  8.381% [6.302, 11.064]   51/667  7.646% [5.863, 9.914]
+  grammatical_cue                       0/525  0.000% [0.000, 0.726]    0/667  0.000% [0.000, 0.573]
+  nonparallel_options                  17/525  3.238% [2.031, 5.124]   24/667  3.598% [2.430, 5.298]
+  numeric_not_ordered                   1/525  0.190% [0.034, 1.071]    1/667  0.150% [0.026, 0.844]
+  overlapping_options                   3/525  0.571% [0.195, 1.666]    7/667  1.049% [0.509, 2.150]
+  any14                                91/525  17.333% [14.336, 20.806]  117/667  17.541% [14.843, 20.611]
+  any10                                60/525  11.429% [8.983, 14.435]   71/667  10.645% [8.525, 13.215]
+  any11                                77/525  14.667% [11.897, 17.949]  100/667  14.993% [12.484, 17.902]
+  any13_no_longest                     79/525  15.048% [12.244, 18.359]  101/667  15.142% [12.622, 18.062]
+  option_length_outlier               207/525  39.429% [35.339, 43.671]  243/667  36.432% [32.867, 40.152]
+  options_not_alphabetical             95/525  18.095% [15.038, 21.616]  115/667  17.241% [14.564, 20.294]
+  numeric_units_inconsistent            2/525  0.381% [0.105, 1.378]    2/667  0.300% [0.082, 1.087]
+
+== 3. Option-length features and item lengths
+  option_length_outlier        five-option  207/525  39.429% [35.339, 43.671] | all  243/667  36.432% [32.867, 40.152]
+  options_not_alphabetical     five-option   95/525  18.095% [15.038, 21.616] | all  115/667  17.241% [14.564, 20.294]
+  numeric_units_inconsistent   five-option    2/525  0.381% [0.105, 1.378] | all    2/667  0.300% [0.082, 1.087]
+  NBME five-option: stem words median 112.000 (IQR 83.000-154.000); mean option characters median 22.800 (IQR 15.800-33.600); option-length CV median 0.283 (IQR 0.189-0.381)
+
+== 4. Key position
+  five-option items, counts A-E: {'A': 110, 'B': 99, 'C': 89, 'D': 118, 'E': 109} (other letters: 0)
+  shares %: A 20.952, B 18.857, C 16.952, D 22.476, E 20.762
+  chi-square vs uniform over A-E: 4.7810, df 4, P = 0.31052
+  all items, counts by key letter: {'A': 135, 'B': 129, 'C': 111, 'D': 147, 'E': 125, 'F': 15, 'G': 3, 'H': 2}
+  all items keyed A-E (n=647): chi-square 5.4034, df 4, P = 0.24835 (the author's log prints this chi-square as 5.4)
+
+== 5. LLM plain-prompt items (comparison set)
+  flags file rows 12000; main-corpus plain rows kept 6000 (five-option 6000); detector versions ['1.2']
+  --llm-items: items found for 6000 of 6000 plain jobs; detector output differs from the flags file for 0
+  LLM plain: stem words median 89.000 (IQR 71.000-111.000); mean option characters median 36.000 (IQR 23.600-52.600); option-length CV median 0.230 (IQR 0.154-0.326)
+  LLM plain any14                        1404/6000 23.400% [22.346, 24.488]
+  LLM plain any10                         769/6000 12.817% [11.995, 13.686]
+  LLM plain any13_no_longest              973/6000 16.217% [15.306, 17.171]
+  LLM plain longest_option_key            654/6000 10.900% [10.136, 11.714]
+  LLM plain clang_cue                     500/6000 8.333% [7.660, 9.060]
+  LLM plain absolute_terms                275/6000 4.583% [4.083, 5.142]
+  LLM plain nonparallel_options           186/6000 3.100% [2.691, 3.569]
+  LLM plain option_length_outlier        1656/6000 27.600% [26.483, 28.745]
+  LLM plain options_not_alphabetical     4856/6000 80.933% [79.920, 81.907]
+  LLM plain numeric_units_inconsistent      1/6000 0.017% [0.003, 0.094]
+
+== 6. LLM plain (all five-option) vs NBME five-option items: logistic regression on source, OR for LLM, HC1 sandwich SEs
+  any14  (LLM 1404/6000, NBME 91/525)
+    unadjusted                                     OR 1.4569 [1.1532, 1.8406]  P=0.001605
+    log stem                                       OR 1.5508 [1.2250, 1.9633]  P=0.0002654
+    log stem + log mean option chars               OR 1.1139 [0.8729, 1.4216]  P=0.3858
+    log stem + option CV                           OR 1.9090 [1.4797, 2.4628]  P=6.530e-07
+    log stem + log mean option chars + option CV   OR 1.2594 [0.9623, 1.6481]  P=0.09289
+    unadjusted, model-clustered SE                 OR 1.4569 [1.1068, 1.9177]  (EXTRA, not in the manuscript: LLM items clustered by generator model)
+  any10  (LLM 769/6000, NBME 60/525)
+    unadjusted                                     OR 1.1393 [0.8616, 1.5065]  P=0.3602
+    log stem                                       OR 1.1703 [0.8841, 1.5491]  P=0.2717
+    log stem + log mean option chars               OR 0.7972 [0.5964, 1.0657]  P=0.1259
+    log stem + option CV                           OR 1.2033 [0.9068, 1.5966]  P=0.1997
+    log stem + log mean option chars + option CV   OR 0.8208 [0.6123, 1.1004]  P=0.1867
+  any11  (LLM 1193/6000, NBME 77/525)
+    unadjusted                                     OR 1.4440 [1.1245, 1.8541]  P=0.003974
+    log stem                                       OR 1.6194 [1.2587, 2.0833]  P=0.0001766
+    log stem + log mean option chars               OR 1.2629 [0.9759, 1.6343]  P=0.07592
+    log stem + option CV                           OR 2.0959 [1.5898, 2.7631]  P=1.537e-07
+    log stem + log mean option chars + option CV   OR 1.4733 [1.1062, 1.9623]  P=0.008045
+  any13_no_longest  (LLM 973/6000, NBME 79/525)
+    unadjusted                                     OR 1.0927 [0.8519, 1.4016]  P=0.4851
+    log stem                                       OR 1.1527 [0.8969, 1.4814]  P=0.2671
+    log stem + log mean option chars               OR 0.8658 [0.6692, 1.1201]  P=0.2728
+    log stem + option CV                           OR 1.3276 [1.0214, 1.7255]  P=0.03414
+    log stem + log mean option chars + option CV   OR 0.9331 [0.7126, 1.2219]  P=0.6149
+  longest_option_key  (LLM 654/6000, NBME 15/525)
+    unadjusted                                     OR 4.1594 [2.4730, 6.9956]  P=7.728e-08
+    log stem                                       OR 4.5078 [2.6712, 7.6071]  P=1.699e-08
+    log stem + log mean option chars               OR 3.2336 [1.9052, 5.4884]  P=1.374e-05
+    log stem + option CV                           OR 6.3350 [3.6720, 10.9293]  P=3.247e-11
+    log stem + log mean option chars + option CV   OR 4.2192 [2.3299, 7.6406]  P=2.017e-06
+    unadjusted, model-clustered SE                 OR 4.1594 [2.4194, 7.1507]  (EXTRA, not in the manuscript: LLM items clustered by generator model)
+  clang_cue  (LLM 500/6000, NBME 44/525)
+    unadjusted                                     OR 0.9938 [0.7202, 1.3714]  P=0.9698
+    log stem                                       OR 1.1728 [0.8488, 1.6205]  P=0.3340
+    log stem + log mean option chars               OR 0.8999 [0.6475, 1.2507]  P=0.5301
+    log stem + option CV                           OR 1.2342 [0.8899, 1.7116]  P=0.2073
+    log stem + log mean option chars + option CV   OR 0.9322 [0.6682, 1.3006]  P=0.6796
+  absolute_terms  (LLM 275/6000, NBME 16/525)
+    unadjusted                                     OR 1.5281 [0.9156, 2.5504]  P=0.1047
+    log stem                                       OR 1.3166 [0.7861, 2.2052]  P=0.2958
+    log stem + log mean option chars               OR 0.7001 [0.4090, 1.1984]  P=0.1936
+    log stem + option CV                           OR 1.2985 [0.7749, 2.1760]  P=0.3213
+    log stem + log mean option chars + option CV   OR 0.7283 [0.4241, 1.2507]  P=0.2505
+  nonparallel_options  (LLM 186/6000, NBME 17/525)
+    unadjusted                                     OR 0.9560 [0.5770, 1.5839]  P=0.8613
+    log stem                                       OR 1.1541 [0.6842, 1.9467]  P=0.5910
+    log stem + log mean option chars               OR 1.1508 [0.6736, 1.9661]  P=0.6073
+    log stem + option CV                           OR 2.0105 [1.0638, 3.7996]  P=0.03152
+    log stem + log mean option chars + option CV   OR 1.4144 [0.7347, 2.7229]  P=0.2995
+
+  Longest-option threshold sweep (key chars > ratio x longest distractor chars and key words >= min): prevalence and
+  unadjusted OR, LLM plain (n=6000) vs NBME five-option (n=525); any-core = the other 13 rules fixed. Agreement of the
+  recomputed rule at (1.25, 4) with the detector's flag: LLM 1.0000, NBME 1.0000
+   ratio 1.10 min words 1: LLM 21.00%, NBME 13.71% | rule OR 1.67 [1.29, 2.16] | any-core LLM 31.73% vs NBME 26.10%, OR 1.32 [1.08, 1.61]
+   ratio 1.10 min words 4: LLM 17.68%, NBME  6.67% | rule OR 3.01 [2.12, 4.27] | any-core LLM 28.70% vs NBME 20.00%, OR 1.61 [1.29, 2.01]
+   ratio 1.10 min words 6: LLM 14.93%, NBME  3.43% | rule OR 4.94 [3.07, 7.96] | any-core LLM 26.37% vs NBME 17.52%, OR 1.69 [1.34, 2.13]
+   ratio 1.15 min words 1: LLM 17.88%, NBME 11.05% | rule OR 1.75 [1.32, 2.32] | any-core LLM 29.33% vs NBME 24.00%, OR 1.31 [1.07, 1.62]
+   ratio 1.15 min words 4: LLM 14.97%, NBME  5.52% | rule OR 3.01 [2.06, 4.41] | any-core LLM 26.63% vs NBME 19.05%, OR 1.54 [1.23, 1.93]
+   ratio 1.15 min words 6: LLM 12.73%, NBME  2.67% | rule OR 5.33 [3.11, 9.11] | any-core LLM 24.78% vs NBME 16.95%, OR 1.61 [1.28, 2.04]
+   ratio 1.20 min words 1: LLM 14.92%, NBME  7.24% | rule OR 2.25 [1.60, 3.15] | any-core LLM 26.87% vs NBME 21.14%, OR 1.37 [1.10, 1.70]
+   ratio 1.20 min words 4: LLM 12.75%, NBME  3.24% | rule OR 4.37 [2.68, 7.12] | any-core LLM 24.83% vs NBME 17.52%, OR 1.55 [1.23, 1.96]
+   ratio 1.20 min words 6: LLM 10.82%, NBME  1.52% | rule OR 7.84 [3.88, 15.83] | any-core LLM 23.22% vs NBME 16.19%, OR 1.57 [1.23, 1.99]
+   ratio 1.25 min words 1: LLM 12.75%, NBME  6.10% | rule OR 2.25 [1.56, 3.24] | any-core LLM 25.13% vs NBME 20.19%, OR 1.33 [1.06, 1.66]
+   ratio 1.25 min words 4: LLM 10.90%, NBME  2.86% | rule OR 4.16 [2.47, 7.00] | any-core LLM 23.40% vs NBME 17.33%, OR 1.46 [1.15, 1.84]
+   ratio 1.25 min words 6: LLM  9.28%, NBME  1.33% | rule OR 7.57 [3.57, 16.05] | any-core LLM 22.03% vs NBME 16.00%, OR 1.48 [1.17, 1.89]
+   ratio 1.30 min words 1: LLM 10.77%, NBME  4.95% | rule OR 2.32 [1.55, 3.46] | any-core LLM 23.52% vs NBME 19.05%, OR 1.31 [1.04, 1.64]
+   ratio 1.30 min words 4: LLM  9.40%, NBME  2.29% | rule OR 4.44 [2.49, 7.91] | any-core LLM 22.27% vs NBME 16.76%, OR 1.42 [1.12, 1.80]
+   ratio 1.30 min words 6: LLM  8.03%, NBME  0.76% | rule OR 11.38 [4.23, 30.57] | any-core LLM 21.10% vs NBME 15.43%, OR 1.47 [1.15, 1.87]
+   ratio 1.40 min words 1: LLM  7.38%, NBME  3.62% | rule OR 2.12 [1.33, 3.39] | any-core LLM 21.10% vs NBME 17.90%, OR 1.23 [0.97, 1.55]
+   ratio 1.40 min words 4: LLM  6.45%, NBME  1.71% | rule OR 3.95 [2.03, 7.70] | any-core LLM 20.27% vs NBME 16.19%, OR 1.32 [1.03, 1.67]
+   ratio 1.40 min words 6: LLM  5.47%, NBME  0.57% | rule OR 10.06 [3.22, 31.48] | any-core LLM 19.42% vs NBME 15.24%, OR 1.34 [1.05, 1.71]
+   ratio 1.50 min words 1: LLM  5.15%, NBME  2.67% | rule OR 1.98 [1.15, 3.41] | any-core LLM 19.50% vs NBME 17.33%, OR 1.16 [0.91, 1.46]
+   ratio 1.50 min words 4: LLM  4.47%, NBME  1.33% | rule OR 3.46 [1.62, 7.37] | any-core LLM 18.88% vs NBME 16.00%, OR 1.22 [0.96, 1.56]
+   ratio 1.50 min words 6: LLM  3.80%, NBME  0.57% | rule OR 6.87 [2.19, 21.55] | any-core LLM 18.30% vs NBME 15.24%, OR 1.25 [0.97, 1.59]
+   ratio 1.75 min words 1: LLM  2.57%, NBME  1.14% | rule OR 2.28 [1.00, 5.18] | any-core LLM 17.63% vs NBME 15.81%, OR 1.14 [0.89, 1.45]
+   ratio 1.75 min words 4: LLM  2.07%, NBME  0.57% | rule OR 3.67 [1.16, 11.58] | any-core LLM 17.18% vs NBME 15.24%, OR 1.15 [0.90, 1.48]
+   ratio 1.75 min words 6: LLM  1.77%, NBME  0.38% | rule OR 4.70 [1.16, 19.11] | any-core LLM 16.95% vs NBME 15.05%, OR 1.15 [0.90, 1.48]
+   ratio 2.00 min words 1: LLM  1.38%, NBME  0.57% | rule OR 2.44 [0.77, 7.75] | any-core LLM 16.90% vs NBME 15.43%, OR 1.11 [0.87, 1.43]
+   ratio 2.00 min words 4: LLM  1.03%, NBME  0.19% | rule OR 5.47 [0.76, 39.55] | any-core LLM 16.58% vs NBME 15.05%, OR 1.12 [0.88, 1.44]
+   ratio 2.00 min words 6: LLM  0.88%, NBME  0.19% | rule OR 4.67 [0.64, 33.85] | any-core LLM 16.47% vs NBME 15.05%, OR 1.11 [0.87, 1.43]
+
+== 7. RQ5: OLS of Difficulty and Response_Time on one flaw variable at a time, adjusting for EXAM (dummies), item type
+   (Text vs other) and log stem words; HC1 SEs; P from t(n-k); 95% CI = coef +/- 1.96 SE (as in the author's code).
+  items in the regressions: 667 (dropped for missing outcome: 0); EXAM reference level 'STEP 1', other levels ['STEP 2', 'STEP 3']
+  Difficulty: mean 0.4878, SD 0.3087 | Response_Time: mean 86.2297 s, SD 29.5479 s
+
+  outcome Difficulty
+  variable                                                      n>0      coef       SE                 95% CI        t          P  q(author)     q(all)     R2
+  cueing count (4 rules: longest, absolute, clang, grammatical)     85   -0.0563   0.0333 [  -0.1215,   +0.0089]   -1.693    0.09091     0.3215     0.2182  0.040
+  flaw count (14 rules)                                         117   -0.0563   0.0267 [  -0.1086,   -0.0039]   -2.106    0.03559          -     0.1760  0.041
+  6-rule count used in psychometrics v1/v2                      113   -0.0519   0.0276 [  -0.1060,   +0.0023]   -1.877    0.06101          -     0.1830  0.040
+  any of 14 (composite)                                         117   -0.0491   0.0316 [  -0.1111,   +0.0128]   -1.554     0.1205     0.3215     0.2411  0.039
+  any of 10 validated                                            71   -0.0832   0.0412 [  -0.1641,   -0.0024]   -2.018    0.04400          -     0.1760  0.042
+  any of 11 (sensitivity)                                       100   -0.0240   0.0339 [  -0.0903,   +0.0424]   -0.707     0.4796          -     0.5208  0.036
+  negative_stem                                                   0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  none_of_the_above                                               0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  all_of_the_above                                                1   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  combination_options                                             0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  fill_in_blank                                                   0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  true_false_stem                                                 0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  longest_option_key                                             20   +0.0689   0.0682 [  -0.0647,   +0.2025]   +1.011     0.3123     0.3569     0.3748  0.036
+  absolute_terms                                                 21   -0.2042   0.0639 [  -0.3295,   -0.0789]   -3.194   0.001471    0.01177    0.01765  0.048
+  vague_terms                                                     3   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  clang_cue                                                      51   -0.0525   0.0504 [  -0.1512,   +0.0462]   -1.042     0.2978     0.3569     0.3748  0.037
+  grammatical_cue                                                 0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  nonparallel_options                                            24   -0.0604   0.0529 [  -0.1642,   +0.0434]   -1.141     0.2543     0.3569     0.3748  0.036
+  numeric_not_ordered                                             1   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  overlapping_options                                             7   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  option_length_outlier                                         243   -0.0254   0.0249 [  -0.0742,   +0.0233]   -1.023     0.3069     0.3569     0.3748  0.037
+  options_not_alphabetical                                      115   -0.0209   0.0325 [  -0.0846,   +0.0428]   -0.642     0.5208     0.5208     0.5208  0.036
+  numeric_units_inconsistent                                      2   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  author's BH family (scripts/nbme_psychometrics.py): cueing_count, any14, longest_option_key, absolute_terms, clang_cue, nonparallel_options, option_length_outlier, options_not_alphabetical
+
+  outcome Response_Time
+  variable                                                      n>0      coef       SE                 95% CI        t          P  q(author)     q(all)     R2
+  cueing count (4 rules: longest, absolute, clang, grammatical)     85   -6.8905   2.5020 [ -11.7944,   -1.9865]   -2.754   0.006049    0.01210    0.01815  0.215
+  flaw count (14 rules)                                         117   -1.5281   2.5331 [  -6.4931,   +3.4368]   -0.603     0.5466          -     0.6559  0.208
+  6-rule count used in psychometrics v1/v2                      113   -3.3477   2.2976 [  -7.8510,   +1.1557]   -1.457     0.1456          -     0.2496  0.209
+  any of 14 (composite)                                         117   -0.6121   3.0932 [  -6.6749,   +5.4507]   -0.198     0.8432     0.8432     0.8432  0.207
+  any of 10 validated                                            71   -6.9335   3.8516 [ -14.4826,   +0.6156]   -1.800    0.07229          -     0.1735  0.212
+  any of 11 (sensitivity)                                       100   +0.7807   3.4332 [  -5.9484,   +7.5098]   +0.227     0.8202          -     0.8432  0.207
+  negative_stem                                                   0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  none_of_the_above                                               0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  all_of_the_above                                                1   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  combination_options                                             0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  fill_in_blank                                                   0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  true_false_stem                                                 0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  longest_option_key                                             20   +6.7517   7.9440 [  -8.8185,  +22.3219]   +0.850     0.3957     0.5276     0.5935  0.209
+  absolute_terms                                                 21  -14.2827   3.6260 [ -21.3895,   -7.1758]   -3.939  9.051e-05  0.0005544  0.0008315  0.214
+  vague_terms                                                     3   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  clang_cue                                                      51  -10.3519   3.3616 [ -16.9406,   -3.7631]   -3.079   0.002160   0.005759   0.008639  0.216
+  grammatical_cue                                                 0   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  nonparallel_options                                            24   +7.8780   4.6984 [  -1.3308,  +17.0869]   +1.677    0.09406     0.1505     0.1881  0.210
+  numeric_not_ordered                                             1   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  overlapping_options                                             7   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  option_length_outlier                                         243   -7.7301   2.0166 [ -11.6827,   -3.7775]   -3.833  0.0001386  0.0005544  0.0008315  0.223
+  options_not_alphabetical                                      115   -1.5353   2.5089 [  -6.4528,   +3.3821]   -0.612     0.5408     0.6180     0.6559  0.207
+  numeric_units_inconsistent                                      2   not estimated: fewer than 10 flagged or unflagged items, or no variation (an estimate would approach an item-level value)
+  author's BH family (scripts/nbme_psychometrics.py): cueing_count, any14, longest_option_key, absolute_terms, clang_cue, nonparallel_options, option_length_outlier, options_not_alphabetical
+
+  Same regressions adding log mean option characters and option-length CV (Supplement 1; 'Adding option length and its spread')
+  Difficulty     cueing count (4 rules: longest, absolute, clang, grammatical)   -0.0378 [  -0.1024,   +0.0269] P=0.2528     (without option length:   -0.0563, P=0.09091)
+  Difficulty     flaw count (14 rules)                                        -0.0346 [  -0.0872,   +0.0179] P=0.1971     (without option length:   -0.0563, P=0.03559)
+  Difficulty     any of 14 (composite)                                        -0.0245 [  -0.0863,   +0.0374] P=0.4388     (without option length:   -0.0491, P=0.1205)
+  Difficulty     absolute_terms                                               -0.1761 [  -0.3012,   -0.0510] P=0.005974   (without option length:   -0.2042, P=0.001471)
+  Difficulty     clang_cue                                                    -0.0404 [  -0.1376,   +0.0568] P=0.4161     (without option length:   -0.0525, P=0.2978)
+  Difficulty     longest_option_key                                           +0.1005 [  -0.0323,   +0.2333] P=0.1384     (without option length:   +0.0689, P=0.3123)
+  Difficulty     option_length_outlier                                        +0.0017 [  -0.0590,   +0.0623] P=0.9573     (without option length:   -0.0254, P=0.3069)
+  Response_Time  cueing count (4 rules: longest, absolute, clang, grammatical)   -6.1600 [ -11.0430,   -1.2770] P=0.01367    (without option length:   -6.8905, P=0.006049)
+  Response_Time  flaw count (14 rules)                                        +0.0754 [  -5.2493,   +5.4001] P=0.9779     (without option length:   -1.5281, P=0.5466)
+  Response_Time  any of 14 (composite)                                        +1.1653 [  -5.2472,   +7.5779] P=0.7218     (without option length:   -0.6121, P=0.8432)
+  Response_Time  absolute_terms                                              -13.9885 [ -21.3842,   -6.5928] P=0.0002272  (without option length:  -14.2827, P=9.051e-05)
+  Response_Time  clang_cue                                                   -10.2183 [ -16.6539,   -3.7826] P=0.001939   (without option length:  -10.3519, P=0.002160)
+  Response_Time  longest_option_key                                          +10.0691 [  -5.6831,  +25.8214] P=0.2107     (without option length:   +6.7517, P=0.3957)
+  Response_Time  option_length_outlier                                        -5.2953 [ -10.2864,   -0.3042] P=0.03796    (without option length:   -7.7301, P=0.0001386)
+
+  Cueing count as categories (dose-response check, Supplement 1; contrasts need >= 5 items)
+  Difficulty     cueing count 1    vs 0 (n=78)    -0.0227 [  -0.1006,   +0.0552] P=0.5683
+  Difficulty     cueing count 2+   vs 0 (n=7)    -0.2873 [  -0.4650,   -0.1095] P=0.001610
+  Response_Time  cueing count 1    vs 0 (n=78)    -4.8799 [ -11.2106,   +1.4508] P=0.1313
+  Response_Time  cueing count 2+   vs 0 (n=7)   -24.2258 [ -31.5886,  -16.8630] P=2.177e-10
+
+  The same regressions on the five-option items only (Supplement 1 reports the cueing count)
+  Difficulty     cueing count (4 rules: longest, absolute, clang, grammatical) n=525 n>0=70   -0.0282 [  -0.1027,   +0.0463] P=0.4584
+  Difficulty     flaw count (14 rules)                                      n=525 n>0=91   -0.0412 [  -0.1023,   +0.0198] P=0.1861
+  Difficulty     any of 14 (composite)                                      n=525 n>0=91   -0.0363 [  -0.1073,   +0.0347] P=0.3167
+  Difficulty     absolute_terms                                             n=525 n>0=16   -0.2216 [  -0.3306,   -0.1127] P=7.674e-05
+  Difficulty     clang_cue                                                  n=525 n>0=44   -0.0033 [  -0.1120,   +0.1054] P=0.9524
+  Difficulty     longest_option_key                                         n=525 n>0=15   +0.0986 [  -0.0606,   +0.2579] P=0.2254
+  Response_Time  cueing count (4 rules: longest, absolute, clang, grammatical) n=525 n>0=70   -4.3363 [ -10.0992,   +1.4265] P=0.1409
+  Response_Time  flaw count (14 rules)                                      n=525 n>0=91   +0.1941 [  -5.7417,   +6.1300] P=0.9489
+  Response_Time  any of 14 (composite)                                      n=525 n>0=91   +1.1104 [  -6.0567,   +8.2776] P=0.7615
+  Response_Time  absolute_terms                                             n=525 n>0=16  -12.7685 [ -21.1154,   -4.4215] P=0.002846
+  Response_Time  clang_cue                                                  n=525 n>0=44   -6.4045 [ -13.5349,   +0.7259] P=0.07892
+  Response_Time  longest_option_key                                         n=525 n>0=15   +8.9061 [ -10.9716,  +28.7838] P=0.3803
+
+  Descriptive means by number of cueing flags (as in nbme_psychometrics_v3.txt; groups of fewer than 5 items are pooled
+  with the next lower group) and by any of the 14 rules (0 vs >= 1 only, so that no difference between the two tables
+  isolates fewer than 5 items)
+  cueing count   0     n= 582  Difficulty mean 0.4910 (SD 0.3041)  Response_Time mean 86.712 (SD 29.314)
+  cueing count   1     n=  78  Difficulty mean 0.4851 (SD 0.3427)  Response_Time mean 84.520 (SD 31.592)
+  cueing count   2     n=   7  Difficulty mean 0.2571 (SD 0.2384)  Response_Time mean 65.224 (SD 17.834)
+  any of 14      0     n= 550  Difficulty mean 0.4937 (SD 0.3071)  Response_Time mean 85.989 (SD 28.437)
+  any of 14      >=1   n= 117  Difficulty mean 0.4602 (SD 0.3161)  Response_Time mean 87.362 (SD 34.406)
+  all items            n= 667  Difficulty mean 0.4878 (SD 0.3087)  Response_Time mean 86.230 (SD 29.548)
+
+== 8. Absolute-terms audit (counts only). 'flagged options' counts options; 'word hits' counts option x word
+  NBME all items: {'flagged items': 21, 'flagged options: distractor': 23, 'flagged options: key': 6, 'items whose flagged options are all distractors': 15, "items with 'only' in a flagged distractor": 12, "items with 'only' in a flagged option": 15, 'word hits: distractor': 23, 'word hits: key': 6}
+  NBME options per triggering word: {'all': 3, 'always': 1, 'completely': 1, 'impossible': 1, 'never': 1, 'none': 3, 'only': 19}
+  NBME word x position: {'all/distractor': 2, 'all/key': 1, 'always/key': 1, 'completely/distractor': 1, 'impossible/distractor': 1, 'never/distractor': 1, 'none/distractor': 3, 'only/distractor': 15, 'only/key': 4}
+  LLM plain: {'flagged items': 275, 'flagged options: distractor': 308, 'flagged options: key': 15, 'items whose flagged options are all distractors': 260, "items with 'only' in a flagged distractor": 220, "items with 'only' in a flagged option": 225, 'word hits: distractor': 313, 'word hits: key': 15}
+  LLM plain options per word: {'all': 60, 'always': 1, 'completely': 10, 'entirely': 5, 'exclusively': 3, 'never': 1, 'only': 248}
+  LLM plain share of flagged options that are distractors: 0.9536; share of word hits in distractors: 0.9543
+
+== 9. Other NBME-dependent numbers
+  stems without a lead-in (author's definition, scripts/analyze_leadin.py): 0 of 667
+  any of 14 under each detector version (five-option denominator from the same loader):
+    v1.0  current loader                           all:  147/667  22.04% [19.06, 25.34] | five-option:  113/525  21.52% [18.22, 25.24]
+    v1.0  v1.0 loader (non-text cells dropped)     all:  147/667  22.04% [19.06, 25.34] | five-option:  113/517  21.86% [18.51, 25.62]
+    v1.1  current loader                           all:  114/667  17.09% [14.43, 20.13] | five-option:   88/525  16.76% [13.81, 20.20]
+    v1.1  v1.0 loader (non-text cells dropped)     all:  114/667  17.09% [14.43, 20.13] | five-option:   88/517  17.02% [14.03, 20.50]
+    v1.2  current loader                           all:  117/667  17.54% [14.84, 20.61] | five-option:   91/525  17.33% [14.34, 20.81]
+    v1.2  v1.0 loader (non-text cells dropped)     all:  117/667  17.54% [14.84, 20.61] | five-option:   91/517  17.60% [14.56, 21.12]
+  RQ5 single-rule regressions under each detector version (current loader; same covariates as section 7). Supplement 1 says
+  the v1.0 -> v1.1 revision, which was made after tabulating what each rule fired on in the corpus and the NBME items,
+  changed no qualitative conclusion; the author's logs show word repetition vs response time p=0.079 (v1.0) -> 0.0013 (v1.1).
+    v1.0  clang_cue              n>0= 52  Diff   -0.053 [  -0.146,   +0.039] P=0.2585 | Resp   -6.452 [ -13.659,   +0.755] P=0.07977
+    v1.0  absolute_terms         n>0= 21  Diff   -0.204 [  -0.329,   -0.079] P=0.001471 | Resp  -14.283 [ -21.390,   -7.176] P=9.051e-05
+    v1.0  longest_option_key     n>0= 20  Diff   +0.069 [  -0.065,   +0.203] P=0.3123 | Resp   +6.752 [  -8.818,  +22.322] P=0.3957
+    v1.0  grammatical_cue        n>0= 26  Diff   -0.076 [  -0.179,   +0.026] P=0.1462 | Resp   -7.556 [ -15.086,   -0.025] P=0.04964
+    v1.0  nonparallel_options    n>0= 24  Diff   -0.060 [  -0.164,   +0.043] P=0.2543 | Resp   +7.878 [  -1.331,  +17.087] P=0.09406
+    v1.0  overlapping_options    n>0= 14  Diff   +0.139 [  -0.033,   +0.311] P=0.1137 | Resp  +17.828 [  -7.164,  +42.820] P=0.1625
+    v1.0  cueing_count           n>0=109  Diff   -0.062 [  -0.118,   -0.005] P=0.03325 | Resp   -5.577 [  -9.948,   -1.206] P=0.01264
+    v1.0  any14                  n>0=147  Diff   -0.056 [  -0.113,   +0.000] P=0.05104 | Resp   +0.171 [  -5.169,   +5.511] P=0.9500
+    v1.1  clang_cue              n>0= 47  Diff   -0.032 [  -0.135,   +0.072] P=0.5496 | Resp  -10.779 [ -17.362,   -4.196] P=0.001395
+    v1.1  absolute_terms         n>0= 21  Diff   -0.204 [  -0.329,   -0.079] P=0.001471 | Resp  -14.283 [ -21.390,   -7.176] P=9.051e-05
+    v1.1  longest_option_key     n>0= 20  Diff   +0.069 [  -0.065,   +0.203] P=0.3123 | Resp   +6.752 [  -8.818,  +22.322] P=0.3957
+    v1.1  grammatical_cue        n>0=  0  not estimated (fewer than 10 flagged)
+    v1.1  nonparallel_options    n>0= 24  Diff   -0.060 [  -0.164,   +0.043] P=0.2543 | Resp   +7.878 [  -1.331,  +17.087] P=0.09406
+    v1.1  overlapping_options    n>0=  7  not estimated (fewer than 10 flagged)
+    v1.1  cueing_count           n>0= 82  Diff   -0.047 [  -0.115,   +0.021] P=0.1728 | Resp   -7.079 [ -12.094,   -2.064] P=0.005818
+    v1.1  any14                  n>0=114  Diff   -0.043 [  -0.106,   +0.019] P=0.1757 | Resp   -0.673 [  -6.774,   +5.427] P=0.8288
+    v1.2  clang_cue              n>0= 51  Diff   -0.052 [  -0.151,   +0.046] P=0.2978 | Resp  -10.352 [ -16.941,   -3.763] P=0.002160
+    v1.2  absolute_terms         n>0= 21  Diff   -0.204 [  -0.329,   -0.079] P=0.001471 | Resp  -14.283 [ -21.390,   -7.176] P=9.051e-05
+    v1.2  longest_option_key     n>0= 20  Diff   +0.069 [  -0.065,   +0.203] P=0.3123 | Resp   +6.752 [  -8.818,  +22.322] P=0.3957
+    v1.2  grammatical_cue        n>0=  0  not estimated (fewer than 10 flagged)
+    v1.2  nonparallel_options    n>0= 24  Diff   -0.060 [  -0.164,   +0.043] P=0.2543 | Resp   +7.878 [  -1.331,  +17.087] P=0.09406
+    v1.2  overlapping_options    n>0=  7  not estimated (fewer than 10 flagged)
+    v1.2  cueing_count           n>0= 85  Diff   -0.056 [  -0.121,   +0.009] P=0.09091 | Resp   -6.890 [ -11.794,   -1.987] P=0.006049
+    v1.2  any14                  n>0=117  Diff   -0.049 [  -0.111,   +0.013] P=0.1205 | Resp   -0.612 [  -6.675,   +5.451] P=0.8432
+
+== SELF-CHECK against the values printed in the manuscript, Supplement 1, Dataset 6 and the logs (rounded half up)
+  MATCH items, all                                                                                   computed 667.0        printed 667      [main text, Supplement 1; analysis_nbme_v3.txt l.1]
+  MATCH items, five-option                                                                           computed 525.0        printed 525      [main text, Table 2, Supplement 1]
+  MATCH items not five-option                                                                        computed 142.0        printed 142      [Supplement 1]
+  MATCH '4 or 6 to 10 options': non-five counts are all in {4, 6..10}                                computed True         printed True     [Supplement 1]
+  MATCH '4 or 6 to 10 options': at least one 4-option and one 10-option item                         computed True         printed True     [Supplement 1]
+  MATCH five-option count, negative_stem                                                             computed 0.0          printed 0        [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, none_of_the_above                                                         computed 0.0          printed 0        [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, all_of_the_above                                                          computed 0.0          printed 0        [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, combination_options                                                       computed 0.0          printed 0        [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, fill_in_blank                                                             computed 0.0          printed 0        [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, true_false_stem                                                           computed 0.0          printed 0        [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, longest_option_key                                                        computed 15.0         printed 15       [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, absolute_terms                                                            computed 16.0         printed 16       [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, vague_terms                                                               computed 3.0          printed 3        [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, clang_cue                                                                 computed 44.0         printed 44       [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, grammatical_cue                                                           computed 0.0          printed 0        [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, nonparallel_options                                                       computed 17.0         printed 17       [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, numeric_not_ordered                                                       computed 1.0          printed 1        [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, overlapping_options                                                       computed 3.0          printed 3        [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, option_length_outlier                                                     computed 207.0        printed 207      [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, options_not_alphabetical                                                  computed 95.0         printed 95       [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, numeric_units_inconsistent                                                computed 2.0          printed 2        [Dataset 6 / nbme_aggregate_for_figures.json]
+  MATCH five-option count, any of 14                                                                 computed 91.0         printed 91       [Dataset 6]
+  MATCH five-option any of 14, %                                                                     computed 17.333333    printed 17.3     [main text, Supplement 1]
+  MATCH five-option any of 14, CI low                                                                computed 14.335654    printed 14.3     [main text, Supplement 1]
+  MATCH five-option any of 14, CI high                                                               computed 20.805606    printed 20.8     [main text, Supplement 1]
+  MATCH five-option longest_option_key, %                                                            computed 2.857143     printed 2.9      [Supplement 1 (and main text for longest)]
+  MATCH five-option absolute_terms, %                                                                computed 3.047619     printed 3.0      [Supplement 1 (and main text for longest)]
+  MATCH five-option clang_cue, %                                                                     computed 8.380952     printed 8.4      [Supplement 1 (and main text for longest)]
+  MATCH five-option nonparallel_options, %                                                           computed 3.238095     printed 3.2      [Supplement 1 (and main text for longest)]
+  MATCH five-option overlapping_options, %                                                           computed 0.571429     printed 0.6      [Supplement 1 (and main text for longest)]
+  MATCH five-option grammatical_cue, %                                                               computed 0.0          printed 0.0      [Supplement 1 (and main text for longest)]
+  MATCH five-option any validated (10), %                                                            computed 11.428571    printed 11.4     [Supplement 1; analysis_nbme_comparison_v1.txt l.6]
+  MATCH five-option any validated, CI low                                                            computed 8.982659     printed 9.0      [Supplement 1]
+  MATCH five-option any validated, CI high                                                           computed 14.434864    printed 14.4     [Supplement 1]
+  MATCH five-option any of 13 (no longest-option rule), %                                            computed 15.047619    printed 15.0     [Supplement 1; analysis_reviewer_sensitivity_v1.txt l.44]
+  MATCH all items, any of 14, %                                                                      computed 17.541229    printed 17.5     [analysis_nbme_v3.txt l.21; detector_changelog v1.2]
+  MATCH all items, n flagged longest_option_key                                                      computed 20.0         printed 20       [main text, Supplement 1]
+  MATCH all items, n flagged absolute_terms                                                          computed 21.0         printed 21       [main text, Supplement 1]
+  MATCH all items, n flagged clang_cue                                                               computed 51.0         printed 51       [main text, Supplement 1]
+  MATCH all items, n flagged option_length_outlier                                                   computed 243.0        printed 243      [Supplement 1]
+  MATCH NBME five-option stem words, median                                                          computed 112.0        printed 112      [Supplement 1; analysis_nbme_comparison_v1.txt l.23]
+  MATCH NBME five-option mean option chars, median                                                   computed 22.8         printed 23       [Supplement 1; analysis_reviewer_sensitivity_v1.txt l.47]
+  MATCH NBME five-option option-length CV, median                                                    computed 0.283222     printed 0.28     [Supplement 1 ('more variable'); reviewer_sensitivity l.47]
+  MATCH five-option key count A                                                                      computed 110.0        printed 110      [Dataset 6; Fig. 2]
+  MATCH five-option key count B                                                                      computed 99.0         printed 99       [Dataset 6; Fig. 2]
+  MATCH five-option key count C                                                                      computed 89.0         printed 89       [Dataset 6; Fig. 2]
+  MATCH five-option key count D                                                                      computed 118.0        printed 118      [Dataset 6; Fig. 2]
+  MATCH five-option key count E                                                                      computed 109.0        printed 109      [Dataset 6; Fig. 2]
+  MATCH five-option key chi-square                                                                   computed 4.780952     printed 4.8      [main text, Supplement 1; analysis_nbme_v3.txt l.24]
+  MATCH five-option key chi-square P                                                                 computed 0.31052      printed 0.31     [main text, Supplement 1 (P is in no log)]
+  MATCH five-option share of keys at A, %                                                            computed 20.952381    printed 21       [Table 2, Fig. 2]
+  MATCH LLM plain stem words, median                                                                 computed 89.0         printed 89       [Supplement 1]
+  MATCH LLM plain mean option chars, median                                                          computed 36.0         printed 36       [Supplement 1]
+  MATCH LLM plain option-length CV, median                                                           computed 0.229575     printed 0.23     [reviewer_sensitivity l.47]
+  MATCH LLM plain any of 13 (no longest-option rule), %                                              computed 16.216667    printed 16.2     [Supplement 1]
+  MATCH OR any10 [log stem + option CV] OR                                                           computed 1.203275     printed 1.2      [Supplement 1]
+  MATCH OR any10 [log stem + log mean option chars + option CV] OR                                   computed 0.820808     printed 0.82     [Supplement 1]
+  MATCH OR any14 [unadjusted] OR                                                                     computed 1.456919     printed 1.46     [main text, Supplement 1]
+  MATCH OR any14 [unadjusted] CI low                                                                 computed 1.153197     printed 1.15     [main text, Supplement 1]
+  MATCH OR any14 [unadjusted] CI high                                                                computed 1.840633     printed 1.84     [main text, Supplement 1]
+  MATCH OR any10 [unadjusted] OR                                                                     computed 1.139314     printed 1.14     [main text, Supplement 1]
+  MATCH OR any10 [unadjusted] CI low                                                                 computed 0.861626     printed 0.86     [main text, Supplement 1]
+  MATCH OR any10 [unadjusted] CI high                                                                computed 1.506496     printed 1.51     [main text, Supplement 1]
+  MATCH OR longest_option_key [unadjusted] OR                                                        computed 4.159371     printed 4.2      [main text, Supplement 1]
+  MATCH OR longest_option_key [unadjusted] CI low                                                    computed 2.473035     printed 2.5      [main text, Supplement 1]
+  MATCH OR longest_option_key [unadjusted] CI high                                                   computed 6.995604     printed 7.0      [main text, Supplement 1]
+  MATCH OR clang_cue [unadjusted] OR                                                                 computed 0.993802     printed 0.99     [analysis_nbme_comparison_v1.txt l.28]
+  MATCH OR clang_cue [unadjusted] CI low                                                             computed 0.720178     printed 0.72     [analysis_nbme_comparison_v1.txt l.28]
+  MATCH OR clang_cue [unadjusted] CI high                                                            computed 1.371386     printed 1.37     [analysis_nbme_comparison_v1.txt l.28]
+  MATCH OR absolute_terms [unadjusted] OR                                                            computed 1.528111     printed 1.53     [analysis_nbme_comparison_v1.txt l.30]
+  MATCH OR absolute_terms [unadjusted] CI low                                                        computed 0.91559      printed 0.92     [analysis_nbme_comparison_v1.txt l.30]
+  MATCH OR absolute_terms [unadjusted] CI high                                                       computed 2.550403     printed 2.55     [analysis_nbme_comparison_v1.txt l.30]
+  MATCH OR any14 [log stem] OR                                                                       computed 1.550837     printed 1.55     [Supplement 1; analysis_nbme_comparison_v1.txt l.26]
+  MATCH OR any14 [log stem] CI low                                                                   computed 1.225035     printed 1.23     [Supplement 1; analysis_nbme_comparison_v1.txt l.26]
+  MATCH OR any14 [log stem] CI high                                                                  computed 1.963288     printed 1.96     [Supplement 1; analysis_nbme_comparison_v1.txt l.26]
+  MATCH OR any10 [log stem] OR                                                                       computed 1.170281     printed 1.17     [Supplement 1; analysis_nbme_comparison_v1.txt l.27]
+  MATCH OR any10 [log stem] CI low                                                                   computed 0.884118     printed 0.88     [Supplement 1; analysis_nbme_comparison_v1.txt l.27]
+  MATCH OR any10 [log stem] CI high                                                                  computed 1.549067     printed 1.55     [Supplement 1; analysis_nbme_comparison_v1.txt l.27]
+  MATCH OR longest_option_key [log stem] OR                                                          computed 4.507764     printed 4.51     [analysis_nbme_comparison_v1.txt l.29]
+  MATCH OR longest_option_key [log stem] CI low                                                      computed 2.671197     printed 2.67     [analysis_nbme_comparison_v1.txt l.29]
+  MATCH OR longest_option_key [log stem] CI high                                                     computed 7.607054     printed 7.61     [analysis_nbme_comparison_v1.txt l.29]
+  MATCH OR any14 [log stem + log mean option chars] OR                                               computed 1.113945     printed 1.11     [main text, Supplement 1]
+  MATCH OR any14 [log stem + log mean option chars] CI low                                           computed 0.872866     printed 0.87     [main text, Supplement 1]
+  MATCH OR any14 [log stem + log mean option chars] CI high                                          computed 1.421609     printed 1.42     [main text, Supplement 1]
+  MATCH OR any10 [log stem + log mean option chars] OR                                               computed 0.797245     printed 0.8      [Supplement 1]
+  MATCH OR any10 [log stem + log mean option chars] CI low                                           computed 0.596439     printed 0.6      [Supplement 1]
+  MATCH OR any10 [log stem + log mean option chars] CI high                                          computed 1.065657     printed 1.07     [Supplement 1]
+  MATCH OR longest_option_key [log stem + log mean option chars] OR                                  computed 3.233635     printed 3.2      [main text, Supplement 1]
+  MATCH OR longest_option_key [log stem + log mean option chars] CI low                              computed 1.905169     printed 1.9      [main text, Supplement 1]
+  MATCH OR longest_option_key [log stem + log mean option chars] CI high                             computed 5.488434     printed 5.5      [main text, Supplement 1]
+  MATCH OR any14 [log stem + option CV] OR                                                           computed 1.908987     printed 1.91     [Supplement 1; reviewer_sensitivity l.52]
+  MATCH OR any14 [log stem + option CV] CI low                                                       computed 1.479693     printed 1.48     [Supplement 1; reviewer_sensitivity l.52]
+  MATCH OR any14 [log stem + option CV] CI high                                                      computed 2.46283      printed 2.46     [Supplement 1; reviewer_sensitivity l.52]
+  MATCH OR any14 [log stem + log mean option chars + option CV] OR                                   computed 1.259367     printed 1.26     [Supplement 1]
+  MATCH OR any14 [log stem + log mean option chars + option CV] CI low                               computed 0.96235      printed 0.96     [Supplement 1]
+  MATCH OR any14 [log stem + log mean option chars + option CV] CI high                              computed 1.648055     printed 1.65     [Supplement 1]
+  MATCH OR longest_option_key [log stem + log mean option chars + option CV] OR                      computed 4.219217     printed 4.2      [Supplement 1]
+  MATCH OR longest_option_key [log stem + log mean option chars + option CV] CI low                  computed 2.32989      printed 2.3      [Supplement 1]
+  MATCH OR longest_option_key [log stem + log mean option chars + option CV] CI high                 computed 7.640613     printed 7.6      [Supplement 1]
+  MATCH longest-option OR > 1 at every threshold examined                                            computed True         printed True     [main text, Supplement 1]
+  MATCH unadjusted longest-option CI includes 1 at the most extreme ratio (2.00), all min-word settings computed True         printed True     [Supplement 1]
+  MATCH Difficulty SD                                                                                computed 0.308737     printed 0.31     [Supplement 1]
+  MATCH Response time mean (s)                                                                       computed 86.2297      printed 86       [Supplement 1]
+  MATCH Response time SD (s)                                                                         computed 29.547932    printed 30       [Supplement 1 (log prints 29.5)]
+  MATCH RQ5 Response_Time cueing_count b                                                             computed -6.890481    printed -6.9     [main text, Supplement 1; nbme_psychometrics_v3.txt l.15]
+  MATCH RQ5 Response_Time cueing_count lo                                                            computed -11.794412   printed -11.8    [main text, Supplement 1]
+  MATCH RQ5 Response_Time cueing_count hi                                                            computed -1.98655     printed -2.0     [main text, Supplement 1]
+  MATCH RQ5 Response_Time cueing_count q                                                             computed 0.012099     printed 0.012    [main text, Supplement 1]
+  MATCH RQ5 Difficulty cueing_count b                                                                computed -0.056303    printed -0.056   [Supplement 1; nbme_psychometrics_v3.txt l.5]
+  MATCH RQ5 Difficulty cueing_count p                                                                computed 0.090906     printed 0.09     [main text, Supplement 1]
+  MATCH RQ5 Difficulty absolute_terms b                                                              computed -0.204165    printed -0.204   [Supplement 1; nbme_psychometrics_v3.txt l.8]
+  MATCH RQ5 Difficulty absolute_terms lo                                                             computed -0.329462    printed -0.329   [Supplement 1]
+  MATCH RQ5 Difficulty absolute_terms hi                                                             computed -0.078868    printed -0.079   [Supplement 1]
+  DIFF  RQ5 Difficulty absolute_terms q                                                              computed 0.011769     printed 0.011    [Supplement 1]
+  MATCH RQ5 Response_Time absolute_terms b                                                           computed -14.282683   printed -14.3    [main text, Supplement 1; l.18]
+  MATCH RQ5 Response_Time absolute_terms lo                                                          computed -21.38955    printed -21.4    [Supplement 1]
+  MATCH RQ5 Response_Time absolute_terms hi                                                          computed -7.175817    printed -7.2     [Supplement 1]
+  MATCH RQ5 Response_Time absolute_terms q < 0.001                                                   computed True         printed True     [Supplement 1]
+  MATCH RQ5 Response_Time clang_cue b                                                                computed -10.351853   printed -10.4    [main text, Supplement 1; l.19]
+  MATCH RQ5 Response_Time clang_cue lo                                                               computed -16.940578   printed -16.9    [Supplement 1]
+  MATCH RQ5 Response_Time clang_cue hi                                                               computed -3.763128    printed -3.8     [Supplement 1]
+  MATCH RQ5 Response_Time clang_cue q                                                                computed 0.005759     printed 0.006    [Supplement 1]
+  MATCH RQ5 Response_Time option_length_outlier b                                                    computed -7.730116    printed -7.7     [Supplement 1; l.21]
+  MATCH RQ5 Response_Time option_length_outlier q < 0.001                                            computed True         printed True     [Supplement 1]
+  MATCH RQ5 Difficulty longest_option_key not significant (P >= 0.05)                                computed True         printed True     [main text, Supplement 1]
+  MATCH RQ5 Difficulty clang_cue not significant (S1: 'no difference in difficulty')                 computed True         printed True     [Supplement 1]
+  MATCH RQ5 Response_Time longest_option_key not significant (P >= 0.05)                             computed True         printed True     [main text, Supplement 1]
+  MATCH RQ5 Difficulty any14 b                                                                       computed -0.049147    printed -0.049   [Supplement 1; nbme_psychometrics_v3.txt l.6]
+  MATCH RQ5 Difficulty any14 p                                                                       computed 0.120549     printed 0.12     [Supplement 1; nbme_psychometrics_v3.txt l.6]
+  MATCH RQ5 Response_Time any14 b                                                                    computed -0.612101    printed -0.612   [Supplement 1 (-0.6 s); nbme_psychometrics_v3.txt l.16]
+  MATCH RQ5 Response_Time any14 p                                                                    computed 0.843197     printed 0.843    [Supplement 1 (0.84); nbme_psychometrics_v3.txt l.16]
+  MATCH RQ5 Response_Time nonparallel_options b                                                      computed 7.87804      printed 7.878    [nbme_psychometrics_v3.txt l.20 (not reported)]
+  MATCH RQ5 Response_Time longest_option_key b                                                       computed 6.751698     printed 6.752    [nbme_psychometrics_v3.txt l.17]
+  MATCH RQ5 Difficulty longest_option_key b                                                          computed 0.068931     printed 0.069    [nbme_psychometrics_v3.txt l.7]
+  DIFF  RQ5 Difficulty clang_cue p                                                                   computed 0.297807     printed 0.297    [nbme_psychometrics_v3.txt l.9]
+  MATCH RQ5 no flaw variable associated with harder items (no positive difficulty coefficient with P < 0.05) computed True         printed True     [Supplement 1]
+  MATCH RQ5 + option length: Response_Time option_length_outlier coef                                computed -5.295295    printed -5.3     [Supplement 1]
+  MATCH RQ5 + option length: Difficulty cueing count coef                                            computed -0.037759    printed -0.038   [Supplement 1]
+  MATCH RQ5 + option length: Difficulty cueing count P                                               computed 0.252818     printed 0.25     [Supplement 1]
+  MATCH RQ5 categories: Response_Time, 1 cueing flaw vs none, coef (s)                               computed -4.87988     printed -4.9     [Supplement 1]
+  MATCH RQ5 categories: Response_Time, 1 cueing flaw vs none, P                                      computed 0.131313     printed 0.13     [Supplement 1]
+  MATCH RQ5 categories: Response_Time, 2 cueing flaws vs none, coef (s)                              computed -24.225795   printed -24.2    [Supplement 1]
+  MATCH RQ5 categories: Response_Time, 2 cueing flaws vs none, P < 0.001                             computed True         printed True     [Supplement 1]
+  MATCH RQ5 categories: items with 2 cueing flaws                                                    computed 7.0          printed 7        [Supplement 1]
+  MATCH RQ5 five-option items only: Response_Time cueing count coef (s)                              computed -4.336334    printed -4.3     [Supplement 1]
+  MATCH RQ5 five-option items only: Response_Time cueing count P                                     computed 0.140865     printed 0.14     [Supplement 1]
+  MATCH Difficulty mean                                                                              computed 0.487826     printed 0.488    [nbme_psychometrics_v3.txt l.2]
+  MATCH items with 0 cueing flags                                                                    computed 582.0        printed 582      [nbme_psychometrics_v3.txt l.27-29]
+  MATCH items with 1 cueing flags                                                                    computed 78.0         printed 78       [nbme_psychometrics_v3.txt l.27-29]
+  MATCH items with 2 cueing flags                                                                    computed 7.0          printed 7        [nbme_psychometrics_v3.txt l.27-29]
+  MATCH NBME absolute-terms flagged items                                                            computed 21.0         printed 21       [Supplement 1]
+  MATCH NBME options containing 'only'                                                               computed 19.0         printed 19       [Supplement 1 ('only' in 19 cases)]
+  MATCH NBME flagged options (hits) in total                                                         computed 29.0         printed 29       [Supplement 1]
+  MATCH NBME flagged options in a distractor                                                         computed 23.0         printed 23       [Supplement 1]
+  MATCH LLM plain share of flagged options in a distractor, %                                        computed 95.356037    printed 95       [Supplement 1]
+  MATCH NBME stems without a lead-in                                                                 computed 0.0          printed 0        [Supplement 1 ('absent from all 667 NBME items')]
+  DIFF  NBME five-option any of 14 under v1.0 (current loader), %                                    computed 21.52381     printed 21.9     [Supplement 1; reviewer_addendum l.15]
+  MATCH NBME five-option any of 14 under v1.0 (v1.0 loader), %                                       computed 21.856867    printed 21.9     [Supplement 1]
+  MATCH NBME five-option any of 14 under v1.1, %                                                     computed 16.761905    printed 16.8     [Supplement 1; reviewer_addendum l.16]
+  MATCH NBME all-item any of 14 under v1.1, %                                                        computed 17.091454    printed 17.1     [detector_changelog v1.2; Amendment 4 A15]
+  MATCH NBME all-item any of 14 under v1.0, %                                                        computed 22.038981    printed 22.0     [detector_changelog v1.1]
+
+  162 checks: 159 MATCH, 3 DIFF
+  Differences explained: (1) q for absolute terms on difficulty: Supplement 1 states that t tails were computed by a normal
+  approximation (q=0.011); this script uses the exact t distribution (q=0.012). (2) nbme_psychometrics_v3.txt prints P=0.297
+  for the clang cue on difficulty where the value is 0.2978 (log formatting; the value is not in the paper). (3) 21.9% is the
+  five-option rate under detector version 1.0 computed with that version's item loader (517 five-option items); the current
+  loader gives 21.5% (113/525) for the same rules, as the next line shows.
+  Lines printed: 464. No item text, item number or per-item value was printed; no file was written.

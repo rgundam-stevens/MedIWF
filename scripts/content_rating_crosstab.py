@@ -1,8 +1,8 @@
 """Physician content ratings vs the detector's structural flags, by-condition comparison, rater-2 Step-1 list, and timing.
 Reads the ingested rating CSVs, the (private) selection key and outputs/flags_full.csv; writes aggregate numbers only.
-Usage: python3 scripts/content_rating_crosstab.py -> outputs/content_rating/main_ratings_crosstab_v1.txt
+Usage: python3 scripts/content_rating_crosstab.py [out.txt]   (default: outputs/content_rating/main_ratings_crosstab_v1.txt)
 """
-import csv, collections, statistics, pathlib
+import csv, collections, statistics, pathlib, sys
 from math import comb
 root = pathlib.Path(__file__).resolve().parents[1]; CR = root / "outputs/content_rating"
 CUE = ["negative_stem", "none_of_the_above", "all_of_the_above", "combination_options", "fill_in_blank", "true_false_stem", "longest_option_key",
@@ -53,13 +53,18 @@ def main():
         r1, r2 = raters[rn[0]], raters[rn[1]]
         uns = [i for i in key if r1[i]["q1"] == "unsure"]
         out.append("\n== Scale use: %s 'unsure' on Q1 for %d items; on those, %s Q1 %s and Q5 %s" % (rn[0], len(uns), rn[1], dict(collections.Counter(r2[i]["q1"] for i in uns)), dict(collections.Counter(r2[i]["q5"] for i in uns))))
-    out.append("\n== Minutes per item (median): " + "; ".join("%s: defect items %.1f, other items %.1f" % (rname, statistics.median([float(rr[i]["minutes"]) for i in key if defect(rr[i]) and rr[i]["minutes"] != ""]), statistics.median([float(rr[i]["minutes"]) for i in key if not defect(rr[i]) and rr[i]["minutes"] != ""])) for rname, rr in raters.items()))
+    if all(rr[i].get("minutes") not in (None, "") for rr in raters.values() for i in key):
+        out.append("\n== Minutes per item (median): " + "; ".join("%s: defect items %.1f, other items %.1f" % (rname, statistics.median([float(rr[i]["minutes"]) for i in key if defect(rr[i]) and rr[i]["minutes"] != ""]), statistics.median([float(rr[i]["minutes"]) for i in key if not defect(rr[i]) and rr[i]["minutes"] != ""])) for rname, rr in raters.items()))
+    else:
+        out.append("\n== Minutes per item: not released (per-item minutes are not in the public rating files)")
     s1 = CR / "ratings/step1_list_R2.csv"
     if s1.exists():
         ids = [r["item_id"] for r in csv.DictReader(open(s1))]
         cc = collections.Counter(key[i]["condition"] for i in ids); sp = collections.Counter(key[i]["specialty"] for i in ids); spn = collections.Counter(k["specialty"] for k in key.values())
         out.append("\n== Rater 2 post hoc 'Step 1-level' list: %d items; by condition %s; by specialty %s" % (len(ids), dict(cc), {s: "%d of %d" % (sp[s], spn[s]) for s in spn if sp[s]}))
-    txt = "\n".join(out); print(txt); (CR / "main_ratings_crosstab_v1.txt").write_text(txt + "\n")
+    txt = "\n".join(out); print(txt)
+    out_path = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else CR / "main_ratings_crosstab_v1.txt"
+    out_path.write_text(txt + "\n"); print("written ->", out_path)
 
 if __name__ == "__main__":
     main()

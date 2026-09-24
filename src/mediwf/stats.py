@@ -1,4 +1,4 @@
-"""Small, dependency-light statistics for MedIWF (numpy + scipy only; Python 3.9).
+"""Small, dependency-light statistics for MedIWF (NumPy; SciPy is used for t and chi-square tails when installed; Python 3.9).
 
 - logistic regression by Newton-Raphson (IRLS)
 - cluster-robust (sandwich) standard errors, clusters = topics

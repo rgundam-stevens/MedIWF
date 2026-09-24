@@ -33,7 +33,8 @@ def main(out_path=None):
     for path in RATINGS:
         rows = {r["item_id"]: r for r in csv.DictReader(open(path))}
         rater = next(iter(rows.values())).get("rater", path.stem)
-        P("== %s (%s): %d items, %s minutes" % (rater, path.name, len(rows), sum(float(r.get("minutes") or 0) for r in rows.values())))
+        mins = [r["minutes"] for r in rows.values() if r.get("minutes") not in (None, "")]
+        P("== %s (%s): %d items, %s" % (rater, path.name, len(rows), ("%s minutes" % sum(float(m) for m in mins)) if mins else "minutes not released"))
         det_planted = det_natural = strict_planted = 0; false_alarm = 0; lines = []
         for k in key:
             exp = json.loads(k["expected"] or "{}"); r = rows.get(k["item_id"], {})

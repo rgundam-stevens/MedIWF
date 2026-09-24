@@ -1,5 +1,11 @@
 # Changes
 
+## 1.0.3 (24 September 2026)
+- `docs/errata_2026-09-24.md`: note 4 added (where the generative-AI disclosure planned in Amendment 6 is made).
+- `README.md`: the Withheld section names the internal review reports, manuscript drafts, screening-test items and scratch backups
+  that the dated records in `docs/` cite by path.
+- `CITATION.cff`: version 1.0.3.
+
 ## 1.0.2 (24 September 2026)
 - `CITATION.cff`: `license` is a single string again (MIT, as in 1.0; the data license is described in LICENSE-DATA.md), so that
   Zenodo can read the metadata; version 1.0.2.
@@ -12,7 +18,7 @@
   in the output.
 - `src/mediwf/detector.py`: the `n_flaws` column of `outputs/flags_*.csv` counted the 14 rules plus the 2 feature checks
   (`option_length_outlier`, `numeric_units_inconsistent`); it now counts the 14 rules, as `mediwf.rules.n_flaws` and the paper's
-  data files always did; the 6 flag files of the analysed runs were regenerated and only that column changed (the 4 pilot flag
+  Dataset 2 always did; the 6 flag files of the analysed runs were regenerated and only that column changed (the 4 pilot flag
   files are the pilot-time records and are unchanged). No analysis script reads the column.
 - `docs/errata_2026-09-24.md`: note 1 rewritten (the disable request and the recorded reasoning tokens per judge), note 2
   names both protocol passages, note 3 added (the combined-prompt judge run of 14 September).

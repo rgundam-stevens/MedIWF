@@ -8,7 +8,7 @@ Author: Rohit Gundam, independent researcher (ORCID 0009-0001-3018-9663). Code: 
 with the exceptions listed in LICENSE-DATA.md (see also DATASET_CARD.md).
 
 Archive: https://doi.org/10.5281/zenodo.22903818 (Zenodo, all versions). Corpus: https://huggingface.co/datasets/rgundam/MedIWF
-Version 1.0.2; the changes since 1.0 are listed in CHANGELOG.md.
+Version 1.0.3; the changes since 1.0 are listed in CHANGELOG.md.
 
 ## Layout
 - `src/mediwf/`     detector (14 rules, version 1.2; versions 1.0 and 1.1 kept for the version history), composites, statistics, gateway client
@@ -96,6 +96,7 @@ reproduces the ledger.
 
 ## Withheld
 NBME items and item-level NBME statistics (data-use agreement); the OpenRouter key; the raters' contact and contract details
-and their per-item rating times; the screening-test key for future structural raters. The files `outputs/content_rating/*_DO_NOT_SEND.csv`
+and their per-item rating times; the screening-test key for future structural raters; the internal review reports, manuscript
+drafts, screening-test items and scratch backups that the dated records in `docs/` cite by path. The files `outputs/content_rating/*_DO_NOT_SEND.csv`
 are the answer keys of the physician-rating sets (planted defects and detector flags), named so that they were never sent to the
 raters; they are released now that the ratings are complete.

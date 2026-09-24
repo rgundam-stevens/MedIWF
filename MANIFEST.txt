@@ -1,11 +1,11 @@
 d799dc5d1d4ecb59835393b58f6b8b4d         139  .env.example
 ad82dac1000d7c1640263c8ea0c230bb         211  .gitignore
-6dce06892f3941b03a357b68c1bd7881        3767  CHANGELOG.md
-22b32d2b9c09e4a56c0d93655a73b6c2         860  CITATION.cff
+34bc9a022d6a08877c056e3587319cdc        4123  CHANGELOG.md
+6b7c780a801f3688aa4185d0feaae418         860  CITATION.cff
 592659e89b1dd51eb1198e34abffce19        2203  DATASET_CARD.md
 a2b0b4dd842db229015d1558cd2899a3        1069  LICENSE
 69d1e74a544bebc87ad1f584ecec78c1        1496  LICENSE-DATA.md
-78db5f9916ca720343e54890fadf5ef2        9418  README.md
+363a1ed4a4f5e7968175b75f00c9a9cd        9555  README.md
 500c18811344d97d90df3a955f8d4814        4796  config/models.json
 8af34dd886f1f6e15ea46239ea0ce098        1072  config/prompts/benchmarker_rules/LICENSE_BenchMarker.txt
 7f8ffe0b5486270614a76638d59c76a2        1073  config/prompts/benchmarker_rules/SOURCE.txt
@@ -58,7 +58,7 @@ b7e556dc96c4187a2dad6ac762c734a1       14902  data/generated/judge_openai-gpt-5-
 2a38c2ff453525f65948e33a971c7049        1039  data/nbme/README.md
 5415da4d5d0017e86c03ef8d3791e3e9       23096  docs/MedIWF_Rater_Guide_v3.docx
 54cbc45339e03d5007a28195f009983d        6820  docs/detector_changelog.md
-4aa68a1f4b6761a048a1a861299b7a28        2319  docs/errata_2026-09-24.md
+cae7b570773e9f2d5095df5a317e1275        2723  docs/errata_2026-09-24.md
 f02c8a72366bf2f91ced4c269b612ab6        7545  docs/hand_check_pass1_log.md
 671c046af9a5ef95fef0e4c884ce74ac        4066  docs/protocol_amendment_1.md
 efc05f770da86b493d5546379c3bc6ac        6000  docs/protocol_amendment_2.md

@@ -1,0 +1,17 @@
+seed 20261021
+stratum, condition: available -> sampled
+longest_only, plain: 485 -> 15
+longest_only, guided: 266 -> 15
+clang_only, plain: 350 -> 15
+clang_only, guided: 315 -> 15
+absolute_only, plain: 213 -> 10
+absolute_only, guided: 54 -> 10
+multi, plain: 189 -> 5
+multi, guided: 60 -> 5
+none, plain: 4763 -> 15
+none, guided: 5305 -> 15
+models represented: Claude Fable 5.1 6, Claude Opus 5 7, Claude Sonnet 5 9, DeepSeek V4 Flash 10, DeepSeek V4 Pro 9, GPT-5.6 Luna 13, GPT-5.6 Terra 11, GPT-6 Astra 7, Gemini 3.1 Pro 6, Gemini 3.8 Flash 3, Grok 4.6 6, Llama 4 Maverick 10, Mistral Small 2603 11, Qwen 3.6 27B 8, Qwen 3.8 Max 4
+prompt: Counter({'plain': 60, 'guided': 60})
+detector-positive for longest_option_key: 40 of 120
+detector-positive for clang_cue: 38 of 120
+detector-positive for absolute_terms: 23 of 120

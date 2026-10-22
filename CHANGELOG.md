@@ -1,5 +1,23 @@
 # Changes
 
+## 1.0.4 (22 October 2026)
+- Independent reader check of the 3 most frequently flagged rules (protocol amendment 7, 21 October 2026, with its addendum of
+  22 October): 2 readers not involved in the study rated a flag-enriched sample of 120 corpus items; `docs/protocol_amendment_7.md`,
+  `scripts/build_independent_check.py`, `scripts/analyze_independent_check.py`, `scripts/independent_check_weighted.py`,
+  `outputs/independent_check/` (the sample, the instruction sheet, the ratings with the detector's flags, the results and the 2
+  sensitivity analyses) and `outputs/independent_check_weighted_v1.txt`. The readers' returned spreadsheets are not released.
+- `scripts/kappa_reanalysis.py` and `outputs/kappa_reanalysis_v1.txt`: Cohen's kappa with the repository's method for the
+  physicians' acceptability dichotomies ("no" vs other; "no or minor edits" vs "yes"), the LLM judges against the physicians on the
+  published composites, on shared criteria (single best answer or implausible distractor) over the same items, and with each
+  generator judge's own items excluded, and the reader check.
+- `scripts/arms_alphabetization_summary.py` and `outputs/arms_alphabetization_summary_v1.txt`: answer-key position by
+  alphabetization under each prompt, the LLM-NBME gap with and without the longest-option rule, the reasoning and guided-neutral
+  arms against their controls, and the item-level versions of the kappa analyses above.
+- `outputs/analysis_verification_prerevision_v1.txt` and `outputs/verification_sample_pass1_firstlabels.xlsx`: the hand-check
+  estimates with the 3 word-repetition labels of rows 16, 143 and 215 at their first value (before the helper correction of
+  20 September; `docs/hand_check_pass1_log.md`).
+- `CITATION.cff`: version 1.0.4.
+
 ## 1.0.3 (24 September 2026)
 - `docs/errata_2026-09-24.md`: note 4 added (where the generative-AI disclosure planned in Amendment 6 is made).
 - `README.md`: the Withheld section names the internal review reports, manuscript drafts, screening-test items and scratch backups

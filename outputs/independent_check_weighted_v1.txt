@@ -1,0 +1,6 @@
+stratum populations: {'none': 10068, 'absolute_only': 267, 'longest_only': 751, 'clang_only': 665, 'multi': 249}
+sample per stratum: {'absolute_only': 20, 'longest_only': 30, 'none': 30, 'clang_only': 30, 'multi': 10}
+weights: {'absolute_only': 13.3, 'longest_only': 25.0, 'none': 335.6, 'clang_only': 22.2, 'multi': 24.9}
+longest_option_key: design-weighted precision 0.95 (0.87 to 1.00), recall 0.98 (0.93 to 1.00); consensus misses in strata ['clang_only']; false positives in strata ['longest_only', 'longest_only']
+clang_cue: design-weighted precision 0.90 (0.79 to 0.98), recall 0.97 (0.91 to 1.00); consensus misses in strata ['longest_only']; false positives in strata ['clang_only', 'clang_only', 'clang_only', 'clang_only']
+absolute_terms: design-weighted precision 0.85 (0.69 to 1.00), recall 1.00 (1.00 to 1.00); consensus misses in strata []; false positives in strata ['absolute_only', 'multi', 'absolute_only']

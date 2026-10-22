@@ -8,7 +8,7 @@ Author: Rohit Gundam, independent researcher (ORCID 0009-0001-3018-9663). Code: 
 with the exceptions listed in LICENSE-DATA.md (see also DATASET_CARD.md).
 
 Archive: https://doi.org/10.5281/zenodo.22903818 (Zenodo, all versions). Corpus: https://huggingface.co/datasets/rgundam/MedIWF
-Version 1.0.3; the changes since 1.0 are listed in CHANGELOG.md.
+Version 1.0.4; the changes since 1.0 are listed in CHANGELOG.md.
 
 ## Layout
 - `src/mediwf/`     detector (14 rules, version 1.2; versions 1.0 and 1.1 kept for the version history), composites, statistics, gateway client
@@ -17,8 +17,8 @@ Version 1.0.3; the changes since 1.0 are listed in CHANGELOG.md.
 - `data/generated/` the corpus and the judge outputs, gzip-compressed (`gunzip data/generated/*.gz` before running the scripts)
 - `data/external/`  instructions for obtaining the BenchMarker validation labels (not redistributed)
 - `data/nbme/`      note on the NBME items (withheld under a data-use agreement)
-- `outputs/`        detector flags, analysis outputs, figures, the hand-check workbooks and labels, the physician rating materials and ratings
-- `docs/`           protocol and its six amendments, detector changelog, hand-check procedure log, rater guide, errata
+- `outputs/`        detector flags, analysis outputs, figures, the hand-check workbooks and labels, the physician rating materials and ratings, the independent reader check (`outputs/independent_check/`)
+- `docs/`           protocol and its seven amendments, detector changelog, hand-check procedure log, rater guide, errata
 
 ## Reproducing the analyses (no network needed)
 The logs in `outputs/` are the record. The commands below write to a separate folder, `repro/`, so that nothing released is
@@ -99,4 +99,4 @@ NBME items and item-level NBME statistics (data-use agreement); the OpenRouter k
 and their per-item rating times; the screening-test key for future structural raters; the internal review reports, manuscript
 drafts, screening-test items and scratch backups that the dated records in `docs/` cite by path. The files `outputs/content_rating/*_DO_NOT_SEND.csv`
 are the answer keys of the physician-rating sets (planted defects and detector flags), named so that they were never sent to the
-raters; they are released now that the ratings are complete.
+raters; they are released now that the ratings are complete. The 4 spreadsheets returned by the readers of the independent reader check (amendment 7) are withheld because they identify the readers; `outputs/independent_check/MedIWF_independent_check_ratings.csv` reproduces the reported pair's answers exactly, and the first pair's results are recorded in the amendment's addendum.

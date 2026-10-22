@@ -1,0 +1,93 @@
+main corpus rows 12000 | arm rows 16280
+
+== A. Answer-key position and alphabetical ordering (main corpus) ==
+plain: key at A pooled 53.7% (3220/6000); alphabetized 19.1% (1144/6000); key at A among alphabetized 28.5% (326/1144); among non-alphabetized 59.6% (2894/4856)
+   key distribution: {'A': '53.7', 'B': '20.3', 'C': '16.8', 'D': '6.9', 'E': '2.4'}
+guided: key at A pooled 43.3% (2599/6000); alphabetized 82.1% (4925/6000); key at A among alphabetized 37.2% (1831/4925); among non-alphabetized 71.4% (768/1075)
+   key distribution: {'A': '43.3', 'B': '17.0', 'C': '16.9', 'D': '13.4', 'E': '9.4'}
+   guided, per model: alphabetized % / key at A %
+     Gemini 3.8 Flash    99.5   19.2
+     Gemini 3.1 Pro      99.0   21.5
+     Grok 4.6            98.8   17.8
+     GPT-6 Astra         98.2   18.5
+     Claude Fable 5.1    97.0   20.5
+     Claude Sonnet 5     92.5   30.8
+     Claude Opus 5       91.8   33.0
+     GPT-5.6 Terra       91.0   34.2
+     Qwen 3.8 Max        88.0   26.8
+     DeepSeek V4 Flash   87.8   51.2
+     DeepSeek V4 Pro     78.0   68.0
+     Mistral Small 2603  69.2   82.0
+     Qwen 3.6 27B        61.0   45.8
+     GPT-5.6 Luna        59.2   91.5
+     Llama 4 Maverick    20.2   89.0
+
+== B. LLM-NBME gap with and without the longest-option rule ==
+plain: any of 14 23.4% (1404/6000); any of the other 13 16.2% (973/6000); longest option 10.9% (654/6000)
+NBME 5-option: any of 14 17.3% (91/525); longest option 2.9% (15/525); (13-rule NBME rate is item-level and comes from the local file: 15.0% per Supplement 1)
+gap on 14 rules 6.07 points; gap on the other 13 rules 1.17 points (using NBME 15.05%); share removed 0.808
+unadjusted OR 14 rules: 1.46; 13 rules: 1.09 (NBME 79/525 assumed = 15.05%)
+
+== C. Reasoning arm and guided-neutral arm ==
+reasoning arm models: ['Claude Sonnet 5', 'GPT-5.6 Luna', 'GPT-5.6 Terra', 'Qwen 3.6 27B']
+  plain: any flaw with reasoning 25.8% (412/1600) vs. without (main corpus, same models) 28.9% (463/1600); key at A 53.2% (852/1600) vs. 52.4% (838/1600)
+  guided: any flaw with reasoning 12.9% (207/1600) vs. without (main corpus, same models) 16.2% (260/1600); key at A 25.6% (409/1600) vs. 50.6% (809/1600)
+  both: any flaw with reasoning 19.3% (619/3200) vs. without (main corpus, same models) 22.6% (723/3200); key at A 39.4% (1261/3200) vs. 51.5% (1647/3200)
+     Claude Sonnet 5  plain  any flaw  30.0 vs  32.2; key A  26.8 vs  28.0
+     Claude Sonnet 5  guided any flaw  16.5 vs  20.2; key A  20.2 vs  30.8
+     GPT-5.6 Luna     plain  any flaw  26.8 vs  32.5; key A  75.5 vs  93.8
+     GPT-5.6 Luna     guided any flaw  15.0 vs  17.0; key A  30.5 vs  91.5
+     GPT-5.6 Terra    plain  any flaw  28.2 vs  29.2; key A  69.2 vs  61.2
+     GPT-5.6 Terra    guided any flaw  13.8 vs  13.2; key A  22.8 vs  34.2
+     Qwen 3.6 27B     plain  any flaw  18.0 vs  21.8; key A  41.5 vs  26.5
+     Qwen 3.6 27B     guided any flaw   6.5 vs  14.5; key A  28.8 vs  45.8
+  guided-neutral: any flaw 12.6% (379/3000) vs guided (standard template) 13.6% (815/6000); key at A 24.1% (724/3000) vs 43.3% (2599/6000)
+  plain-neutral: any flaw 23.5% (705/3000); key at A 22.9% (686/3000); plain-rotated: any flaw 24.2% (145/600); key at A 16.7% (100/600)
+  guided-neutral vs plain-neutral unadjusted OR 0.47
+  arm item counts by run: {'full_reasoning': 3200, 'position': 3000, 'template': 6600, 'wording': 3000, 'stability': 480} | arms total excluding stability: 15800
+
+== D. Physician ratings: acceptability dichotomizations ==
+  q5 = no: R1 11 (Wilson 6.3, 18.6), R2 8 (Wilson 4.1, 15.0); kappa 0.59 (0.26-0.85)
+  q5 = no or minor edits (not yes): R1 13 (Wilson 7.8, 21.0), R2 24 (Wilson 16.7, 33.2); kappa 0.38 (0.16-0.60)
+  q5 values R1: Counter({'yes': 87, 'no': 11, 'minor edits': 2}) R2: Counter({'yes': 76, 'minor edits': 16, 'no': 8})
+  composite (published definition): R1 13, R2 12, both 8; kappa 0.59 (0.30-0.81)
+  q1 values R1: Counter({'yes': 89, 'unsure': 10, 'no': 1}) R2: Counter({'yes': 97, 'no': 3})
+  q2 values R1: Counter({'yes': 98, 'no': 2}) R2: Counter({'yes': 98, 'no': 2})
+  q3 values R1: Counter({'yes': 96, 'no': 4}) R2: Counter({'yes': 93, 'no': 7})
+
+== E. LLM judges on the physician-rated items ==
+  rules in file: {'single_best_answer': 599, 'plausible_distractors': 598, 'no_extraneous_info': 598, 'focused_stem': 598}
+  4 content rules used: ['single_best_answer', 'plausible_distractors', 'no_extraneous_info', 'focused_stem']
+  Claude Fable 5.1 (reasoning requested: no) [published composite (4 judge rules vs physician composite)] n=99, judge flags 14: vs R1 kappa 0.53 (0.25-0.75); vs R2 kappa 0.56 (0.28-0.78) | raters with each other on these items: kappa 0.59 (0.31-0.81); R1 13, R2 12
+      own items excluded (8 items by Claude Fable 5.1; n=91): vs R1 kappa 0.55 (0.28-0.77); vs R2 kappa 0.55 (0.28-0.78)
+  Claude Fable 5.1 (reasoning requested: no) [shared criteria (single best answer or implausible distractor, both sides)] n=99, judge flags 12: vs R1 kappa 0.62 (0.33-0.84); vs R2 kappa 0.43 (0.10-0.73) | raters with each other on these items: kappa 0.43 (0.10-0.72); R1 12, R2 5
+      own items excluded (8 items by Claude Fable 5.1; n=91): vs R1 kappa 0.65 (0.38-0.86); vs R2 kappa 0.43 (0.10-0.71)
+  Claude Fable 5.1 (reasoning requested: no) [single best answer only] n=100, judge flags 8: vs R1 kappa 0.71 (0.42-0.92); vs R2 kappa 0.52 (0.00-0.85) | raters with each other on these items: kappa 0.40 (0.00-0.71); R1 11, R2 3
+      own items excluded (8 items by Claude Fable 5.1; n=92): vs R1 kappa 0.75 (0.47-0.95); vs R2 kappa 0.52 (0.00-0.85)
+  Claude Fable 5.1 (reasoning requested: yes) [published composite (4 judge rules vs physician composite)] n=99, judge flags 13: vs R1 kappa 0.56 (0.26-0.78); vs R2 kappa 0.59 (0.31-0.81) | raters with each other on these items: kappa 0.59 (0.31-0.81); R1 13, R2 12
+      own items excluded (8 items by Claude Fable 5.1; n=91): vs R1 kappa 0.58 (0.30-0.81); vs R2 kappa 0.58 (0.30-0.81)
+  Claude Fable 5.1 (reasoning requested: yes) [shared criteria (single best answer or implausible distractor, both sides)] n=99, judge flags 11: vs R1 kappa 0.66 (0.36-0.86); vs R2 kappa 0.46 (0.12-0.75) | raters with each other on these items: kappa 0.43 (0.10-0.72); R1 12, R2 5
+      own items excluded (8 items by Claude Fable 5.1; n=91): vs R1 kappa 0.69 (0.42-0.89); vs R2 kappa 0.46 (0.11-0.75)
+  Claude Fable 5.1 (reasoning requested: yes) [single best answer only] n=99, judge flags 9: vs R1 kappa 0.67 (0.37-0.88); vs R2 kappa 0.48 (0.00-0.80) | raters with each other on these items: kappa 0.40 (0.00-0.73); R1 11, R2 3
+      own items excluded (8 items by Claude Fable 5.1; n=91): vs R1 kappa 0.71 (0.39-0.92); vs R2 kappa 0.47 (0.00-0.79)
+  Gemini 3.1 Pro (reasoning requested: no) [published composite (4 judge rules vs physician composite)] n=100, judge flags 12: vs R1 kappa 0.22 (-0.03-0.48); vs R2 kappa 0.24 (-0.02-0.50) | raters with each other on these items: kappa 0.59 (0.30-0.81); R1 13, R2 12
+      own items excluded (6 items by Gemini 3.1 Pro; n=94): vs R1 kappa 0.22 (-0.06-0.49); vs R2 kappa 0.24 (-0.03-0.50)
+  Gemini 3.1 Pro (reasoning requested: no) [shared criteria (single best answer or implausible distractor, both sides)] n=100, judge flags 8: vs R1 kappa 0.34 (0.03-0.60); vs R2 kappa 0.10 (-0.08-0.40) | raters with each other on these items: kappa 0.43 (0.08-0.73); R1 12, R2 5
+      own items excluded (6 items by Gemini 3.1 Pro; n=94): vs R1 kappa 0.33 (0.00-0.61); vs R2 kappa 0.09 (-0.08-0.39)
+  Gemini 3.1 Pro (reasoning requested: no) [single best answer only] n=100, judge flags 5: vs R1 kappa 0.33 (-0.03-0.63); vs R2 kappa 0.22 (-0.04-0.66) | raters with each other on these items: kappa 0.40 (0.00-0.71); R1 11, R2 3
+      own items excluded (6 items by Gemini 3.1 Pro; n=94): vs R1 kappa 0.33 (-0.03-0.64); vs R2 kappa 0.22 (-0.04-0.65)
+  GPT-5.4 Mini (reasoning requested: no) [published composite (4 judge rules vs physician composite)] n=100, judge flags 5: vs R1 kappa 0.28 (-0.04-0.56); vs R2 kappa 0.05 (-0.09-0.30) | raters with each other on these items: kappa 0.59 (0.30-0.81); R1 13, R2 12
+  GPT-5.4 Mini (reasoning requested: no) [shared criteria (single best answer or implausible distractor, both sides)] n=100, judge flags 0: vs R1 kappa 0.00 (0.00-0.00); vs R2 kappa 0.00 (0.00-0.00) | raters with each other on these items: kappa 0.43 (0.08-0.73); R1 12, R2 5
+  GPT-5.4 Mini (reasoning requested: no) [single best answer only] n=100, judge flags 0: vs R1 kappa 0.00 (0.00-0.00); vs R2 kappa 0.00 (0.00-0.00) | raters with each other on these items: kappa 0.40 (0.00-0.71); R1 11, R2 3
+  GPT-6 Astra (reasoning requested: no) [published composite (4 judge rules vs physician composite)] n=100, judge flags 32: vs R1 kappa 0.15 (-0.03-0.33); vs R2 kappa 0.28 (0.08-0.46) | raters with each other on these items: kappa 0.59 (0.30-0.81); R1 13, R2 12
+      own items excluded (6 items by GPT-6 Astra; n=94): vs R1 kappa 0.14 (-0.05-0.33); vs R2 kappa 0.27 (0.09-0.47)
+  GPT-6 Astra (reasoning requested: no) [shared criteria (single best answer or implausible distractor, both sides)] n=100, judge flags 13: vs R1 kappa 0.50 (0.19-0.73); vs R2 kappa 0.40 (0.09-0.68) | raters with each other on these items: kappa 0.43 (0.08-0.73); R1 12, R2 5
+      own items excluded (6 items by GPT-6 Astra; n=94): vs R1 kappa 0.49 (0.20-0.73); vs R2 kappa 0.40 (0.09-0.67)
+  GPT-6 Astra (reasoning requested: no) [single best answer only] n=100, judge flags 12: vs R1 kappa 0.56 (0.25-0.78); vs R2 kappa 0.37 (0.00-0.66) | raters with each other on these items: kappa 0.40 (0.00-0.71); R1 11, R2 3
+      own items excluded (6 items by GPT-6 Astra; n=94): vs R1 kappa 0.55 (0.26-0.78); vs R2 kappa 0.37 (0.00-0.65)
+  GPT-6 Astra (reasoning requested: yes) [published composite (4 judge rules vs physician composite)] n=100, judge flags 37: vs R1 kappa 0.11 (-0.06-0.28); vs R2 kappa 0.23 (0.05-0.39) | raters with each other on these items: kappa 0.59 (0.30-0.81); R1 13, R2 12
+      own items excluded (6 items by GPT-6 Astra; n=94): vs R1 kappa 0.09 (-0.08-0.27); vs R2 kappa 0.22 (0.06-0.39)
+  GPT-6 Astra (reasoning requested: yes) [shared criteria (single best answer or implausible distractor, both sides)] n=100, judge flags 12: vs R1 kappa 0.53 (0.22-0.75); vs R2 kappa 0.43 (0.09-0.71) | raters with each other on these items: kappa 0.43 (0.08-0.73); R1 12, R2 5
+      own items excluded (6 items by GPT-6 Astra; n=94): vs R1 kappa 0.52 (0.22-0.77); vs R2 kappa 0.43 (0.09-0.72)
+  GPT-6 Astra (reasoning requested: yes) [single best answer only] n=100, judge flags 12: vs R1 kappa 0.56 (0.24-0.79); vs R2 kappa 0.37 (0.00-0.66) | raters with each other on these items: kappa 0.40 (0.00-0.71); R1 11, R2 3
+      own items excluded (6 items by GPT-6 Astra; n=94): vs R1 kappa 0.55 (0.26-0.79); vs R2 kappa 0.37 (0.00-0.67)

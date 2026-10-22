@@ -1,0 +1,25 @@
+items with both readers: 120 of 120; unsure treated as: yes
+
+== Q1 longest option (n=120; dropped/blank 0) ==
+  detector yes 40; reader 1 yes 39; reader 2 yes 40; both yes 39; either yes 40
+  kappa reader 1 vs reader 2: 0.98 (0.93 to 1.00)
+  detector vs reader 1: raw agreement 0.97; kappa 0.94 (0.87 to 1.00); precision 0.95 (0.86 to 1.00); recall 0.97 (0.91 to 1.00)
+  detector vs reader 2: raw agreement 0.98; kappa 0.96 (0.90 to 1.00); precision 0.97 (0.91 to 1.00); recall 0.97 (0.92 to 1.00)
+  detector vs consensus (both yes): raw agreement 0.97; kappa 0.94 (0.87 to 1.00); precision 0.95 (0.86 to 1.00); recall 0.97 (0.91 to 1.00)
+  detector vs either reader yes: raw agreement 0.98; kappa 0.96 (0.90 to 1.00); precision 0.97 (0.91 to 1.00); recall 0.97 (0.92 to 1.00)
+
+== Q2 word repetition (n=120; dropped/blank 0) ==
+  detector yes 38; reader 1 yes 36; reader 2 yes 37; both yes 35; either yes 38
+  kappa reader 1 vs reader 2: 0.94 (0.86 to 1.00)
+  detector vs reader 1: raw agreement 0.97; kappa 0.92 (0.84 to 0.98); precision 0.92 (0.82 to 1.00); recall 0.97 (0.91 to 1.00)
+  detector vs reader 2: raw agreement 0.94; kappa 0.86 (0.76 to 0.96); precision 0.89 (0.78 to 0.98); recall 0.92 (0.82 to 1.00)
+  detector vs consensus (both yes): raw agreement 0.96; kappa 0.90 (0.81 to 0.98); precision 0.89 (0.78 to 0.98); recall 0.97 (0.91 to 1.00)
+  detector vs either reader yes: raw agreement 0.95; kappa 0.88 (0.78 to 0.96); precision 0.92 (0.82 to 1.00); recall 0.92 (0.83 to 1.00)
+
+== Q3 absolute terms (n=120; dropped/blank 0) ==
+  detector yes 23; reader 1 yes 21; reader 2 yes 20; both yes 20; either yes 21
+  kappa reader 1 vs reader 2: 0.97 (0.89 to 1.00)
+  detector vs reader 1: raw agreement 0.98; kappa 0.94 (0.85 to 1.00); precision 0.91 (0.77 to 1.00); recall 1.00 (1.00 to 1.00)
+  detector vs reader 2: raw agreement 0.97; kappa 0.92 (0.80 to 1.00); precision 0.87 (0.71 to 1.00); recall 1.00 (1.00 to 1.00)
+  detector vs consensus (both yes): raw agreement 0.97; kappa 0.92 (0.80 to 1.00); precision 0.87 (0.71 to 1.00); recall 1.00 (1.00 to 1.00)
+  detector vs either reader yes: raw agreement 0.98; kappa 0.94 (0.85 to 1.00); precision 0.91 (0.77 to 1.00); recall 1.00 (1.00 to 1.00)

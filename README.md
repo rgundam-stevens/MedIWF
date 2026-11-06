@@ -7,6 +7,10 @@ an open corpus of 28,280 generated items, a rule-based detector for 14 structura
 Author: Rohit Gundam, independent researcher (ORCID 0009-0001-3018-9663). Code: MIT License. Data and documents: CC BY 4.0
 with the exceptions listed in LICENSE-DATA.md (see also DATASET_CARD.md).
 
+**Paper:** Gundam R. Item-writing flaws and answer-position bias in large language model-generated medical multiple-choice
+questions: a benchmark study of 15 models with an open corpus and a rule-based detector. *J Educ Eval Health Prof*
+2026;23:36. https://doi.org/10.3352/jeehp.2026.23.36
+
 Archive: https://doi.org/10.5281/zenodo.22903818 (Zenodo, all versions). Corpus: https://huggingface.co/datasets/rgundam/MedIWF
 Version 1.0.4; the changes since 1.0 are listed in CHANGELOG.md.
 
@@ -100,3 +104,13 @@ and their per-item rating times; the screening-test key for future structural ra
 drafts, screening-test items and scratch backups that the dated records in `docs/` cite by path. The files `outputs/content_rating/*_DO_NOT_SEND.csv`
 are the answer keys of the physician-rating sets (planted defects and detector flags), named so that they were never sent to the
 raters; they are released now that the ratings are complete. The 4 spreadsheets returned by the readers of the independent reader check (amendment 7) are withheld because they identify the readers; `outputs/independent_check/MedIWF_independent_check_ratings.csv` reproduces the reported pair's answers exactly, and the first pair's results are recorded in the amendment's addendum.
+
+## How to cite
+Please cite the paper:
+
+> Gundam R. Item-writing flaws and answer-position bias in large language model-generated medical multiple-choice questions:
+> a benchmark study of 15 models with an open corpus and a rule-based detector. J Educ Eval Health Prof. 2026;23:36.
+> https://doi.org/10.3352/jeehp.2026.23.36
+
+If you use the corpus, detector or code, please also cite the archive: Gundam R. MedIWF [software and data]. Zenodo.
+https://doi.org/10.5281/zenodo.22903818

@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this corpus, detector or code, please cite this repository by its Zenodo DOI."
+message: "Please cite the paper (preferred citation below); if you use the corpus, detector or code, please also cite the Zenodo archive."
 title: "MedIWF: item-writing flaws and answer-position bias in large language model-generated medical multiple-choice questions"
 authors:
   - family-names: Gundam
@@ -17,9 +17,25 @@ identifiers:
   - type: url
     value: https://huggingface.co/datasets/rgundam/MedIWF
     description: "Corpus on Hugging Face"
+  - type: doi
+    value: 10.3352/jeehp.2026.23.36
+    description: "The paper (J Educ Eval Health Prof 2026;23:36)"
 keywords:
   - item-writing flaws
   - multiple-choice questions
   - large language models
   - medical education
   - answer-position bias
+preferred-citation:
+  type: article
+  title: "Item-writing flaws and answer-position bias in large language model-generated medical multiple-choice questions: a benchmark study of 15 models with an open corpus and a rule-based detector"
+  authors:
+    - family-names: Gundam
+      given-names: Rohit
+      orcid: https://orcid.org/0009-0001-3018-9663
+  journal: "Journal of Educational Evaluation for Health Professions"
+  year: 2026
+  volume: 23
+  start: 36
+  doi: 10.3352/jeehp.2026.23.36
+  url: https://doi.org/10.3352/jeehp.2026.23.36
